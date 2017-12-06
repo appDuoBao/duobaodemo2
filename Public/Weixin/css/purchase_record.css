@@ -1,0 +1,72 @@
+.purchase_content{
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+    width:722px;
+    height:222px;
+    margin:auto;
+    margin-top:10px;
+}
+body{
+    background:#eeeeee;
+}
+.purchase_left{
+    width:253px;
+    height:100%;
+    float:left;
+}
+.purchase_left img{
+    width:223px;
+    height:138px;
+    margin-left:30px;
+    margin-top:42px;
+}
+.purchase_right{
+    width:469px;
+    height:100%;
+    float:left;
+}
+.purchase_right_title{
+    width:100%;
+    height:45px;
+    font-size: 32px;
+    color: #3C3C3C;
+    letter-spacing: -0.48px;
+    margin-top:20px;
+    margin-bottom:18px;
+    padding-left:30px;
+}
+.purchase_right_choose{
+    font-size: 24px;
+    color: #686868;
+    letter-spacing: -0.44px;
+    margin-bottom:10px;
+    padding-left:30px;
+}
+.purchase_right_choose span{
+    color: #C73741;
+    letter-spacing: -0.44px;
+    line-height: 33px;
+}
+.exchange_menu{
+    width:100%;
+    height:88px;
+    font-size:32px;
+    color: #3C3C3C;
+    background: #FFFFFF;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.20);
+}
+.exchange_left,.exchange_right{
+    width:50%;
+    height:86px;
+    float:left;
+    text-align: center;
+    line-height:88px;
+}
+.active{
+    font-size: 32px;
+    color: #F5A623;
+    height:86px;
+    letter-spacing: -0.48px;
+    border-bottom:2px solid #F5A623;
+}

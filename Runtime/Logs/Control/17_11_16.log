@@ -1,0 +1,212 @@
+[ 2017-11-16T16:44:31+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-11-16T16:44:34+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:44:35+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:44:35+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:44:36+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:44:40+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:44:41+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:51:31+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-16T16:55:07+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:08+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:09+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:09+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:09+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:10+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:10+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:10+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:10+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:10+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:11+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:11+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:11+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:12+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:13+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:14+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-11-16T16:55:15+08:00 ] ::1 /duobao/app/duobaodemo2/control.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Common\functions.php 第 563 行.
+NOTIC: [8] Undefined index: lite E:\wamp\www\duobao\app\duobaodemo2\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+

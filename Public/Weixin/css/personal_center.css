@@ -1,0 +1,103 @@
+.heand{
+    width:100%;
+    height:255px;
+    background:#c22631;
+    position:relative;
+    top:0;
+    left:0;
+}
+.head_img{
+    position:absolute;
+    left:300px;
+    top:30px;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+}
+.head_name{
+    position:absolute;
+    top:190px;
+    width:100%;
+    height:45px;
+    text-align: center;
+    font-size:32px;
+    color:#fff;
+    margin-top:10px;
+}
+body{
+    background:#eeeeee;
+    position:relative;
+}
+body,html{
+    height:100%;
+}
+.menu_personal{
+    width:100%;
+    height:100px;
+    line-height:100px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.20);
+}
+.menu_img{
+    width:50px;
+    height:50px;
+    display: inline-block;
+    margin-left:40px;
+    float:left;
+    margin-top:20px;
+}
+.head_img img{
+    width:100%;
+    height:100%;
+}
+.menu_font{
+    font-size:32px;
+    padding-left:20px;
+    color: #686868;
+    letter-spacing: -0.55px;
+}
+.menu_right{
+    float:right;
+    padding-right:40px;
+    font-size:32px;
+    color:#979797;
+}
+.signout{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:100;
+    width:100%;
+    height:100%;
+    background: rgba(60,60,60,0.40);
+}
+.sign_center{
+    position:relative;
+    top:39%;
+    left:16%;
+    width:540px;
+    height:208px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 24px;
+}
+.sign_title{
+    width:100%;
+    height:120px;
+    text-align: center;
+    line-height:120px;
+    font-size: 34px;
+    color: #FFFFFF;
+    letter-spacing: -0.22px;
+    border-bottom:2px solid #898989;
+}
+.canal,.determine{
+    float:left;
+    width:268px;
+    height:85px;
+    border-right:2px solid #898989;
+    text-align: center;
+    font-size: 32px;
+    color: #FFFFFF;
+    letter-spacing: -0.62px;
+    line-height:85px;
+}

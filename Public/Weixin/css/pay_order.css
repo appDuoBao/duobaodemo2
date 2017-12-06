@@ -1,0 +1,142 @@
+.pay_title{
+    width:100%;
+    height:100px;
+    text-align: center;
+    line-height:100px;
+    color:#fff;
+    background: #C22631;
+    font-size:32px;
+}
+.pay_number{
+    width:65%;
+    height:78px;
+    margin:auto;
+    margin-top:50px;
+    text-align: center;
+}
+.pay_choose {
+    width: 84px;
+    height: 78px;
+    background: #D8D8D8;
+    border-radius: 6px 0 0 6px;
+    font-size: 40px;
+    color: #686868;
+    letter-spacing: 0;
+    text-align: center;
+    float:left;
+    line-height: 78px;
+}
+.pay_center{
+    float:left;
+    width:312px;
+    height:72px;
+    background: #FFFFFF;
+    font-size: 40px;
+    color: #C22631;
+    letter-spacing: 0;
+    text-align: center;
+    border-top: 3px solid #D8D8D8;
+    border-bottom: 3px solid #D8D8D8;
+}
+.number_content{
+    display: inline-block;
+    width:115px;
+    float:left;
+    height:72px;
+    background: #FFFFFF;
+    border: 3px solid #D8D8D8;
+    text-align: center;
+    line-height:72px;
+    font-size: 30px;
+    color: #686868;
+    letter-spacing: 0;
+    margin-bottom:20px;
+}
+.more_buy{
+    width:100%;
+    height:41px;
+    text-align: center;
+    line-height:41px;
+    font-size: 28.8px;
+    color: #9B9B9B;
+    letter-spacing: -0.43px;
+}
+.line{
+    width:480px;
+    height:3px;
+    background: #9B9B9B;
+    margin:auto;
+    margin-top:13px;
+}
+.all_need{
+    widht:100%;
+    height:67px;
+    text-align: center;
+    line-height:67px;
+    font-size: 48px;
+    color: #C22631;
+    letter-spacing: -0.72px;
+    margin-top:13px;
+}
+.menu_personal{
+    width:100%;
+    height:100px;
+    line-height:100px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.20);
+}
+.menu_img{
+    width:50px;
+    height:50px;
+    display: inline-block;
+    margin-left:40px;
+    float:left;
+    margin-top:20px;
+}
+.head_img img{
+    width:100%;
+    height:100%;
+}
+.menu_font{
+    font-size:32px;
+    padding-left:20px;
+    color: #686868;
+    letter-spacing: -0.55px;
+}
+.menu_right{
+    float:right;
+    padding-right:40px;
+    font-size:32px;
+    color:#979797;
+}
+.cbtest{
+    width:40px;
+    height:40px;
+}
+.pay_confirm{
+    width:540px;
+    height:100px;
+    text-align: center;
+    line-height:100px;
+    color:#fff;
+    margin:auto;
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: -0.82px;
+    margin-top:157px;
+    background: #C22631;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+}
+.pay_number input::-webkit-input-placeholder { /* WebKit browsers*/
+    color: #C22631;
+}
+.pay_number input:-moz-placeholder {  /* Mozilla Firefox 4 to 18*/
+    color: #C22631;
+}
+.pay_number input::-moz-placeholder {  /* Mozilla Firefox 19+*/
+    color: #C22631;
+}
+.pay_number input:-ms-input-placeholder { /* Internet Explorer 10+*/
+    color: #C22631;
+}

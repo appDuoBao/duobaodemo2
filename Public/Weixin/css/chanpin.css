@@ -1,0 +1,236 @@
+.mainall{
+    background-color: #f1f1f1;
+}
+.bg{
+    width: 100%;
+    height: 4.6667rem;
+    /*background: url(../images/bg2_02.jpg) 0 0 no-repeat;*/
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.bgp{
+    position: relative;
+    width:100%;
+    height:0.9rem;
+    line-height: 0.9rem;
+    background-color: #C22631;
+    color: #fff;
+    font-size: 0.32rem;
+    padding:0 0.32rem;
+}
+.bgp p{
+    float: left;
+}
+.bgp1{
+    width:39%;
+    font-size: 0.2rem;
+}
+.bgp .bgp3{
+    float: right;
+}
+.bgp2{
+    width: 18%;
+    height: 0.533rem;
+    line-height:0.533rem ;
+    margin-top: 0.133rem;
+    background: #fff;
+    -webkit-border-radius:0.0667rem;
+    -moz-border-radius:0.0667rem;
+    border-radius:0.0667rem;
+    color:#C22631;
+    text-align: center;
+}
+.bgp3{
+    width:43%;
+    padding-left: 0.2rem;
+}
+.con{
+    padding: 0.733rem .8rem 0.4rem  0.8rem;
+    width: 100%;
+    /*height: 3.92rem;*/
+    border-bottom: 1px solid #EAEAEA;
+}
+.con1{overflow: hidden;width:100%;margin-top: 0.5rem;}
+.con1 div{
+    float: left;
+    height: 1.5rem;
+
+}
+.con1l{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.con1l img{
+    width:1.5rem;
+    height: 1.5rem;
+}
+.con1m{
+    margin-left: 0.4rem;
+}
+.con1m p{
+	width: 4rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    height: 0.6rem;
+    line-height: 0.6rem;
+}
+.conp1{
+    color: #3C3C3C ;
+    font-size: 0.4rem;
+}
+.conp2{
+    color: #C22631;
+    font-size: 0.2rem;
+    margin-top: 0.2rem;
+}
+.con1 .con1r{
+    float:right;
+    width:2.2rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    -webkit-border-radius:5%;
+    -moz-border-radius:5%;
+    border-radius:5%;
+    background: #3C3C3C;
+    color: #fff;
+    font-size: 0.4rem;
+    margin-top: 0.4rem;
+}
+.con2{
+    overflow: hidden;
+    margin-top: 0.4rem;
+}
+.con2 div{
+    width: 3rem;
+    height:0.9rem ;
+    line-height: 0.9rem;
+    text-align: center;
+    -webkit-border-radius:0.0667rem;
+    -moz-border-radius:0.0667rem;
+    border-radius:0.0667rem;
+    color: #fff;
+    font-size: 0.4rem;
+}
+.con2 .con2x{
+    float: left;
+	background: #F5A623 ;
+    margin-left: 0.3rem;
+}
+.con2 .con2d{
+    float: right;
+    background: #C22631;
+}
+.tabtitle{
+    padding:  0 0.32rem 0 0;
+    overflow: hidden;
+    background: #FFFFFF;
+
+box-shadow: 0 0 2px 0 rgba(0,0,0,0.20);
+}
+.tabtitle p{
+    color: #5d6b7d;
+    font-size: 0.3733rem;
+    width: 50%;
+    height: 1.3rem;
+    line-height: 1rem;
+    text-align: center;
+    float: left;
+    line-height: 1.3rem;
+    font-size: 0.5rem;
+}
+.tabtitle .active{
+    color:#db4352;
+    height:;
+    border-bottom: 2px solid #db4352;
+}
+.tablis{
+    width: 100%;
+    background-color: #f1f1f1;
+}
+.tablis ul{
+    display: none;
+    background: #ffffff;
+    width:98%;
+    margin:0px auto;
+    margin-bottom: 1.3rem;
+}
+.tablis ul:first-child{display: block;}
+.tablis li{
+    height: 2.4rem;
+    padding: 0.466rem 0.333rem 0;
+    background: #fff;
+    margin-top: 0.1rem;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);
+
+}
+.tablis .tablis-rule li{
+	height: auto;
+	padding: 0.2rem 0 0;
+	background: #fff;
+}
+.tr-p{
+	width: 100%;
+	height: 0.8rem;
+	background-color:rgba(219,66,82,1);
+	padding: 0 0.3rem;
+	line-height: 0.8rem;
+	font-size: 0.34rem;
+	color: #fff;
+}
+.tr-img{
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+	margin-top: 0.2rem;
+	margin-bottom: 0.4rem;
+}
+.tablis li div{
+    float: left;
+    height: 1.5rem;
+}
+.li1{
+    margin-top: 0rem;
+    width:1.5rem;
+}
+.li1 img{
+    width: 1.5rem;
+    height: 1.5rem;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    margin-top: 0rem;
+}
+.li2{
+    float:right;
+    font-size: 0.28rem;
+    width:7.5rem;
+    height:1.5rem;
+}
+.li2 p{
+    height: 0.7rem;
+    line-height: 0.7rem;
+}
+.li2 p:nth-child(1){
+    overflow: hidden;
+}
+.li2l{
+    float: left;
+    color: #3C3C3C;
+    font-size: 0.4rem;
+    padding-left: 0.3rem;
+}
+.li2r{
+    float: right;
+    color: #C22631;
+}
+.li2 p:nth-child(2) {
+    padding-left: 0.3rem;
+    color: #686868 ;
+}
+.li2 p:nth-child(2) span{
+    color: #C22631;
+}

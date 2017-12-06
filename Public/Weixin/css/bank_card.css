@@ -1,0 +1,176 @@
+.card_content{
+    width:100%;
+    height:100px;
+    color: #686868;
+    background: #FFFFFF;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.20);
+    margin-bottom:2px;
+}
+.card_name{
+    width:183px;
+    height:45px;
+    font-size: 32px;
+    color: #686868;
+    letter-spacing: -0.55px;
+    text-align: right;
+    display: inline-block;
+    margin-top:23px;
+}
+.card_content input{
+    width:463px;
+    height:45px;
+    border:0;
+    font-size: 32px;
+    letter-spacing: -0.55px;
+}
+.card_content select{
+    width:463px;
+    height:45px;
+    border:0;
+    font-size: 32px;
+    letter-spacing: -0.55px;
+}
+.card_content input::-webkit-input-placeholder { /* WebKit browsers*/
+    color: #D8D8D8;
+}
+.card_content input:-moz-placeholder {  /* Mozilla Firefox 4 to 18*/
+    color: #D8D8D8;
+}
+.card_content input::-moz-placeholder {  /* Mozilla Firefox 19+*/
+    color: #D8D8D8;
+}
+.card_content input:-ms-input-placeholder { /* Internet Explorer 10+*/
+    color: #D8D8D8;
+}
+.get_code{
+    width:150px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #C22631;
+    border-radius: 8px;
+    color:#C22631;
+    font-size:22px;
+}
+.zhu{
+    width:629px;
+    min-height:56px;
+    margin:auto;
+    margin-top:22px;
+    opacity: 0.5;
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #C22631;
+    letter-spacing: -0.34px;
+}
+.save_btn{
+    width:540px;
+    height:100px;
+    position:fixed;
+    left:105px;
+    bottom:100px;
+    background: #C22631;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: -0.82px;
+    text-align: center;
+    line-height:100px;
+}
+.account{
+    text-align: center;
+    font-size: 32px;
+    color: #C22631;
+    letter-spacing: -0.48px;
+    line-height:100px;
+}
+.account_card{
+    width:100%;
+    height:120px;
+    margin-top:5px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+}
+.account_left{
+    width:70%;
+    height:100%;
+    float:left;
+}
+.account_right{
+    width:30%;
+    height:100%;
+    float:left;
+    font-size: 32px;
+    color: #686868;
+    letter-spacing: -0.48px;
+    text-align: center;
+    line-height:120px;
+}
+.card_nmber{
+    display: block;
+    height:45px;
+    padding-left:30px;
+    margin-top:20px;
+    margin-bottom:5px;
+    font-size: 32px;
+    color: #9B9B9B;
+    letter-spacing: -0.48px;
+}
+.card_bottm{
+    font-size: 24px;
+    color: #9B9B9B;
+    letter-spacing: -0.58px;
+    height:33px;
+    display: block;
+    padding-left:30px;
+}
+.can_use{
+    width:100%;
+    height:33px;
+    text-align: center;
+    line-height:33px;
+    font-size: 24px;
+    color: #686868;
+    letter-spacing: -0.58px;
+    margin-top:20px;
+}
+.money_edit{
+    width:540px;
+    height:100px;
+    border-bottom:2px solid #686868;
+    margin:auto;
+    margin-top:50px;
+}
+.money_edit input{
+    width:90%;
+    height:100%;
+    border:0;
+    background: transparent;
+    font-size: 72px;
+    color: #686868;
+    letter-spacing: -1.74px;
+    text-align: center;
+}
+.money_edit span{
+    font-family:PingFangSC-Light;
+    float: left;
+    width:10%;
+    font-size: 72px;
+    color:#686868;
+}
+.warning{
+    opacity: 0.7;
+    width:600px;
+    margin:10px auto;
+    height:auto;
+}
+.warning p{
+    width:100%;
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #C22631;
+    letter-spacing: -0.34px;
+}
