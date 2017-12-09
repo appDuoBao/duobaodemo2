@@ -105,8 +105,8 @@ class Model {
         } elseif (!isset($this->tablePrefix)) {
             $this->tablePrefix = C('DB_PREFIX');
         }
-        if(empty($connection))
-            $this->connection='mysql://root:123456@localhost:3306/duobao#utf8';
+        //if(empty($connection))
+         //   $this->connection='mysql://root:123456@localhost:3306/duobao#utf8';
         // 数据库初始化操作
         // 获取数据库操作对象
         // 当前模型有独立的数据库连接信息
