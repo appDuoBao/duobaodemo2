@@ -71,15 +71,17 @@ fieldset {
 }
 .menu_bottom_img{
     display: block;
-    width:38px;
+    width:40px;
     height:38px;
     margin-left:74px;
     margin-top:14px;
 }
 .menu_bottom_font{
-    font-size: 28px;
+    display: block;
+    font-size: 20px;
     color: #3C3C3C;
     letter-spacing: -0.48px;
+    margin-top:5px;
 }
 .font-red{
     color:#C22631;
