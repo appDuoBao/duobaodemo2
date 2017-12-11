@@ -20,37 +20,10 @@ Class RequestController extends HomeController{
     private $mynum ;
 
     public function _initialize(){
-//        header("Content-type: text/html; charset=utf-8");
-//        require_once('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/class/ClientResponseHandler.class.php');
-//        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/class/RequestHandler.class.php');
-//        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/class/PayHttpClient.class.php');
-//        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/Utils.class.php');
-//        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/config/config.php');
-//
-////        $this->resHandler = new \ClientResponseHandler();
-
-//        vendor('payInterface_jsapi_wx.Utils');
-//        vendor('payInterface_jsapi_wx.class.RequestHandler');
-//        vendor('payInterface_jsapi_wx.class.ClientResponseHandler');
-//        vendor('payInterface_jsapi_wx.class.PayHttpClient');
         $this->Request();
     }
 
     public function Request(){
-//        $this->resHandler = new \ClientResponseHandler();
-//        $this->reqHandler = new \RequestHandler();
-//        $this->pay = new \PayHttpClient();
-//        $this->cfg = new \Config();
-//        if($_GET['t']){
-//            $this->cfg->num = $_GET['t'];
-//        }else{
-//            $num = substr($this->getPeriod($_POST['lottery_time']),-1)%10;//开奖期数
-//	    $num = rand(0,9);	
-//            $this->cfg->num = $this->mynum = $num;
-//        }
-//
-//        $this->reqHandler->setGateUrl($this->cfg->C('url'));
-//        $this->reqHandler->setKey($this->cfg->C('key'));
     }
 
 //    public function index(){
