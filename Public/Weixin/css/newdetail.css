@@ -1,0 +1,240 @@
+.mainall{
+    width:750px;
+    background-color: #f1f1f1;
+}
+.bg{
+    width: 100%;
+    height: 418px;
+}
+.bg img{
+    width: 100%;
+    height: 350px;
+    float: left;
+}
+.bgp{
+    float: left;
+    width:100%;
+    height:68px;
+    line-height: 68px;
+    background-color: #C22631;
+    color: #fff;
+    font-size: 24px;
+    margin-top: 0px;
+}
+.bgp p{
+    float: left;
+}
+.bgp1{
+    max-width: 43%;
+    min-width: 38%;
+    font-size: 24px;
+    margin-left: 32px;
+}
+.bgp .bgp3{
+    float: right;
+}
+.bgp2{
+    width: 100px;
+    height: 40px;
+    line-height:40px ;
+    margin-top: 0.133rem;
+    background: #fff;
+    color:#C22631;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+    font-size: 24px;
+    color: #C22631;
+    letter-spacing: -0.36px;
+    margin-top: 14px;
+}
+
+.bgp3{
+    margin-right: 30px;
+    font-family: PingFangHK-Regular;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: -0.48px;
+}
+.con{
+    height: 264px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+.con1{overflow: hidden;width:100%;margin-top: 30px;height: 108px;}
+.con1 div{
+    float: left;
+    height: 108px;
+
+}
+.con1l{
+    border-radius: 50%;
+    width: 108px;
+    height: 108px;
+    margin-left: 44px;
+}
+.con1l img{
+    width:108px;
+    height: 108px;
+    border-radius: 50%;
+}
+.con1m{
+    margin-left: 40px;
+}
+.con1m p{
+	width: 300px;
+	overflow: hidden;
+}
+.con1m .conp1{
+    font-size: 32px;
+    color: #3C3C3C;
+    letter-spacing: -0.48px;
+}
+.con1m .conp2{
+    font-size: 26px;
+    color: rgba(194,38,49,0.50);
+    letter-spacing: -0.48px;
+}
+.con1 .con1r{
+    float:right;
+    width:160px;
+    height: 55px;
+    line-height: 55px;
+    background: #3C3C3C;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+    font-family: PingFangSC-Regular;
+    font-size: 32px;
+    color: #FFFFFF;
+    letter-spacing: -0.48px;
+    text-align: center;
+    margin-right: 68px;
+    margin-top: 26px;
+}
+.con2{
+    width:100%;
+    height: 66px;
+    margin-top: 30px;
+}
+.con2 div{
+    width: 240px;
+    height:66px; ;
+    line-height: 66px;
+    text-align: center;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+    font-family: PingFangSC-Regular;
+    font-size: 32px;
+    color: #FFFFFF;
+    letter-spacing: -0.48px;
+}
+.con2 .con2x{
+    float: left;
+	background: #F5A623 ;
+    margin-left: 76px;
+}
+.con2 .con2d{
+    float: right;
+    background: #C22631;
+    margin-right: 60px;
+}
+.tabtitle{
+    width:750px;
+    height: 88px;
+    background: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.20);
+}
+.tabtitle p{
+    float: left;
+    font-family: PingFangHK-Regular;
+    width: 49%;
+    height: 88px;
+    line-height: 88px;
+    font-size: 32px;
+    text-align: center;
+    color: #3C3C3C;
+    letter-spacing: -0.48px;font-family: PingFangHK-Regular;
+    font-size: 32px;
+    letter-spacing: -0.48px;
+}
+.tabtitle .active{
+    color:#db4352;
+    border-bottom: 2px solid #db4352;
+}
+.tablis{
+    width: 100%;
+    background-color: #f1f1f1;
+}
+.tablis ul{
+    display: none;
+    width: 100%;
+}
+.tablis ul:first-child{display: block;}
+.tablis li{
+    width: 722px;
+    height: 162px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+    margin-left: 14px;
+    margin-top: 10px;
+}
+
+.tablis li div{
+    float: left;
+}
+.li1{
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    margin-top: 27px;
+    margin-left: 30px;
+}
+.li1 img{
+    width: 108px;
+    height: 108px;
+    border-radius:50%;
+}
+.li2{
+    float:right;
+    width: 584px;
+    height: 100%;
+}
+.li2 p{
+    height: 81px;
+}
+.li2 p:nth-child(1){
+    overflow: hidden;
+}
+.li2l{
+    float: left;
+    font-family: PingFangHK-Regular;
+    font-size: 32px;
+    color: #3C3C3C;
+    letter-spacing: -0.48px;
+    margin-left: 30px;
+    margin-top: 27px;
+}
+.li2r{
+    float: right;
+    font-family: PingFangHK-Regular;
+    font-size: 22px;
+    color: rgba(194,38,49,0.50);
+    letter-spacing: -0.48px;
+    margin-top: 35px;
+    margin-right: 20px;
+}
+.li2 .title{
+    font-family: PingFangHK-Regular;
+    font-size: 26px;
+    color: #686868;
+    letter-spacing: -0.48px;
+    margin-left: 30px;
+}
+.li2 p:nth-child(2) {
+    color: #686868 ;
+}
+.li2 p:nth-child(2) span{
+    color: #C22631;
+}

@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>产品详情页</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="__CSS__/common.css?t=123">
-    <link rel="stylesheet" href="__CSS__/chanpinbuy.css?t=12345">
-    <link rel="stylesheet" href="__CSS__/chanpin.css?t=123">
-    <!-- <link rel="stylesheet" href="__CSS__/dingdan.css"> -->
-<script src="__JS__/qrcode.js"></script>
-<script src="ap.js"></script>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-<meta http-equiv="refresh" content="60" />  
-<!--<script id='spay-script' src='https://jspay.beecloud.cn/1/pay/jsbutton/returnscripts?appId=5303b6b1-5281-4ec2-842f-1cb80280183c'></script>-->
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=750, target-densitydpi=284, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="__CSS__/newdetail.css">
+    <link rel="stylesheet" href="__CSS__/base.css">
+    <script src="__JS__/qrcode.js"></script>
+    <script src="__JS__ap.js"></script> 
 </head>
 <body>
 <div align="center"  id="qrcode" >
@@ -28,7 +22,7 @@
             <img src="{$data['goodsDetail']['cover_img']}"/>
         </if>
         <div class="bgp">
-            <p class="bgp1">{$data.goodsDetail.title}</p>
+            <p class="bgp1">{$data.goodsDetail.title|mb_substr=0,10}</p>
             <p class="bgp2">上期：{$data.period_last_type}</p>
             <p class="bgp3 fnTimeCountDown" data-end="{$data.time_end}" >
                 开战倒计时： <span class="hour">00</span>:<span class="mini">00</span>:<span class="sec">00</span>
@@ -44,11 +38,10 @@
     <div class="con">
         <div class="con1">
             <div class="con1l">
-                <!-- <img src="{$data.memberData.headimgurl}" alt=""> -->
-                <img src="__ROOT__{$data['goodsDetail']['pics'][0]['path']}">
+                <img src="{$data.memberData.headimgurl}" alt="">
             </div>
             <div class="con1m">
-                <p class="conp1">{$data.memberData.nickname}</p>
+                <p class="conp1">{$data.memberData.nickname|mb_substr=0,9}</p>
                 <p class="conp2">[{$data.memberData.ip}]</p>
             </div>
             <div class="con1r">
@@ -56,14 +49,14 @@
             </div>
         </div>
         <div class="con2">
-            <div class="con2x" onclick="buy(1);">买单</div>
-            <div class="con2d" onclick="buy(2);">买双</div>
+            <div class="con2x" onclick="buy(1);">买 单</div>
+            <div class="con2d" onclick="buy(2);">买 双</div>
         </div>
     </div>
 
     <div class="tab">
         <div class="tabtitle">
-            <p class=" active">最近战绩</p>
+            <p class=" active" style="margin-left: 10px;">最近战绩</p>
             <p >购买记录</p>
         </div>
         <div class="tablis">
@@ -73,12 +66,12 @@
                         <div class="li1"><img src="{$vo.userinfo.headimgurl}" alt=""></div>
                         <div class="li2">
                             <p>
-                                <span class="li2l">{$vo.userinfo.nickname}</span>
+                                <span class="li2l">{$vo.userinfo.nickname|mb_substr=0,9}</span>
                                 <span class="li2r"js>{$vo.buy_time|date='Y/m/d H:i:s',###}</span>
                             </p>
 
                             <!--<p>刚刚参与<span>{$vo.num}</span> 单,-&#45;&#45;{$vo.ip_info}</p>-->
-                            <p>{$data.goodsDetail.title}  &nbsp;中奖  <span>{$vo.buy_num}</span>  单</p>
+                            <p class="title">{$data.goodsDetail.title}  &nbsp;中奖  <span>{$vo.buy_num}</span>  单</p>
                         </div>
                     </li>
                 </volist>
@@ -99,7 +92,7 @@
                                 <span class="li2l">{$vo1.userinfo.nickname}</span>
                                 <span class="li2r"js>{$vo1.buy_time|date='Y/m/d H:i:s',###}</span>
                             </p>
-                            <p>{$data.goodsDetail.title}  购买<span>{$vo1.buy_num}</span>单 </p>
+                            <p class="title">{$data.goodsDetail.title}  购买<span>{$vo1.buy_num}</span>单 </p>
                         </div>
                     </li>
                 </volist>
@@ -107,59 +100,41 @@
         </div>
     </div>
 
-    <!--支付弹框-->
-    <div class="alert" style="display: none;">
-        <div class="content" align="center" >
-            <div class="cont">{$data.goodsDetail.title}</div>
-            <div class="conbd">
-                <p class="cbdt">参与单数</p>
-                <div class="btn-group">
-                    <button class="btn1">－</button>
-                    <input type="number" class="btn2" id="btn2" value="1" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
-                    <button class="btn3">＋</button>
-                </div>
-                <ul class="number">
-                    <if condition="$data['goodsDetail']['price'] eq 1">
-                        <li>1</li>
-                        <li>10</li>
-                        <li>20</li>
-                        <li>30</li>
-                        <li>50</li>
-                        <li>60</li>
-                        <li>80</li>
-                        <li>100</li>
-                    <else />
-                        <li>1</li>
-                        <li>10</li>
-                        <li>20</li>
-                        <li>30</li>
-                        <li>50</li>
-                        <li>60</li>
-                        <li>80</li>
-                        <li>100</li>
-                    </if>
-
-                    <li class="max-sum">单次最多可购买<span><if condition="$data['goodsDetail']['price'] eq 1">100<else />100</if></span>单</li>
-                </ul>
-                <input type="hidden" id="goods_type" value="{$data.goodsDetail.price}">
-                <input type="hidden" id="pay_type">
-                <div class="sum">总需：<span class="sumn">{$data.price_half_1}</span> 微币<!--(当前拥有{$price}微币)--></div>
-                <!--  <input  id="buyer_id" vtype="ip" value="" placeholder="支付宝账号" maxlength="26" placeholder="长度16">-->
-                <div class="pay" onclick="callpay(1);">支付宝扫码</div> 
-                <!--<div class="pay" onclick="judge();">支付</div>-->
-                <div class="pay" onclick="callpay(2);">微信支付</div>
-            </div>
-            <div class="line"></div>
-            <div class="close"></div>
+    <div class="menu_fixed">
+        <div class="bottom_menu" id="main">
+            <span class="menu_bottom_img"><img src="__IMG__/icon_red.png" alt=""></span>
+            <span class="menu_bottom_font font-red">首页</span>
+        </div>
+        <div class="bottom_menu" id="flow">
+            <span class="menu_bottom_img"><img src="__IMG__/icon-flow.png" alt=""></span>
+            <span class="menu_bottom_font">走势图</span>
+        </div>
+        <div class="bottom_menu" id="order">
+            <span class="menu_bottom_img"><img src="__IMG__/icon-order.png" alt=""></span>
+            <span class="menu_bottom_font">排行榜</span>
+        </div>
+        <div class="bottom_menu" id="personal">
+            <span class="menu_bottom_img"><img src="__IMG__/icon-person.png" alt=""></span>
+            <span class="menu_bottom_font ">个人中心</span>
         </div>
     </div>
-</div>
-<include file="Public/footer" />
 <!--<script type="text/javascript" src="__JS__/jquery-1.11.1.min.js"></script>-->
 <script type="text/javascript" src="__JS__/zepto.min.js"></script>
 <script type="text/javascript" src="__JS__/countdown.js"></script>
 
 <script type="text/javascript">
+     $("#main").click(function(){
+        window.location.href='{:U('Index/index')}';
+    });
+    $("#flow").click(function(){
+        window.location.href='{:U('Openprize/index')}';
+    });
+    $("#order").click(function(){
+        window.location.href='{:U('Index/topsort?t=to')}';
+    });
+    $("#personal").click(function(){
+        window.location.href='{:U('My/index')}';
+    });
     $(function(){
         $('.tabtitle p').tap(function(){
             var i=$(this).index();
