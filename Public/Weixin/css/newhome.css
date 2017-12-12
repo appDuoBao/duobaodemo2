@@ -20,41 +20,21 @@ a{text-decoration: none;}
     height: 350px;
 }
 .swiper-pagination span{
-    width: 0.15rem;
-    height: 0.15rem;
+    width: 15px;
+    height: 15px;
     background: #fff;
     border-radius: 50%;
     -webkit-border-radius:50%;
     -moz-border-radius:50%;
 }
 .swiper-container-horizontal>.swiper-pagination-bullets{
-    bottom: 0rem;
+    bottom: 0px;
 }
-.search{
-    margin-top: 0.2rem;
-    margin-left:0.3333rem;
-    position: absolute;
-    height: 0.9333rem;
-}
-.search input{
-    height: 0.933rem;
-    width: 9.346rem;
-    line-height: 9.346rem;
-    -webkit-border-radius:0.5rem;
-    -moz-border-radius:0.5rem;
-    border-radius:0.5rem;
-    background: url(../images/search_03.png) 0.4rem 50% no-repeat;
-    background-size: 0.32rem 0.32rem;
-    background-color: #fff;
-    font-size: 0.42rem;
-    padding-left: 1rem;
-    color: #8296b1;
-}
+
 .bgbottom{
     height:68px;
     width:100%;
     line-height: 68px;
-    padding-left: 0.333rem;
     background-color: #C22631;
     font-size: 24px;
     color: #FFFFFF;
@@ -65,19 +45,18 @@ a{text-decoration: none;}
     height: 33.3px;
     margin-left: 30px;
     margin-right: 16px;
+    margin-top: 17px;
+    float: left;
 }
 .bgbottom span{
     font-family: .PingFangSC-Regular;
     font-size: 24px;
     color: #FFFFFF;
     letter-spacing: -0.48px;
+    line-height: 68px;
 }
 .lis{
     background-color: #666666;
-}
-.tejia img{
-    width:100%;
-    height:2.4rem;
 }
 .tab-img{
     background: #FFFFFF;
@@ -213,7 +192,6 @@ a{text-decoration: none;}
     width:100%;
     height:88px;
     overflow: hidden;
-    padding: 0 .4rem;
     background: #FFFFFF;
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);
 }
@@ -240,10 +218,7 @@ a{text-decoration: none;}
     color:#3C3C3C ;
 }
 
-.list-head p a{
-    font-size: 0.4rem;
-    color: #333;
-}
+
 #reload_more{
     width:100%;
     height:100px;
