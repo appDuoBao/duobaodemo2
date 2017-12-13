@@ -147,7 +147,8 @@ Class RequestController extends HomeController{
             $arrali['mch_create_ip'] = get_client_ip();
             $arrali['buyer_id'] = I("buyer_id");
 	    $arrali['openid'] = $openid;
-            $this->submitOrderInfobyali($arrali,$out_trade_no,$ptype);
+            $ret = $this->submitOrderInfobyali($arrali,$out_trade_no,$ptype);
+	    exit(json_encode($ret));
        // }
         
     }
@@ -271,12 +272,12 @@ Class RequestController extends HomeController{
         $result =  $api->bill($data);
         $code_url = $result->code_url;
         if($code_url){
-            exit(json_encode(array('ret'=>0,'url'=>$code_url)));    
+            return array('ret'=>0,'url'=>$code_url);    
         }
 	if($type == 2 && $result->resultCode == 0){
-	   exit(json_encode(array('ret'=>0,'data'=>$result)));
+	   return  array('ret'=>0,'data'=>$result);
 	}else{
-	   exit(json_encode(array('ret'=>1,'msg'=>'system error')));
+	   return  array('ret'=>1,'msg'=>'system error');
 	}
             
     }
@@ -288,24 +289,16 @@ Class RequestController extends HomeController{
     public function rechargeOrderInfo(){
         //支付处理
         $total_fee = $_POST['total_fee'];//总费用
+	$ptype    = $_POST['ptype'];
         //获取预支付信息
-        // 1,获取openid
-        $openid = $_SESSION['openid'];
-        //$openid = 'oPlawwN7QTh_2Nqt8Gl7UmedjXaM';
-        if($openid){
-            $uid = M('Member')->where(array('openid'=>$openid))->getField('uid');
-            $out_trade_no = 'RE-'.date('YmjHis').sprintf("%07d", $uid).'3'.rand(1000,9999);//商户订单号
-        }else{
-            die('openid不能为空!');
-        }
-
-		
+        $out_trade_no = 'RE-'.date('YmjHis').sprintf("%07d", $uid).'3'.rand(1000,9999);//商户订单号
         //创建订单
         $data['uid'] = D('Member')->uid();
         $data['create_time'] = time();
         $data['total_fee'] = $total_fee;
+        $data['ptype'] = $ptype;
         $data['out_trade_no'] = $out_trade_no;
-		
+        $openid = $_SESSION['openid'];
         //$data['ip_info'] = $this->getIpInfo();//用户的ip信息
 
 
@@ -320,55 +313,9 @@ Class RequestController extends HomeController{
         }else{
             exit();
         }
-
-        $this->reqHandler->setReqParams($arr,array('method'));
-        $this->reqHandler->setParameter('service','pay.weixin.jspay');//接口类型
-        $this->reqHandler->setParameter('mch_id',$this->cfg->C('mchId'));//必填项，商户号，由平台分配
-        $this->reqHandler->setParameter('version',$this->cfg->C('version'));
-        $this->reqHandler->setParameter('limit_credit_pay','1');
-        $this->reqHandler->setParameter('appid',$this->cfg->C('appid'));
-//        $this->reqHandler->setParameter('op_user_id','yida');
-//        $this->reqHandler->setParameter('op_shop_id','yida1');
-//        $this->reqHandler->setParameter('op_device_id','yida2');
-//        $this->reqHandler->setParameter('device_info','yida3');
-        //$this->reqHandler->setParameter('time_expire','20170306152200');
-//        $this->reqHandler->setParameter('goods_tag',$arr['out_trade_no']);
-        $this->reqHandler->setParameter('is_raw','1');
-        //通知地址，必填项，接收平台通知的URL，需给绝对路径，255字符内格式如:http://wap.tenpay.com/tenpay.asp
-        //$notify_url = 'http://'.$_SERVER['HTTP_HOST'];
-        //$this->reqHandler->setParameter('notify_url',$notify_url.'/payInterface/request.php?method=callback');
-        $this->reqHandler->setParameter('notify_url','http://duobao.akng.net/Weixin/Request/callback?t='.$this->mynum);//
-        $this->reqHandler->setParameter('callback_url','http://duobao.akng.net/Weixin/My/orderDetail/id/'.$orderid);
-        $this->reqHandler->setParameter('nonce_str',mt_rand(time(),time()+rand()));//随机字符串，必填项，不长于 32 位
-//        $this->reqHandler->setParameter('sub_openid','o8DGQs1COe0UyuwgbvmxvJvnH-KA');
-        $this->reqHandler->createSign();//创建签名
-
-        $data = \Utils::toXml($this->reqHandler->getAllParameters());
-		
-        $this->pay->setReqContent($this->reqHandler->getGateURL(),$data);
-
-        if($this->pay->call()){
-            $this->resHandler->setContent($this->pay->getResContent());
-            $this->resHandler->setKey($this->reqHandler->getKey());
-
-            if($this->resHandler->isTenpaySign()){
-                //当返回状态与业务结果都为0时才返回，其它结果请查看接口文档
-                if($this->resHandler->getParameter('status') == 0 && $this->resHandler->getParameter('result_code') == 0){
-                    echo json_encode(array('token_id'=>$this->resHandler->getParameter('token_id'),
-                        'pay_info'=>$this->resHandler->getParameter('pay_info'),
-                        'orderid'=>$orderid));
-                    exit();
-                }else{
-                    echo json_encode(array('status'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
-                    exit();
-                }
-            }
-
-            echo json_encode(array('status'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
-        }else{
-            echo json_encode(array('status'=>500,'msg'=>'Response Code:'.$this->pay->getResponseCode().'Error Info:'.$this->pay->getErrInfo()));
-        }
-
+	 $arr['openid'] = $openid;
+	 $ret = $this->submitOrderInfobyali($arr,$orderid,$ptype);
+	 exit(json_encode($ret));
     }
 
     /**
@@ -600,24 +547,24 @@ Class RequestController extends HomeController{
         }
     }
 
- public function beecallback(){
-	$data = $GLOBALS['HTTP_RAW_POST_DATA'];
-        $dedate = json_decode($data,true);
-        
-        if($dedate['trade_success']){
-              $arr['status'] = 1;
-              $arr['pay_time'] =time();
-              $out_trade_no = $dedate['message_detail']['orderId'];
+    public function beecallback(){
+	    $data = $GLOBALS['HTTP_RAW_POST_DATA'];
+	    $dedate = json_decode($data,true);
 
-              $orderData = M('WinOrder')->where(array('order_number'=>$out_trade_no))->find();
-              	if($orderData['status'] == 0){
-                    $ret = M('WinOrder')->where(array('order_number'=>$out_trade_no))->save($arr);
-                    if($ret){
-                        echo "susess";    
-                    }
-			  }	
+	    if($dedate['trade_success']){
+		    $arr['status'] = 1;
+		    $arr['pay_time'] =time();
+		    $out_trade_no = $dedate['message_detail']['orderId'];
 
-        }
+		    $orderData = M('WinOrder')->where(array('order_number'=>$out_trade_no))->find();
+		    if($orderData['status'] == 0){
+			    $ret = M('WinOrder')->where(array('order_number'=>$out_trade_no))->save($arr);
+			    if($ret){
+				    echo "susess";    
+			    }
+		    }	
+
+	    }
     }
 
 }
