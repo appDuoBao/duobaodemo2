@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>登录</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" href="__CSS__/common.css">
-	<link rel="stylesheet" href="__CSS__/homePage.css">
-	<link rel="stylesheet" href="__CSS__/homePage2.css">
-	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=750, target-densitydpi=284, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta charset="utf-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="__CSS__/base.css">
+    <link rel="stylesheet" href="__CSS__/register.css">
+    <script src="__JS__/jquery-1.9.1.min.js"></script>
 </head>
 <body>
 <div class="alert">
@@ -17,19 +18,19 @@
 			<input type="hidden" name="">
 			<div class="main">
 				<div class="tel">
-					<input name="mobile" id="mobile" onblur="ismobile_registered();"  placeholder="手机号">
-					<img src="__IMG__/phone_03.jpg" alt="" class="phone">
+					<img src="__IMG__/iphone.png" alt="" class="phone">
+					<input name="mobile" id="mobile" onblur="ismobile_registered();" maxlength="11"  placeholder="请输入手机号">
 					<span class="check_tips error_tip" id="dmobile"></span>
 
 				</div>
 				<div class="message">
-					<input type="text" name="miss" id="miss" oninput="checkphone();" placeholder="验证码">
-					<img src="__IMG__/phone2_03.jpg" alt="" class="mm">
-					<span class="check_tips error_tip" id="dmiss" style="right: 2.5rem;"></span>
+					<img src="__IMG__/check.png" alt="" class="mm">
+					<input type="text" name="miss" id="miss" oninput="checkphone();" placeholder="请输入验证码">
 					<p class="yzm"  onclick="sendphone();">
 						<span id="sendma" name="sendma">获取验证码</span>
 					</p>
 				</div>
+				<div class="yzmerror"><span class="check_tips error_tip" id="dmiss" ></span></div>
 				<div id="confirm" onclick="register();">
 					确定
 				</div>
@@ -38,7 +39,7 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="__JS__/libs/zepto.min.js"></script>
+<script type="text/javascript" src="__JS__/zepto.min.js"></script>
 <script type="text/javascript">
 	$(function() {
 		var mo=function(e){e.preventDefault();};
