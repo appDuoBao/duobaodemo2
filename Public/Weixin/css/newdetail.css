@@ -139,6 +139,10 @@
     background: #C22631;
     margin-right: 60px;
 }
+.tab{
+    width: 100%;
+    margin-bottom: 110px;
+}
 .tabtitle{
     width:750px;
     height: 88px;
