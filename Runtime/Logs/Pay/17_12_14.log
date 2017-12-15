@@ -1,0 +1,71 @@
+[ 2017-12-14T10:00:32+08:00 ] 123.179.17.145 /pay.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000052s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: onethink_home /home/wwwroot/newduobao/Ewshop/Pay/Controller/IndexController.class.php 第 36 行.
+NOTIC: [8] Undefined index: onethink_admin /home/wwwroot/newduobao/Ewshop/Pay/Controller/IndexController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0006s ]
+SQL: SELECT `goods_id` FROM `ewshop_win_exchange` WHERE `uid` = 671 AND `is_exchange` = 0 AND `exchange_number` <> ''  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`uid`,`order_id`,`goods_id`,`exchange_number`,`buy_num` FROM `ewshop_win_exchange` WHERE `uid` = 671 AND `is_exchange` = 0 AND `exchange_number` <> ''  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: shiji /home/wwwroot/newduobao/Ewshop/Pay/Controller/IndexController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: arrcode /home/wwwroot/newduobao/Ewshop/Pay/Controller/IndexController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: ex_tot /home/wwwroot/newduobao/Ewshop/Pay/Controller/IndexController.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `ewshop_account` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`card_no`,`bankname`,`username` FROM `ewshop_account` WHERE ( uid = 671 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_account` WHERE `defaultcard` = 1 AND `uid` = 671 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000024s ]
+
+[ 2017-12-14T22:20:09+08:00 ] 113.44.45.222 /pay.php?s=/index/cardlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000054s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_ned5uljrebgajf53863cvh1gm6, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: onethink_home /home/wwwroot/newduobao/Ewshop/Pay/Controller/IndexController.class.php 第 36 行.
+NOTIC: [8] Undefined index: onethink_admin /home/wwwroot/newduobao/Ewshop/Pay/Controller/IndexController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `ewshop_account` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`card_no`,`bankname` FROM `ewshop_account` WHERE ( status=1 and uid =671 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000029s ]
+
+[ 2017-12-14T22:20:19+08:00 ] 113.44.45.222 /pay.php?s=/Index/bindcard.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_ned5uljrebgajf53863cvh1gm6, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: onethink_home /home/wwwroot/newduobao/Ewshop/Pay/Controller/IndexController.class.php 第 36 行.
+NOTIC: [8] Undefined index: onethink_admin /home/wwwroot/newduobao/Ewshop/Pay/Controller/IndexController.class.php 第 36 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000025s ]
+

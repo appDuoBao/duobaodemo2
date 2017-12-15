@@ -147,12 +147,33 @@ Class RequestController extends HomeController{
             $arrali['mch_create_ip'] = get_client_ip();
             $arrali['buyer_id'] = I("buyer_id");
 	    $arrali['openid'] = $openid;
-            $ret = $this->submitOrderInfobyali($arrali,$out_trade_no,$ptype);
+	   //充值支付
+            $ispay = $this->payByChange($orderid,$data['money']);
+	    if($ispay['ret']==100){
+		exit(json_encode($ispay));	
+	    }elseif($ptype){
+            	$ret = $this->submitOrderInfobyali($arrali,$out_trade_no,$ptype);
+	    }else{
+		$ret = array('ret'=>2,'msg'=>'select pay type');
+	    }
 	    exit(json_encode($ret));
        // }
         
     }
-    
+    public function payByChange($orderid,$total){
+	$uid = D('Member')->uid();
+	$totnum = D('Recharge')->where('uid='.$uid)->getField('totalnum');
+	if($totnum >= $total){
+	    $payafer = bcsub($totnum,$total);
+	    $data['totalnum'] = $payafer;
+	    $ret = D('Recharge')->where('uid = '.$uid)->save($data);	
+	    if($ret){
+		$ret = D('WinOrder')->where('id = '.$orderid)->save(array('status'=>1,'paytype'=>'充值'));
+	        if($ret) return array('ret'=>100,'msg'=>'ok','data'=>'s')
+	     }
+	}
+	return array('ret'=>1,'msg'=>'error','data'=>'select');
+    }
     private function paybyweixin($arr,$orderid){
          header("Content-type: text/html; charset=utf-8");
         require_once('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/class/ClientResponseHandler.class.php');

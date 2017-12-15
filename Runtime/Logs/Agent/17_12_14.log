@@ -1,0 +1,411 @@
+[ 2017-12-14T10:00:06+08:00 ] 123.179.17.145 /agent.php?s=Index/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000054s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:06+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000046s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:06+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:06+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:06+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000058s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000044s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000053s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000054s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000045s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000057s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000045s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000046s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000057s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:07+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000044s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000045s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000058s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000046s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000039s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:08+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000039s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000045s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000039s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000039s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:13+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:14+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:14+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:14+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:14+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:14+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:14+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
+[ 2017-12-14T10:00:14+08:00 ] 123.179.17.145 /agent.php?s=/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000038s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+
+[ 2017-12-14T10:00:14+08:00 ] 123.179.17.145 /agent.php?s=/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000056s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_brjp7a0nc5cccif3jpcts9v9i1, O_RDWR) failed: Permission denied (13) /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [8] Undefined index: user_agent /home/wwwroot/newduobao/Ewshop/Agent/Controller/ControlController.class.php 第 25 行.
+
