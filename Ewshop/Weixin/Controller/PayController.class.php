@@ -12,583 +12,292 @@ namespace Weixin\Controller;
 use Think\Controller;
 
 Class PayController extends HomeController{
-    //$url = 'http://192.168.1.185:9000/pay/gateway';
 
-    private $resHandler = null;
-    private $reqHandler = null;
-    private $pay = null;
-    private $mynum ;
+	private static  $certFilePath='/home/cert/800000600020008.p12';
 
-    public function _initialize(){
-        $this->Request();
-    }
+	private static  $merchanid='800000600020008';
 
-    public function Request(){
-    }
+	private static  $merchantCertPass='VkSuds'; 
 
-//    public function index(){
-//        $method = isset($_REQUEST['method'])?$_REQUEST['method']:'submitOrderInfo';
-//        switch($method){
-//            case 'submitOrderInfo'://提交订单
-//                $this->submitOrderInfo();
-//                break;
-//            case 'queryOrder'://查询订单
-//                $this->queryOrder();
-//                break;
-//            case 'submitRefund'://提交退款
-//                $this->submitRefund();
-//                break;
-//            case 'queryRefund'://查询退款
-//                $this->queryRefund();
-//                break;
-//            case 'callback':
-//                $this->callback();
-//                break;
-//        
-//    }
+	private static  $deskey = 'cputest';  
 
-    /**
-     * 提交订单信息
-     */
-    public function submitOrderInfo(){			
-        var_dump($_POST);die;
-        //支付处理
-        $total_fee = $_POST['total_fee'];//总费用
-        $type      = $_POST['type'];//1：小号码段   2：大号码段
-        $num       = $_POST['num'];//购买数量
-        $goods_type = $_POST['goods_type'];//商品类型 1：50元卡  2:100元卡
-        $goods_id = $_POST['goods_id'];//商品id
-        $lottery_time = $_POST['lottery_time'];//开奖时间
+	private $uid;
 
-        if($goods_type == 1){
-            $price  =  28;
-        }elseif($goods_type == 2){
-            $price  =  55;
-        }
-        $total_fee = $num*$price;
-        //获取预支付信息
-        //$paymentInfo     = R('Wxpay/getPayment_to' , array ($total_fee , $type));
-        //dump($paymentInfo);die();
-        //$jsApiParameters = $paymentInfo['jsApiParameters'];
-        if($total_fee < 28){
-            die('支付金额不正确!');
-        }
-        if(empty($type)){
-            die('支付类型不能为空!');
-        }
+	private $shouxufei = 1; //手续费1元
 
-        // 1,获取openid
-        $openid = $_SESSION['openid'];
-        //$openid = 'oPlawwN7QTh_2Nqt8Gl7UmedjXaM';
-         $ptype = I("ptype");
-        
-        if($ptype==2){
-            if($openid){
-            $uid = M('Member')->where(array('openid'=>$openid))->getField('uid');
-            $data['paytype'] = '微信';
-           //商户订单号
-            }else{
-               //  die('openid不能为空!');
-            }
-        }else{
-              $data['paytype'] = '支付宝';   
-        }
-        $out_trade_no = 'FD'.date('YmjHis').sprintf("%07d", $uid).$type.rand(1000,9999);
-        //创建订单
-        $data['uid'] = D('Member')->uid();
-        $data['goods_id'] = $goods_id;
-        $data['num'] = $num;
-        $data['type'] = $type;
-        $data['create_time'] = time();
-        $data['order_number'] = $out_trade_no;
-        $data['lottery_time'] = $lottery_time;
-        $data['period'] = $this->getPeriod($lottery_time);//开奖期数
-		
-        //$data['ip_info'] = $this->getIpInfo();//用户的ip信息
-		
+	public function _initialize(){
 
-        $goods_type = M('Document')->where(array('id'=>$goods_id))->getField('price');
-        $data['goods_type'] = $goods_type;
-        if($goods_type == 1){
-            $data['money_w'] = $num*28;
-            $data['money'] = $num*28;
-            if($type == 1){
-                $data['number_section'] = '1-28';
-            }elseif($type == 2){
-                $data['number_section'] = '29-56';
-            }
-        }elseif($goods_type == 2){
-            $data['money_w'] = $num*55;
-            $data['money'] = $num*55;
-            if($type == 1){
-                $data['number_section'] = '1-55';
-            }elseif($type == 2){
-                $data['number_section'] = '56-110';
-            }
-        }
-        if($orderid = M('WinOrder')->add($data)){
-            $arr['method'] = 'submitOrderInfo';
-            $arr['out_trade_no'] = $out_trade_no;
-            $arr['sub_openid'] = $openid;
-            $arr['body'] = $out_trade_no;
-	    $arr['total_fee'] = $data['money']*100;//正式购买金额
-            //$arr['total_fee'] = 0.01*100;
-            $arr['mch_create_ip'] = get_client_ip();
-        }
-        $ptype = I("ptype");
-        //if($ptype == 1){
-        //    $this->paybyweixin($arr,$orderid);
-        //}else{
-            $arrali['method'] = 'submitOrderInfo';
-            $arrali['out_trade_no'] = $out_trade_no;
-            $arrali['body'] = $out_trade_no;
-	    $arrali['total_fee'] = $data['money']*100;//正式购买金额
-            $arrali['buyer_logon_id'] =I("buyer_logon_id");
-            $arrali['mch_create_ip'] = get_client_ip();
-            $arrali['buyer_id'] = I("buyer_id");
-	    $arrali['openid'] = $openid;
-	   //充值支付
-            $ispay = $this->payByChange($orderid,$data['money']);
-	    if($ispay['ret']==100){
-		exit(json_encode($ispay));	
-	    }elseif($ptype){
-            	$ret = $this->submitOrderInfobyali($arrali,$out_trade_no,$ptype);
-	    }else{
-		$ret = array('ret'=>2,'msg'=>'select pay type');
-	    }
-	    exit(json_encode($ret));
-       // }
-        
-    }
-    public function payByChange($orderid,$total){
-	$uid = D('Member')->uid();
-	$totnum = D('Recharge')->where('uid='.$uid)->getField('totalnum');
-	if($totnum >= $total){
-	    $payafer = bcsub($totnum,$total);
-	    $data['totalnum'] = $payafer;
-	    $ret = D('Recharge')->where('uid = '.$uid)->save($data);	
-	    if($ret){
-		$ret = D('WinOrder')->where('id = '.$orderid)->save(array('status'=>1,'paytype'=>'充值'));
-	        if($ret) return array('ret'=>100,'msg'=>'ok','data'=>'s')
-	     }
+		$this->uid = ($_SESSION['onethink_home']['uid']) ? ($_SESSION['onethink_home']['uid']) : ($_SESSION['onethink_admin']['user_auth']['uid']) ;
+
+		if(empty($this->uid)){
+			$this->redirect('User/register');  return;
+		}
+	public function isCanPay($tsnum){
+		 $uid = $this->uid;
+		 $totnum = D('Recharge')->where('uid = '.$uid)->getField('totalnum');
+		 if($tsnum > $totnum){
+			return false;
+		 }
+		 return array('tot'=>$totnum);
 	}
-	return array('ret'=>1,'msg'=>'error','data'=>'select');
-    }
-    private function paybyweixin($arr,$orderid){
-         header("Content-type: text/html; charset=utf-8");
-        require_once('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/class/ClientResponseHandler.class.php');
-        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/class/RequestHandler.class.php');
-        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/class/PayHttpClient.class.php');
-        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/Utils.class.php');
-        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/config/config.php');
-        $this->cfg = new \Config();
-        $this->resHandler = new \ClientResponseHandler();
-        $this->reqHandler = new \RequestHandler();
-        $this->pay = new \PayHttpClient();
-        $this->cfg = new \Config();
-        
-         if($_GET['t']){
-            $this->cfg->num = $_GET['t'];
-        }else{
-            $num = substr($this->getPeriod($_POST['lottery_time']),-1)%10;//开奖期数
-	        $num = rand(0,9);	
-            $this->cfg->num = $this->mynum = $num;
-        }
+	public function doorder(){
+			$uid = $this->uid;
+			$shiji = $_REQUEST['numb'];
+			if(empty($uid) || !preg_match('/\d{1,10000}/',$shiji)){
+				$this->error("请登陆");return;
+			}
+			$ispay = $this->isCanPay($shiji);
+			if(!$ispay){
+				$this->error('提现金额有误');exit;	
+			}
+			//查询有无银行卡
+			$allcard = M('Account')->where(sprintf('uid = %d and defaultcard=1',$uid))->find();
+			if(empty($allcard)){
+				$this->redirect('Index/bindcard');  return; 
+			}
+			$payobj = M('PayRecord');
+			//插入订单表数据 
+			$orderSn = 'PAY' . strtoupper(dechex(date('m'))) . date('d') . substr(time(), -5) . substr(microtime(), 2, 5) . sprintf('%02d', mt_rand(10, 1000));
+			$data['pay_id'] = $orderSn;
+			$data['account_id'] = $allcard['id'];
+			$data['card_no'] = $allcard['card_no'];
+			$data['username'] = $allcard['username'];
+			$data['cardname'] = $allcard['bankname'];
+			$data['uid'] = $uid;
+			$data['pay_code'] = 'TIXIAN';
 
-        $this->reqHandler->setGateUrl($this->cfg->C('url'));
-        $this->reqHandler->setKey($this->cfg->C('key'));
-        
-        
-        $this->reqHandler->setReqParams($arr,array('method'));
-        $this->reqHandler->setParameter('service','pay.weixin.jspay');//接口类型
-        $this->reqHandler->setParameter('mch_id',$this->cfg->C('mchId'));//必填项，商户号，由平台分配
-        $this->reqHandler->setParameter('version',$this->cfg->C('version'));
-        $this->reqHandler->setParameter('limit_credit_pay','1');
-        $this->reqHandler->setParameter('appid',$this->cfg->C('appid'));
+			$data['total_nu'] = $shiji;
+			$data['ctime'] = time();
+			$data['status'] = 0;
+			$ret = M('PayRecord')->add($data);
+			if($shiji && $uid && $data['card_no'] && $orderSn && $ret){ 
+				//调用第三方接口 
 
-        $this->reqHandler->setParameter('is_raw','1');
-        
-        $this->reqHandler->setParameter('notify_url','http://duobao.akng.net/Weixin/Request/callback?t='.$this->mynum);//
-        $this->reqHandler->setParameter('callback_url','http://duobao.akng.net/Weixin/My/orderDetail/id/'.$orderid);
-        $this->reqHandler->setParameter('nonce_str',mt_rand(time(),time()+rand()));//随机字符串，必填项，不长于 32 位
+				$retstatu =  $this->paySinTrans($orderSn,$shiji,$allcard); 
+				if($retstatu){
+					//更新所有本系统未支付状态记录,//第三方支付成功一定要更新 win-exchange 
+					$left = bcsub($ispay['tot'],$shiji);
+					$ret = M('Recharge')->where(sprintf("uid = '%d' ",$uid))->save(array('totalnum'=>$left));
+					if(!$ret)
+						$flag = 1;
+						while($flag<=3){
+						$ret = M('Recharge')->where(sprintf("uid = '%d' ",$uid))->save(array('totalnum'=>$left));
+							if(!$ret){
+								$flag++;
+								error_log(json_encode(array('orderNo'=>$orderNo,'status'=>'exret:'.$exret.'|payret:'.$ret,'msg'=>'更新数据库失败'.implode(':',$order_ids)))."\n\t",3,'/home/tmp/pay.log');   
+							}
+							if($ret) break;
+						}
+				}else{
+					//第三方支付没成功
+				}  
+				$this->redirect('index/recordlist');return;
 
-        $this->reqHandler->createSign();//创建签名
+			}
+		}
+		public function checkCode(){
+			if (trim($_POST['miss']) == $_SESSION['mobile_code']) {
+				$return = array ("status" => 1 , "info" => "");
+			} else {
+				$return = array ("status" => 0 , "info" => '验证码不正确');
+			}
+			$this->ajaxreturn($return);
+		}
+		public function sendcode(){
 
-        $data = \Utils::toXml($this->reqHandler->getAllParameters());
+			$phone = $_POST['phone'];
+			$mobile_code = random(4 , 1);//生成手机验证码
+			$send_code   = (!empty($_SESSION['send_code'])) ? $_SESSION['send_code'] : '8888';//获取提交随机加密码
+			$content     = "您的短信验证码为：" . $mobile_code . "，有效期一小时。【千亩阳光】";
+			$result      = sendsmscode($phone , $content , $send_code , $mobile_code);
+			exit(json_encode($result));
 
-		
-		
-        $this->pay->setReqContent($this->reqHandler->getGateURL(),$data);
+		}
 
+		public function cardlist(){
+			$uid = $this->uid;
+			$accout = M('Account');
+			$cards = $accout->where('status=1 and uid ='.$uid)->getField('id,card_no,bankname',true);
+			$this->assign('list',$cards);
+			$this->assign('sytlec',1);
+			$this->display();
+		}
 
-        if($this->pay->call()){
-            $this->resHandler->setContent($this->pay->getResContent());
-            $this->resHandler->setKey($this->reqHandler->getKey());
+		public function paySinTrans($orderSn,$shiji,$cardinfo){
+			header("Content-type: text/html; charset=utf-8"); 
+			//$reUrl = 'http://43.227.141.32/paygateway/mpsGate/mpsTransaction';//接口类型
+			$reUrl = 'https://jd.kingpass.cn/paygateway/mpsGate/mpsTransaction';
+			$order['mcSequenceNo'] = "123456789";
+			$order["mcTransDateTime"] = date('YmdHis');
+			$order["orderNo"] = $orderSn;
+			$order["amount"] = bcmul($shiji,100,4);
+			$order["cardNo"] = self::do_des($cardinfo['card_no'],self::$deskey); //'9df04f691e75d4fad0b57592b1dcfc14906ad91d4dbb3063';
+			$order["accName"] =  $cardinfo['username'];
+			$order["accType"] = '0';
+			$order1["lBnkNo"]  = '';
+			$order1["lBnkNam"] = '';
+			$order["crdType"]= "00";
+			$order1["validPeriod"] ='';
+			$order1["cvv2"] ="";
+			$order1["cellPhone"] = "";
+			$order1['remark']='';
+			$order1['bnkRsv'] = '';
+			$order['capUse'] ='9';
+			//$order['callBackUrl']='http://duobao.akng.net/pay.php?s=index/callbak';
+			$params['service'] = 'capSingleTransfer';
+			$publicp = self::publicParams($params);
+			$order = array_merge($order,$publicp);
+			ksort($order);
+			$signdata = self::arrToStr($order);
+			$sign = $this->RSAsign($signdata,self::$merchantCertPass);//password私钥证书的密码
+			$header =array();
+			$order= array_merge($order,$order1);
+			$order['merchantSign'] = $sign['sign'];
+			$order['merchantCert'] = $sign['cert'];
+			$res =mb_convert_encoding(PostHttp($reUrl,$order,$header),'UTF-8','auto');
+			$ret = self::formartRet($res); 
+			if($ret['rspCode']=='IPS00000'){
+				return 1;    
+			}else{
+				error_log(json_encode($ret)."\n\t",3,'/home/tmp/pay.log');     
+			}
 
-            if($this->resHandler->isTenpaySign()){
-                //当返回状态与业务结果都为0时才返回，其它结果请查看接口文档
-                if($this->resHandler->getParameter('status') == 0 && $this->resHandler->getParameter('result_code') == 0){
-                    echo json_encode(array('token_id'=>$this->resHandler->getParameter('token_id'),
-                        'pay_info'=>$this->resHandler->getParameter('pay_info'),
-                        'orderid'=>$orderid));
-                    exit();
-                }else{
-                    echo json_encode(array('status'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
-                    exit();
-                }
-            }
+		}
+		public static function formartRet($ret){
+			if($ret){
+				$ret = explode('&', $ret);
+				if(is_array($ret)){
 
-            echo json_encode(array('status'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
-        }else{
-            echo json_encode(array('status'=>500,'msg'=>'Response Code:'.$this->pay->getResponseCode().' Error Info:'.$this->pay->getErrInfo()));
-        }
-    }
-    
-    private function submitOrderInfobyali($arr,$orderid,$type){
-         header("Content-type: text/html; charset=utf-8");
-         
-        require_once("ThinkPHP/Library/Vendor/sdk/src/rest/config.php");
-        require_once("ThinkPHP/Library/Vendor/sdk/src/rest/network.php");
-        require_once("ThinkPHP/Library/Vendor/sdk/src/rest/api.php");
-        
-         $api = new \beecloud\rest\api();
-         $international = new \beecloud\rest\international();
-         $subscription = new \beecloud\rest\Subscriptions();
-         $auth = new \beecloud\rest\Auths();
-             
-        $data = array();
-        $data["timestamp"] =time();
-        //total_fee(int 类型) 单位分
-        $data["total_fee"] = $arr['total_fee'];
-        $data["bill_no"] = $orderid;
-        //title UTF8编码格式，32个字节内，最长支持16个汉字
-        $data["title"] = '支付';
-        //渠道类型:ALI_WEB 或 ALI_QRCODE 或 UN_WEB或JD_WAP或JD_WEB, BC_GATEWAY为京东、BC_WX_WAP、BC_ALI_WEB渠道时为必填, BC_ALI_WAP不支持此参数
-        $data["return_url"] = "http://duobao.akng.net/";
-        $data["optional"] = (object)array("order"=>$orderid);
-	if($type == 1){
-         $APP_ID = 'f561d848-bb6a-4958-8eb6-21ed37f41a13';
-         $APP_SECRET = '96a3aa41-5ef5-42e9-a927-768229ddc890';
-         $MASTER_SECRET = '1162c1dc-4a0f-4d28-87e1-97db6bcb975c';
-         $TEST_SECRET = 'b38f720b-50a1-475f-bbbc-1e77b8ff3bee';
-         $api->registerApp($APP_ID, $APP_SECRET, $MASTER_SECRET, $TEST_SECRET);
-        //Test Model,只提供下单和支付订单查询的Sandbox模式,不写setSandbox函数或者false即live模式,true即test模式
-         $api->setSandbox(false);
-        	$data["channel"] = "BC_ALI_QRCODE";
-        }
-	if($type == 2){
-	 if(!$arr['openid']){
-		 exit(json_encode(array('ret'=>1,'msg'=>'openid is null')));	
-	 }
-         $APP_ID = '74b02851-f238-49fe-a64f-13470ca72ae4';
-         $APP_SECRET = 'a7b5c556-072e-40fd-a9ee-1e58205546d7';
-         $MASTER_SECRET = 'b15313a5-f330-4fcb-95e6-ec0d35bd5c6d';
-         $TEST_SECRET = 'b38f720b-50a1-475f-bbbc-1e77b8ff3bee';
-         $api->registerApp($APP_ID, $APP_SECRET, $MASTER_SECRET, $TEST_SECRET);
-        //Test Model,只提供下单和支付订单查询的Sandbox模式,不写setSandbox函数或者false即live模式,true即test模式
-         $api->setSandbox(false);
-       	 $data["channel"] = "BC_WX_JSAPI";
-	 $data['openid'] = $arr['openid'];
+					foreach($ret as $k=>$v){
+						$retv = explode('=', $v);
+						$arrret[$retv[0]] = $retv[1];
+					}
+
+				}
+			}
+			return $arrret;
+		}
+		public static function publicParams($param = array()){
+			$params["charset"] = '02';
+			$params["version"] = '1.0';
+			$params["merchantId"] = self::$merchanid;;
+			$params["requestTime"] = date('YmdHis');
+			$params["requestId"] = time();
+			$params["service"] = $param['service'];
+			$params["signType"] = 'RSA256';
+			//$params['merchantCert'] = '';
+			//$params['merchanSign']='';
+			return $params;
+		}
+		public static function getSign($request,$encoding = 'gbk'){
+			$certFilePath =self::$certFilePath;
+			$password = self::$merchantCertPass;
+			$reqStr=http_build_query($request);
+			$asci = self::getBytes($reqStr);
+			$sign = self::ascii2hex($asci);
+
+			return $sign;
+
+		}
+
+		public static function getBytes($string) {  
+			$bytes = array();  
+			for($i = 0; $i < strlen($string); $i++){  
+				$bytes[] = ord($string[$i]);  
+			}  
+			return $bytes;  
+		}  
+		public static function ascii2hex($ascii) {
+			$hex = '';
+			for ($i = 0; $i < strlen($ascii); $i++) {
+				$byte = strtoupper(dechex(ord($ascii{$i})));
+				$byte = str_repeat('0', 2 - strlen($byte)).$byte;
+				$hex.=$byte." ";
+			}
+			return $hex;
+		}
+
+		public static function getCert(){
+			openssl_private_encrypt();    
+		}
+
+		/**
+		 * 根据原文生成签名内容
+		 *
+		 * @param string $data 原文内容
+		 *
+		 * @return string
+		 * @author confu
+		 */
+		public static function RSAsign($source, $password)
+		{
+			$certs = array ();
+			$fd = fopen (self::$certFilePath, 'r' );
+			$p12buf = fread ( $fd, filesize (self::$certFilePath) );
+			fclose ( $fd );
+			if (openssl_pkcs12_read ( $p12buf, $certs, $password )) {
+				$pkeyid = openssl_pkey_get_private ( $certs ['pkey'] );//var_dump($pkeyid);exit;
+				$signature = "";
+				$pubder = self::pem2der( $certs ['cert'] );
+				openssl_sign ($source, $signature, $pkeyid,OPENSSL_ALGO_SHA256);
+				openssl_free_key ( $pkeyid );
+				return array('sign'=>self::asc2hex ( $signature ),'cert'=>self::asc2hex($pubder));
+			}
+		}
+
+		public static function asc2hex($str)
+		{
+			return chunk_split(bin2hex($str), 2, '');
+		}
+		public static function pem2der($pem_data)
+		{
+			$begin = "CERTIFICATE-----";
+			$end   = "-----END";
+			$pem_data = substr($pem_data, strpos($pem_data, $begin)+strlen($begin));
+			$pem_data = substr($pem_data, 0, strpos($pem_data, $end));
+			$der = base64_decode($pem_data);
+			return $der;
+		}
+		public static function encodeArr($input){
+			while (list($k, $v) = each($input)) {
+				if (!empty ($v)) {
+					$ret[] = "$k=" . mb_convert_encoding($v, 'UTF-8', 'GB18030');
+				} else if (gettype($v) != 'boolean' && !is_array($v)) {
+					$ret[] = "$k=" . mb_convert_encoding($v, 'UTF-8', 'GB18030');
+				}
+			}
+			return $ret;
+		}
+		private static function arrToStr($arrdata){
+			if($arrdata){
+				$ret = [];
+				while(list($k,$v)=each($arrdata)){
+					if(!empty($v)||$v===0 || $v ==='0'){
+						$ret[] = "$k=$v";	
+					}	
+				}
+				return	$str = implode('&',$ret);
+			}
+			return false;
+		}
+		private static  function do_des($input, $key)
+		{
+
+			$size = mcrypt_get_block_size(MCRYPT_DES, MCRYPT_MODE_ECB);
+			$str = self::pkcs5Pad($input, $size);
+			$td = @mcrypt_module_open(MCRYPT_DES, '', MCRYPT_MODE_ECB, '');
+			$iv = 'cputest0';
+			@mcrypt_generic_init($td, $key, $iv);
+			$data = @mcrypt_generic($td, $str);
+			$ret = strtoupper(bin2hex($data));
+			return $ret;
+			//return self::asc2hex($encrypted_data);
+		}
+		public static function pkcs5Pad($text, $blocksize)
+		{
+			$pad = $blocksize - (strlen($text) % $blocksize);
+			return $text . str_repeat(chr($pad), $pad);
+		}
+
 	}
-        $result =  $api->bill($data);
-        $code_url = $result->code_url;
-        if($code_url){
-            return array('ret'=>0,'url'=>$code_url);    
-        }
-	if($type == 2 && $result->resultCode == 0){
-	   return  array('ret'=>0,'data'=>$result);
-	}else{
-	   return  array('ret'=>1,'msg'=>'system error');
-	}
-            
-    }
-
-
-    /**
-     * 充值
-     */
-    public function rechargeOrderInfo(){
-        //支付处理
-        $total_fee = $_POST['total_fee'];//总费用
-	$ptype    = $_POST['ptype'];
-        //获取预支付信息
-        $out_trade_no = 'RE-'.date('YmjHis').sprintf("%07d", $uid).'3'.rand(1000,9999);//商户订单号
-        //创建订单
-        $data['uid'] = D('Member')->uid();
-        $data['create_time'] = time();
-        $data['total_fee'] = $total_fee;
-        $data['ptype'] = $ptype;
-        $data['out_trade_no'] = $out_trade_no;
-        $openid = $_SESSION['openid'];
-        //$data['ip_info'] = $this->getIpInfo();//用户的ip信息
-
-
-        if($orderid = M('RechargeOrder')->add($data)){
-            $arr['method'] = 'submitOrderInfo';
-            $arr['out_trade_no'] = $out_trade_no;
-            $arr['sub_openid'] = $openid;
-            $arr['body'] = $out_trade_no;
-            //$arr['total_fee'] = $total_fee*100;
-            $arr['total_fee'] = 0.01*100;
-            $arr['mch_create_ip'] = get_client_ip();
-        }else{
-            exit();
-        }
-	 $arr['openid'] = $openid;
-	 $ret = $this->submitOrderInfobyali($arr,$orderid,$ptype);
-	 exit(json_encode($ret));
-    }
-
-    /**
-     * 查询订单
-     */
-    public function queryOrder(){
-        $this->reqHandler->setReqParams($_POST,array('method'));
-        $reqParam = $this->reqHandler->getAllParameters();
-        if(empty($reqParam['transaction_id']) && empty($reqParam['out_trade_no'])){
-            echo json_encode(array('status'=>500,
-                'msg'=>'请输入商户订单号,平台订单号!'));
-            exit();
-        }
-        $this->reqHandler->setParameter('version',$this->cfg->C('version'));
-        $this->reqHandler->setParameter('service','unified.trade.query');//接口类型
-        $this->reqHandler->setParameter('mch_id',$this->cfg->C('mchId'));//必填项，商户号，由平台分配
-        $this->reqHandler->setParameter('nonce_str',mt_rand(time(),time()+rand()));//随机字符串，必填项，不长于 32 位
-        $this->reqHandler->createSign();//创建签名
-        $data = Utils::toXml($this->reqHandler->getAllParameters());
-
-        $this->pay->setReqContent($this->reqHandler->getGateURL(),$data);
-        if($this->pay->call()){
-            $this->resHandler->setContent($this->pay->getResContent());
-            $this->resHandler->setKey($this->reqHandler->getKey());
-            if($this->resHandler->isTenpaySign()){
-                $res = $this->resHandler->getAllParameters();
-                Utils::dataRecodes('查询订单',$res);
-                //支付成功会输出更多参数，详情请查看文档中的7.1.4返回结果
-                echo json_encode(array('status'=>200,'msg'=>'查询订单成功，请查看result.txt文件！','data'=>$res));
-                exit();
-            }
-            echo json_encode(array('status'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
-        }else{
-            echo json_encode(array('status'=>500,'msg'=>'Response Code:'.$this->pay->getResponseCode().' Error Info:'.$this->pay->getErrInfo()));
-        }
-    }
-
-
-    /**
-     * 提交退款
-     */
-    public function submitRefund(){
-        $this->reqHandler->setReqParams($_POST,array('method'));
-        $reqParam = $this->reqHandler->getAllParameters();
-        if(empty($reqParam['transaction_id']) && empty($reqParam['out_trade_no'])){
-            echo json_encode(array('status'=>500,
-                'msg'=>'请输入商户订单号或平台订单号!'));
-            exit();
-        }
-        $this->reqHandler->setParameter('version',$this->cfg->C('version'));
-        $this->reqHandler->setParameter('service','unified.trade.refund');//接口类型
-        $this->reqHandler->setParameter('mch_id',$this->cfg->C('mchId'));//必填项，商户号，由平台分配
-        $this->reqHandler->setParameter('nonce_str',mt_rand(time(),time()+rand()));//随机字符串，必填项，不长于 32 位
-        $this->reqHandler->setParameter('op_user_id',$this->cfg->C('mchId'));//必填项，操作员帐号,默认为商户号
-
-        $this->reqHandler->createSign();//创建签名
-        $data = Utils::toXml($this->reqHandler->getAllParameters());//将提交参数转为xml，目前接口参数也只支持XML方式
-        //var_dump($data);
-        $this->pay->setReqContent($this->reqHandler->getGateURL(),$data);
-
-        if($this->pay->call()){
-            $this->resHandler->setContent($this->pay->getResContent());
-            $this->resHandler->setKey($this->reqHandler->getKey());
-            if($this->resHandler->isTenpaySign()){
-                //当返回状态与业务结果都为0时才返，其它结果请查看接口文档
-                if($this->resHandler->getParameter('status') == 0 && $this->resHandler->getParameter('result_code') == 0){
-                    /*$res = array('transaction_id'=>$this->resHandler->getParameter('transaction_id'),
-                                 'out_trade_no'=>$this->resHandler->getParameter('out_trade_no'),
-                                 'out_refund_no'=>$this->resHandler->getParameter('out_refund_no'),
-                                 'refund_id'=>$this->resHandler->getParameter('refund_id'),
-                                 'refund_channel'=>$this->resHandler->getParameter('refund_channel'),
-                                 'refund_fee'=>$this->resHandler->getParameter('refund_fee'),
-                                 'coupon_refund_fee'=>$this->resHandler->getParameter('coupon_refund_fee'));*/
-                    $res = $this->resHandler->getAllParameters();
-                    Utils::dataRecodes('提交退款',$res);
-                    echo json_encode(array('status'=>200,'msg'=>'退款成功,请查看result.txt文件！','data'=>$res));
-                    exit();
-                }else{
-                    echo json_encode(array('status'=>300,'msg'=>'Error Code:'.$this->resHandler->getParameter('err_code').' Error Message:'.$this->resHandler->getParameter('err_msg')));
-                    exit();
-                }
-            }
-            echo json_encode(array('status'=>400,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
-        }else{
-            echo json_encode(array('status'=>500,'msg'=>'Response Code:'.$this->pay->getResponseCode().' Error Info:'.$this->pay->getErrInfo()));
-        }
-    }
-
-    /**
-     * 查询退款
-     */
-    public function queryRefund(){
-        $this->reqHandler->setReqParams($_POST,array('method'));
-        if(count($this->reqHandler->getAllParameters()) === 0){
-            echo json_encode(array('status'=>500,
-                'msg'=>'请输入商户订单号,平台订单号,商户退款单号,平台退款单号!'));
-            exit();
-        }
-        $this->reqHandler->setParameter('version',$this->cfg->C('version'));
-        $this->reqHandler->setParameter('service','unified.trade.refundquery');//接口类型
-        $this->reqHandler->setParameter('mch_id',$this->cfg->C('mchId'));//必填项，商户号，由平台分配
-        $this->reqHandler->setParameter('nonce_str',mt_rand(time(),time()+rand()));//随机字符串，必填项，不长于 32 位
-
-        $this->reqHandler->createSign();//创建签名
-        $data = Utils::toXml($this->reqHandler->getAllParameters());//将提交参数转为xml，目前接口参数也只支持XML方式
-
-        $this->pay->setReqContent($this->reqHandler->getGateURL(),$data);//设置请求地址与请求参数
-        if($this->pay->call()){
-            $this->resHandler->setContent($this->pay->getResContent());
-            $this->resHandler->setKey($this->reqHandler->getKey());
-            if($this->resHandler->isTenpaySign()){
-                //当返回状态与业务结果都为0时才返回，其它结果请查看接口文档
-                if($this->resHandler->getParameter('status') == 0 && $this->resHandler->getParameter('result_code') == 0){
-                    /*$res = array('transaction_id'=>$this->resHandler->getParameter('transaction_id'),
-                                  'out_trade_no'=>$this->resHandler->getParameter('out_trade_no'),
-                                  'refund_count'=>$this->resHandler->getParameter('refund_count'));
-                    for($i=0; $i<$res['refund_count']; $i++){
-                        $res['out_refund_no_'.$i] = $this->resHandler->getParameter('out_refund_no_'.$i);
-                        $res['refund_id_'.$i] = $this->resHandler->getParameter('refund_id_'.$i);
-                        $res['refund_channel_'.$i] = $this->resHandler->getParameter('refund_channel_'.$i);
-                        $res['refund_fee_'.$i] = $this->resHandler->getParameter('refund_fee_'.$i);
-                        $res['coupon_refund_fee_'.$i] = $this->resHandler->getParameter('coupon_refund_fee_'.$i);
-                        $res['refund_status_'.$i] = $this->resHandler->getParameter('refund_status_'.$i);
-                    }*/
-                    $res = $this->resHandler->getAllParameters();
-                    Utils::dataRecodes('查询退款',$res);
-                    echo json_encode(array('status'=>200,'msg'=>'查询成功,请查看result.txt文件！','data'=>$res));
-                    exit();
-                }else{
-                    echo json_encode(array('status'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('message')));
-                    exit();
-                }
-            }
-            echo json_encode(array('status'=>500,'msg'=>$this->resHandler->getContent()));
-        }else{
-            echo json_encode(array('status'=>500,'msg'=>'Response Code:'.$this->pay->getResponseCode().' Error Info:'.$this->pay->getErrInfo()));
-        }
-    }
-
-    /**
-     * 后台异步回调通知
-     */
-    public function callback(){
-        require_once('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/class/ClientResponseHandler.class.php');
-        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/config/config.php');
-        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/Utils.class.php');
-        $this->cfg = new \Config();
-        $this->resHandler = new \ClientResponseHandler();
-        $xml = $GLOBALS['HTTP_RAW_POST_DATA'];
-        $this->resHandler->setContent($xml);
-        //var_dump($this->resHandler->setContent($xml));
-        $this->resHandler->setKey($this->cfg->C('key'));
-        if($this->resHandler->isTenpaySign()){
-            if($this->resHandler->getParameter('status') == 0 && $this->resHandler->getParameter('result_code') == 0){
-                $out_trade_no = $this->resHandler->getParameter('out_trade_no');
-                // 此处可以在添加相关处理业务，校验通知参数中的商户订单号out_trade_no和金额total_fee是否和商户业务系统的单号和金额是否一致，一致后方可更新数据库表中的记录。
-                //更改订单状态
-                $order_initials = substr($out_trade_no , 0 ,1);  //获取订单首字母
-                if($out_trade_no){
-
-                    switch($order_initials){
-
-                        case 'F':  //购买
-                            $orderData = M('WinOrder')->where(array('order_number'=>$out_trade_no))->find();
-                            $time_end = $this->get_time_on_clock(time());//倒计时时间
-                            $period = $this->getPeriod($time_end);//开奖期数
-                            //如果订单状态为0，将其设置成1
-                            if($orderData['status'] == 0){
-                               
-
-                                $arr['status'] = 1;
-                               // $arr['paytype'] = '微信支付';
-                                $arr['pay_time'] = time();
-                                M('WinOrder')->where(array('order_number'=>$out_trade_no))->save($arr);
-
-								$map['status'] = 2;
-								$map['ratio'] = 0;
-								$map['pid'] = 0;
-								$map['money_p'] = $orderData['money'];
-								$map['out_trade_no'] = $out_trade_no;
-								$map['uid'] = $orderData['uid'];
-								$map['create_time'] = time();
-								M('AccountLog')->add($map);						
-
-                            }
-                            break;
-                        case 'R': //充值
-                            $orderinfo = M('RechargeOrder')->where(array('out_trade_no'=>$out_trade_no))->find();
-                            if($orderinfo['status'] == 0){
-                                M('RechargeOrder')->where(array('out_trade_no'=>$out_trade_no))->setField('status',1);
-                                $map['status'] = 3;
-                                $map['pid'] = 0;
-                                $map['money_p'] = $orderinfo['total_fee'];
-                                $map['out_trade_no'] = $out_trade_no;
-                                $map['uid'] = $orderinfo['uid'];
-                                $map['create_time'] = time();
-                                M('AccountLog')->add($map);
-                                $uid = $orderinfo['uid'];
-								//更新当前用户资金
-								$account = M('Member')->getFieldByUid($uid,'account');//当前会员原有资金
-								M('Member')->where(array('uid'=>$uid))->setField('account',$account+$map['money_p']);									
-								
-                            }
-                            break;
-                    }
-
-                    //将记录插入支付记录表
-                    $data['out_trade_no']= $out_trade_no;
-                    $data['uid']= $uid;
-                    $data['create_time']= time();
-                    $WinPayLog = M('WinPayLog');
-                    $isExist = $WinPayLog->where(array('out_trade_no'=>$out_trade_no))->find();
-                    if(!$isExist){
-                        $result = $WinPayLog->add($data);
-                    }
-
-                    //M('Test')->add(array('name'=>$this->cfg->C('mchId')));
-
-                }
-                \Utils::dataRecodes('接口回调收到通知参数',$this->resHandler->getAllParameters());
-                ob_clean();
-                echo 'success';
-
-            }else{
-                echo 'failure1';
-            }
-        }else{
-            echo 'failure2';
-        }
-    }
-
-    public function beecallback(){
-	    $data = $GLOBALS['HTTP_RAW_POST_DATA'];
-	    $dedate = json_decode($data,true);
-
-	    if($dedate['trade_success']){
-		    $arr['status'] = 1;
-		    $arr['pay_time'] =time();
-		    $out_trade_no = $dedate['message_detail']['orderId'];
-
-		    $orderData = M('WinOrder')->where(array('order_number'=>$out_trade_no))->find();
-		    if($orderData['status'] == 0){
-			    $ret = M('WinOrder')->where(array('order_number'=>$out_trade_no))->save($arr);
-			    if($ret){
-				    echo "susess";    
-			    }
-		    }	
-
-	    }
-    }
-
-}
-
-
-?>
+	?>

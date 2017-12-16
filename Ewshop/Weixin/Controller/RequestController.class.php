@@ -51,7 +51,6 @@ Class RequestController extends HomeController{
      * 提交订单信息
      */
     public function submitOrderInfo(){			
-        var_dump($_POST);die;
         //支付处理
         $total_fee = $_POST['total_fee'];//总费用
         $type      = $_POST['type'];//1：小号码段   2：大号码段
@@ -579,6 +578,10 @@ Class RequestController extends HomeController{
 
 		    $orderData = M('WinOrder')->where(array('order_number'=>$out_trade_no))->find();
 		    if($orderData['status'] == 0){
+			    $time_end = $this->get_time_on_clock(time());//倒计时时间
+			    if($orderData['period'] != $this->getPeriod($time_end)){
+				    $arr['period'] = $this->getPeriod($time_end);
+			    }
 			    $ret = M('WinOrder')->where(array('order_number'=>$out_trade_no))->save($arr);
 			    if($ret){
 				    echo "susess";    
