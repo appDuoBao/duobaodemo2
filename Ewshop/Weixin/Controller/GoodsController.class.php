@@ -90,13 +90,13 @@ class GoodsController extends HomeController {
         $period_last = M('WinCode')->where("code <> 0")->order("id desc")->find();
 //        dump($period_last);
         if($data['goodsDetail']['price'] == 1){//号码(56除余+1）
-            $data['period_last_type'] = ($period_last['code_56_type'] == 1) ? '小' : '大'; //上期大/小
+            $data['period_last_type'] = ($period_last['code_56_type'] == 1) ? '单' : '双'; //上期大/小
             $data['code_word1'] = '1-28';
             $data['code_word2'] = '29-56';
             $data['price_half'] = 28;//半价
             $data['price_half_1'] = 28;//半价
         }elseif($data['goodsDetail']['price'] == 2){//号码(110除余+1)
-            $data['period_last_type'] = ($period_last['code_110_type'] == 1) ? '小' : '大'; //上期大/小
+            $data['period_last_type'] = ($period_last['code_110_type'] == 1) ? '单' : '双'; //上期大/小
             $data['code_word1'] = '1-55';
             $data['code_word2'] = '56-110';
             $data['price_half'] = 55;//半价
@@ -585,7 +585,7 @@ class GoodsController extends HomeController {
         empty($id) ? $this->error('操作异常') : '';
         //订单信息
         $data['order_detail'] = M('WinOrder')->where(array('id'=>$id))->find();
-        $data['order_detail']['type_val'] = ($data['order_detail']['type'] == 1) ? '小':'大';
+        $data['order_detail']['type_val'] = ($data['order_detail']['type'] == 1) ? '单':'双';
         $data['goodsDetail']  = D('Document')->getDetail($data['order_detail']['goods_id']);
 
         //当前用户信息
@@ -600,10 +600,10 @@ class GoodsController extends HomeController {
         $period_last = M('WinCode')->where("code <> 0")->order("id desc")->find();
 //        dump($period_last);
         if($data['goodsDetail']['price'] == 1){//号码(56除余+1）
-            $data['period_last_type'] = ($period_last['code_56_type'] == 1) ? '小' : '大'; //上期大/小
+            $data['period_last_type'] = ($period_last['code_56_type'] == 1) ? '单' : '双'; //上期大/小
 
         }elseif($data['goodsDetail']['price'] == 2){//号码(110除余+1)
-            $data['period_last_type'] = ($period_last['code_110_type'] == 1) ? '小' : '大'; //上期大/小
+            $data['period_last_type'] = ($period_last['code_110_type'] == 1) ? '单' : '双'; //上期大/小
 
         }
 //
@@ -618,7 +618,7 @@ class GoodsController extends HomeController {
 
 
         //PK对象
-        $data['info_pk']['type_val'] = ($data['order_detail']['type'] == 1) ? '大':'小';
+        $data['info_pk']['type_val'] = ($data['order_detail']['type'] == 1) ? '单':'双';
         $is_order = M('WinOrderTemp')->where("order_id = {$id}")->find();//是否存在pk对象
 
         if($data['order_detail']['num'] < 3){

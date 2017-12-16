@@ -43,8 +43,8 @@ class OpenprizeController extends HomeController {
         foreach($code_list as $key => $val){
             $code_list[$key]['code'] = chunk_split($val['code'],1,' ');
             $code_list[$key]['create_time'] = explode(' ',str_replace('/', '-',$val['create_time']));
-            $code_list[$key]['code_56_type'] = ($val['code_56_type'] == 1) ? '小' : '大';
-            $code_list[$key]['code_110_type'] = ($val['code_110_type'] == 1) ? '小' : '大';
+            $code_list[$key]['code_56_type'] = ($val['code_56_type'] == 1) ? '单' : '双';
+            $code_list[$key]['code_110_type'] = ($val['code_110_type'] == 1) ? '单' : '双';
 
         }
 //        dump($code_list);

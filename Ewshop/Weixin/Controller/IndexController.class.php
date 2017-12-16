@@ -71,7 +71,7 @@ class IndexController extends HomeController {
         $cmap['id'] = array('in',$codeid); 
         $codarr = M('WinOrder')->where($cmap)->getField('id,type,period');//var_dump($codeid);exit;
         foreach ($pk_list as $k=>$v) {
-            $pk_list[$k]['codeid'] = ($codarr[$v['order_id']]['type'] ==1) ? '小' : '大';
+            $pk_list[$k]['codeid'] = ($codarr[$v['order_id']]['type'] ==1) ? '单' : '双';
         } 
        
        // var_dump($pk_list);exit;
@@ -88,7 +88,7 @@ class IndexController extends HomeController {
 			$buy_list[$i]['buy_time'] = $val1['create_time'];
 			$buy_list[$i]['buy_num'] = $val1['num'];
 			$buy_list[$i]['period'] = $val1['period'];
-			$buy_list[$i]['type'] = ($val1['type'] == 1) ? '小' : '大';
+			$buy_list[$i]['type'] = ($val1['type'] == 1) ? '单' : '双';
 			//if($val1['type'] ==1){
                 $buy_list[$i]['userinfo'] = M('Member')->field('uid,headimgurl,nickname')->where("uid = {$val1['uid']}")->find();
             // }elseif($val1['type']==2){
@@ -110,8 +110,8 @@ class IndexController extends HomeController {
         foreach($code_list as $key => $val){
             $code_list[$key]['code'] = chunk_split($val['code'],1,' ');
             $code_list[$key]['create_time'] = explode(' ',$val['create_time']);
-            $code_list[$key]['code_56_type'] = ($val['code_56_type'] == 1) ? '小' : '大';
-            $code_list[$key]['code_110_type'] = ($val['code_110_type'] == 1) ? '小' : '大';
+            $code_list[$key]['code_56_type'] = ($val['code_56_type'] == 1) ? '单' : '双';
+            $code_list[$key]['code_110_type'] = ($val['code_110_type'] == 1) ? '单' : '双';
 
         }
 //        dump($code_list);
@@ -233,7 +233,7 @@ class IndexController extends HomeController {
                     $buy_list[$i]['buy_time'] = $val1['create_time'];
                     $buy_list[$i]['buy_num'] = $val1['num'];
                     $buy_list[$i]['period'] = $val1['period'];
-                    $buy_list[$i]['type'] = ($val1['type'] == 1) ? '小' : '大';
+                    $buy_list[$i]['type'] = ($val1['type'] == 1) ? '单' : '双';
                     //if($val1['type'] ==1){
                     $usermsg=M('Member')->field('uid,headimgurl,nickname')->where("uid = {$val1['uid']}")->find();
                         $buy_list[$i]['userinfo'] = empty($usermsg) ? array() : $usermsg;
@@ -269,7 +269,7 @@ class IndexController extends HomeController {
                 $cmap['id'] = array('in',$codeid); 
                 $codarr = M('WinOrder')->where($cmap)->getField('id,type,period');//var_dump($codeid);exit;
                 foreach ($pk_list as $k=>$v) {
-                    $pk_list[$k]['codeid'] = ($codarr[$v['order_id']]['type'] ==1) ? '小' : '大';
+                    $pk_list[$k]['codeid'] = ($codarr[$v['order_id']]['type'] ==1) ? '单' : '双';
                 } 
                
                // var_dump($pk_list);exit;

@@ -112,9 +112,9 @@ class MyController extends HomeController {
         $order_doing_num = 0 ;
         foreach($list as $key => $val){
             if($val['type'] == 1){
-                $list[$key]['type'] = '小';
+                $list[$key]['type'] = '单';
             }elseif($val['type'] == 2){
-                $list[$key]['type'] = '大';
+                $list[$key]['type'] = '双';
             }else{
                 $list[$key]['type'] = '';
             }
@@ -228,9 +228,9 @@ class MyController extends HomeController {
 //        dump($info_pk);die;
         $info['goods_detail'] = D('Document')->getDetail($info['goods_id']);
         if($info['type'] == 1){
-            $info['type_val'] = '小';
+            $info['type_val'] = '单';
         }else{
-            $info['type_val'] = '大';
+            $info['type_val'] = '双';
         }
         $info['win_code'] = M('WinCode')->where(array('period'=>$info['period'],'create_time'=>$info['lottery_time']))->find();
         $info['is_win'] = M('WinExchange')->where(array('order_id'=>$id))->find();//是否中奖
@@ -241,10 +241,10 @@ class MyController extends HomeController {
             $info['win_code']['code'] = chunk_split($info['win_code']['code'],1,' ');//开奖结果
             if($info['goods_type'] == 1){
                 $info['win_code_val'] = $info['win_code']['code_56'];   //获胜号码
-                $info['win_code_val_type'] = ($info['win_code']['code_56_type'] == 1) ? '小' : '大';   //获胜号码
+                $info['win_code_val_type'] = ($info['win_code']['code_56_type'] == 1) ? '单' : '双';   //获胜号码
             }else{
                 $info['win_code_val'] = $info['win_code']['code_110'];   //获胜号码
-                $info['win_code_val_type'] = ($info['win_code']['code_110_type'] == 1) ? '小' : '大';
+                $info['win_code_val_type'] = ($info['win_code']['code_110_type'] == 1) ? '单' : '双';
             }
         }else{//未开奖
             $info['win_code']['code'] = '待开奖';//开奖结果
@@ -269,9 +269,9 @@ class MyController extends HomeController {
             $noExchangeList[$k]['order'] = M('WinOrder')->where(array('id'=>$v['order_id'],'status'=>1))->find();
             $noExchangeList[$k]['order']['goods_detail'] = M('Document')->field('title,cover_id,price')->where(array('id'=>$noExchangeList[$k]['goods_id']))->find();
             if($noExchangeList[$k]['order']['type'] == 1){
-                $noExchangeList[$k]['type'] = '小';
+                $noExchangeList[$k]['type'] = '单';
             }elseif($noExchangeList[$k]['order']['type'] == 2){
-                $noExchangeList[$k]['type'] = '大';
+                $noExchangeList[$k]['type'] = '双';
             }else{
                 $noExchangeList[$k]['type'] = '';
             }
@@ -298,9 +298,9 @@ class MyController extends HomeController {
             $yesExchangeList[$k]['order'] = M('WinOrder')->where(array('id'=>$v['order_id'],'status'=>1))->find();
             $yesExchangeList[$k]['order']['goods_detail'] = M('Document')->field('title,cover_id,price')->where(array('id'=>$yesExchangeList[$k]['order']['goods_id']))->find();
             if($yesExchangeList[$k]['order']['type'] == 1){
-                $yesExchangeList[$k]['type'] = '小';
+                $yesExchangeList[$k]['type'] = '单';
             }elseif($yesExchangeList[$k]['order']['type'] == 2){
-                $yesExchangeList[$k]['type'] = '大';
+                $yesExchangeList[$k]['type'] = '双';
             }else{
                 $yesExchangeList[$k]['type'] = '';
             }
