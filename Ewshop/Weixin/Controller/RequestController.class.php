@@ -316,7 +316,10 @@ Class RequestController extends HomeController{
         $data['out_trade_no'] = $out_trade_no;
         $openid = $_SESSION['openid'];
         //$data['ip_info'] = $this->getIpInfo();//用户的ip信息
-
+	$uid = D('Member')->uid();
+        if(!$openid){
+             $openid = M('Member')->where(array('uid'=>$uid))->getField('openid');
+        }
 
         if($orderid = M('RechargeOrder')->add($data)){
             $arr['method'] = 'submitOrderInfo';
