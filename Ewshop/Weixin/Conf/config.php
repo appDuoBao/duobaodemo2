@@ -195,7 +195,7 @@ return array (
         'appid' =>'wxc624a047e450f940',
         'secret'=>'01efa246da38ce6e918e2afa5c9e98dc',
     ),
-
+    'SHOW_PAGE_TRACE' =>false, 
 );
 
 

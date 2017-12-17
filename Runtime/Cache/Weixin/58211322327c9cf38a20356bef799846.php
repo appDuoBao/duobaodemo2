@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -6,13 +6,13 @@
     <meta name="renderer" content="webkit">
     <meta charset="utf-8">
     <title>支付订单</title>
-    <link rel="stylesheet" href="__CSS__/base.css">
-    <link rel="stylesheet" href="__CSS__/pay_order.css">
-    <script src="__JS__/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="/Public/Weixin/css/base.css">
+    <link rel="stylesheet" href="/Public/Weixin/css/pay_order.css">
+    <script src="/Public/Weixin/js/jquery-1.9.1.min.js"></script>
     <script src="../../ap.js"></script> 
 </head>
 <body>
-    <div class="pay_title">{$goodsmsg[0].title}</div>
+    <div class="pay_title"><?php echo ($goodsmsg[0]["title"]); ?></div>
     <div class="pay_number">
         <button class="pay_choose lower">-</button>
         <input class="pay_center" type="number" placeholder="" value="1" onkeyup="check_num(this.value);">
@@ -30,14 +30,14 @@
     </div>
     <div class="more_buy">单笔最多可购买100单</div>
     <div class="line"></div>
-    <div class="all_need">总需：<span id="pay_num">{$pay_half}</span>微币</div>
+    <div class="all_need">总需：<span id="pay_num"><?php echo ($pay_half); ?></span>微币</div>
     <div class="menu_personal" style="margin-top:18px;">
-        <span class="menu_img"><img src="__IMG__/pay_wei.png" alt=""></span>
+        <span class="menu_img"><img src="/Public/Weixin/images/pay_wei.png" alt=""></span>
         <span class="menu_font">微信支付</span>
         <span class="menu_right"><input type="radio" class="cbtest" name="pay" value="1" /></span>
     </div>
     <div class="menu_personal" style="margin-top:5px;">
-        <span class="menu_img"><img src="__IMG__/pay_zhi.png" alt=""></span>
+        <span class="menu_img"><img src="/Public/Weixin/images/pay_zhi.png" alt=""></span>
         <span class="menu_font">支付宝支付</span>
         <span class="menu_right">
             <input type="radio" class="cbtest" name="pay" value="2" />
@@ -53,7 +53,7 @@
         if(num>1)
             num--;
         $(".pay_center").val(num);
-        $("#pay_num").html(num*{$pay_half});
+        $("#pay_num").html(num*<?php echo ($pay_half); ?>);
     });
     //点+ 增加数量和钱数
     $(".uper").click(function(){
@@ -61,7 +61,7 @@
         if(num<100)
             num++;
         $(".pay_center").val(num);
-        $("#pay_num").html(num*{$pay_half});
+        $("#pay_num").html(num*<?php echo ($pay_half); ?>);
     });
     $(".pay_center").blur(function(){
         if($(this).val()>100){
@@ -76,11 +76,11 @@
             alert("最多只可购买100单");
             $(".pay_center").val(100);
             v=100;
-            $("#pay_num").html(parseInt(v)*parseInt({$pay_half}));
+            $("#pay_num").html(parseInt(v)*parseInt(<?php echo ($pay_half); ?>));
             return false;
         }else{
 
-            $("#pay_num").html(parseInt(v)*parseInt({$pay_half}));
+            $("#pay_num").html(parseInt(v)*parseInt(<?php echo ($pay_half); ?>));
             return true;
         }
     }
@@ -88,7 +88,7 @@
     $(".number_content").each(function(i){
         $(this).click(function(){
             $(".pay_center").val($(this).html());
-            $("#pay_num").html($(this).html()*{$pay_half});
+            $("#pay_num").html($(this).html()*<?php echo ($pay_half); ?>);
         });
     });
     //确认支付
@@ -98,7 +98,7 @@
         }
     });
      function callpay(ptype){
-          var myunix = "{$data.myunix}";
+          var myunix = "<?php echo ($data["myunix"]); ?>";
           var myjsunix = nowunix = Date.parse( new Date())/1000;
 	 //如果微币少于钱数，提示选择支付方式
          if((myunix - myjsunix) < 30){
@@ -106,12 +106,12 @@
             return false;
          }
         var total_fee = $('.pay_num').html();
-        var type =  "{$type}";
+        var type =  "<?php echo ($type); ?>";
         var num = $(".pay_center").val();
-        var goods_type = '{$goodsmsg[0].price}';
+        var goods_type = '<?php echo ($goodsmsg[0]["price"]); ?>';
         var fromtype = ptype;
         var lottery_time = $(".fnTimeCountDown").data('end');
-        var goods_id = '{$goodsmsg[0].id}';
+        var goods_id = '<?php echo ($goodsmsg[0]["id"]); ?>';
         if(total_fee == '' || type==''  || num =='' || lottery_time =='' || goods_id ==''){
             alert('操作异常,请选择购买数量！');
             return false;
@@ -119,7 +119,7 @@
         $.ajax({
             type: 'post', //传送的方式,get/post
             //url: './index.php?s=Weixin/Request/submitOrderInfo',
-            url:"{:U('Request/submitOrderInfo')}",
+            url:"<?php echo U('Request/submitOrderInfo');?>",
             data: {total_fee:total_fee,type:type,num:num,goods_type:goods_type,lottery_time:lottery_time,goods_id:goods_id,ptype:ptype,buyer_id:'',buyer_logon_id:''},
             dataType: "json",
             success: function (res) {

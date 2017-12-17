@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=750, target-densitydpi=284, maximum-scale=1, user-scalable=no">
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" href="__CSS__/newdetail.css">
-    <link rel="stylesheet" href="__CSS__/base.css">
-    <script src="__JS__/qrcode.js"></script>
+    <link rel="stylesheet" href="/Public/Weixin/css/newdetail.css">
+    <link rel="stylesheet" href="/Public/Weixin/css/base.css">
+    <script src="/Public/Weixin/js/qrcode.js"></script>
     <script src="../../ap.js"></script> 
 </head>
 <body>
@@ -16,20 +16,18 @@
 </div>
 <div class="mainall">
     <div class="bg">
-        <if condition="$data['goodsDetail']['pics'] neq ''">
-            <img src="__ROOT__{$data['goodsDetail']['pics'][0]['path']}"/>
-            <else />
-            <img src="{$data['goodsDetail']['cover_img']}"/>
-        </if>
+        <?php if($data['goodsDetail']['pics'] != ''): ?><img src="<?php echo ($data['goodsDetail']['pics'][0]['path']); ?>"/>
+            <?php else: ?>
+            <img src="<?php echo ($data['goodsDetail']['cover_img']); ?>"/><?php endif; ?>
         <div class="bgp">
-            <p class="bgp1">{$data.goodsDetail.title|mb_substr=0,10}</p>
-            <p class="bgp2">上期：{$data.period_last_type}</p>
-            <p class="bgp3 fnTimeCountDown" data-end="{$data.time_end}" >
+            <p class="bgp1"><?php echo (mb_substr($data["goodsDetail"]["title"],0,10)); ?></p>
+            <p class="bgp2">上期：<?php echo ($data["period_last_type"]); ?></p>
+            <p class="bgp3 fnTimeCountDown" data-end="<?php echo ($data["time_end"]); ?>" >
                 开战倒计时： <span class="hour">00</span>:<span class="mini">00</span>:<span class="sec">00</span>
                 <!--:<span class="hm">000</span>-->
 
             </p>
-            <p class="fnTimeCountDown1" data-end="{$data.time_end}" style="display: none">
+            <p class="fnTimeCountDown1" data-end="<?php echo ($data["time_end"]); ?>" style="display: none">
                 开战倒计时： <span class="mini">00</span>:<span class="sec">00</span>
                 :<span class="hm">000</span>
             </p>
@@ -38,14 +36,14 @@
     <div class="con">
         <div class="con1">
             <div class="con1l">
-                <img src="{$data.memberData.headimgurl}" alt="">
+                <img src="<?php echo ($data["memberData"]["headimgurl"]); ?>" alt="">
             </div>
             <div class="con1m">
-                <p class="conp1">{$data.memberData.nickname|mb_substr=0,9}</p>
-                <p class="conp2">[{$data.memberData.ip}]</p>
+                <p class="conp1"><?php echo (mb_substr($data["memberData"]["nickname"],0,9)); ?></p>
+                <p class="conp2">[<?php echo ($data["memberData"]["ip"]); ?>]</p>
             </div>
             <div class="con1r">
-                第{$data.period_now}期
+                第<?php echo ($data["period_now"]); ?>期
             </div>
         </div>
         <div class="con2">
@@ -61,79 +59,75 @@
         </div>
         <div class="tablis">
             <ul>
-                <volist name="data.pk_list" id="vo">
-                    <li>
-                        <div class="li1"><img src="{$vo.userinfo.headimgurl}" alt=""></div>
+                <?php if(is_array($data["pk_list"])): $i = 0; $__LIST__ = $data["pk_list"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                        <div class="li1"><img src="<?php echo ($vo["userinfo"]["headimgurl"]); ?>" alt=""></div>
                         <div class="li2">
                             <p>
-                                <span class="li2l">{$vo.userinfo.nickname|mb_substr=0,9}</span>
-                                <span class="li2r"js>{$vo.buy_time|date='Y/m/d H:i:s',###}</span>
+                                <span class="li2l"><?php echo (mb_substr($vo["userinfo"]["nickname"],0,9)); ?></span>
+                                <span class="li2r"js><?php echo (date('Y/m/d H:i:s',$vo["buy_time"])); ?></span>
                             </p>
 
-                            <!--<p>刚刚参与<span>{$vo.num}</span> 单,-&#45;&#45;{$vo.ip_info}</p>-->
-                            <p class="title">{$data.goodsDetail.title}  &nbsp;中奖  <span>{$vo.buy_num}</span>  单</p>
+                            <!--<p>刚刚参与<span><?php echo ($vo["num"]); ?></span> 单,-&#45;&#45;<?php echo ($vo["ip_info"]); ?></p>-->
+                            <p class="title"><?php echo ($data["goodsDetail"]["title"]); ?>  &nbsp;中奖  <span><?php echo ($vo["buy_num"]); ?></span>  单</p>
                         </div>
-                    </li>
-                </volist>
+                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
             <!--<ul class="tablis-rule">-->
             <ul>
             	<!--
                 <li>
                     <p class="tr-p">本期号码÷本期商品所消耗的微币数量所得余数加上1</p>
-                    <img class="tr-img" src="__IMG__/new_rule_way.png"/>
+                    <img class="tr-img" src="/Public/Weixin/images/new_rule_way.png"/>
                 </li>
                 -->
-                <volist name="data.buy_list" id="vo1">
-                    <li>
-                        <div class="li1"><img src="{$vo1.userinfo.headimgurl}" alt=""></div>
+                <?php if(is_array($data["buy_list"])): $i = 0; $__LIST__ = $data["buy_list"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;?><li>
+                        <div class="li1"><img src="<?php echo ($vo1["userinfo"]["headimgurl"]); ?>" alt=""></div>
                         <div class="li2">
                             <p>
-                                <span class="li2l">{$vo1.userinfo.nickname}</span>
-                                <span class="li2r"js>{$vo1.buy_time|date='Y/m/d H:i:s',###}</span>
+                                <span class="li2l"><?php echo ($vo1["userinfo"]["nickname"]); ?></span>
+                                <span class="li2r"js><?php echo (date('Y/m/d H:i:s',$vo1["buy_time"])); ?></span>
                             </p>
-                            <p class="title">{$data.goodsDetail.title}  购买<span>{$vo1.buy_num}</span>单 </p>
+                            <p class="title"><?php echo ($data["goodsDetail"]["title"]); ?>  购买<span><?php echo ($vo1["buy_num"]); ?></span>单 </p>
                         </div>
-                    </li>
-                </volist>
+                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
     </div>
 
     <div class="menu_fixed">
         <div class="bottom_menu" id="main">
-            <span class="menu_bottom_img"><img src="__IMG__/icon_red.png" alt=""></span>
+            <span class="menu_bottom_img"><img src="/Public/Weixin/images/icon_red.png" alt=""></span>
             <span class="menu_bottom_font font-red">首页</span>
         </div>
         <div class="bottom_menu" id="flow">
-            <span class="menu_bottom_img"><img src="__IMG__/icon-flow.png" alt=""></span>
+            <span class="menu_bottom_img"><img src="/Public/Weixin/images/icon-flow.png" alt=""></span>
             <span class="menu_bottom_font">走势图</span>
         </div>
         <div class="bottom_menu" id="order">
-            <span class="menu_bottom_img"><img src="__IMG__/icon-order.png" alt=""></span>
+            <span class="menu_bottom_img"><img src="/Public/Weixin/images/icon-order.png" alt=""></span>
             <span class="menu_bottom_font">排行榜</span>
         </div>
         <div class="bottom_menu" id="personal">
-            <span class="menu_bottom_img"><img src="__IMG__/icon-person.png" alt=""></span>
+            <span class="menu_bottom_img"><img src="/Public/Weixin/images/icon-person.png" alt=""></span>
             <span class="menu_bottom_font ">个人中心</span>
         </div>
     </div>
-<!--<script type="text/javascript" src="__JS__/jquery-1.11.1.min.js"></script>-->
-<script type="text/javascript" src="__JS__/zepto.min.js"></script>
-<script type="text/javascript" src="__JS__/countdown.js"></script>
+<!--<script type="text/javascript" src="/Public/Weixin/js/jquery-1.11.1.min.js"></script>-->
+<script type="text/javascript" src="/Public/Weixin/js/zepto.min.js"></script>
+<script type="text/javascript" src="/Public/Weixin/js/countdown.js"></script>
 
 <script type="text/javascript">
      $("#main").click(function(){
-        window.location.href='{:U('Index/index')}';
+        window.location.href='<?php echo U('Index/index');?>';
     });
     $("#flow").click(function(){
-        window.location.href='{:U('Openprize/index')}';
+        window.location.href='<?php echo U('Openprize/index');?>';
     });
     $("#order").click(function(){
-        window.location.href='{:U('Index/topsort?t=to')}';
+        window.location.href='<?php echo U('Index/topsort?t=to');?>';
     });
     $("#personal").click(function(){
-        window.location.href='{:U('My/index')}';
+        window.location.href='<?php echo U('My/index');?>';
     });
     $(function(){
         $('.tabtitle p').tap(function(){
@@ -156,11 +150,11 @@
                 $(".btn2").val(max);
                 alert('单次最多可购买'+max+'单');
 
-                $(".sumn").html($(".btn2").val()*{$data.price_half});
+                $(".sumn").html($(".btn2").val()*<?php echo ($data["price_half"]); ?>);
                 return false;
             }
 
-            $(".sumn").html($(".btn2").val()*{$data.price_half});
+            $(".sumn").html($(".btn2").val()*<?php echo ($data["price_half"]); ?>);
         }
         $(".btn1").tap(function(){
             var x=$(".btn2").val();
@@ -183,7 +177,7 @@
                 return false;
             }
             $(".btn2").val(x);
-            $(".sumn").html($(".btn2").val()*{$data.price_half});
+            $(".sumn").html($(".btn2").val()*<?php echo ($data["price_half"]); ?>);
         })
         $(".btn3").tap(function(){
             var x=$(".btn2").val();
@@ -201,12 +195,12 @@
                 return false;
             }
             $(".btn2").val(x);
-            $(".sumn").html($(".btn2").val()*{$data.price_half});
+            $(".sumn").html($(".btn2").val()*<?php echo ($data["price_half"]); ?>);
         })
         $(".number li").tap(function(){
             var n=$(this).html();
             $(".btn2").val(n);
-            $(".sumn").html($(".btn2").val()*{$data.price_half});
+            $(".sumn").html($(".btn2").val()*<?php echo ($data["price_half"]); ?>);
         })
     })
 
@@ -217,7 +211,7 @@
             alert('请等待开战时间');
             return false;
         }
-        window.location.href="{:U("Goods/payOrder")}/type/"+type+"/goods_id/{$data['goods_id']}";
+        window.location.href="<?php echo U("Goods/payOrder");?>/type/"+type+"/goods_id/<?php echo ($data['goods_id']); ?>";
 
         // if(type == 2){
         //     $('.cont').css('background','rgba(243,141,49,1)');
@@ -290,7 +284,7 @@
     //        var type = $('#pay_type').val();
     //        var num = $(".btn2").val();
     //        var lottery_time = $(".fnTimeCountDown").data('end');
-    //        var goods_id = {$data.goods_id};
+    //        var goods_id = <?php echo ($data["goods_id"]); ?>;
     //        if(total_fee == ''  || type =='' || num =='' || lottery_time =='' || goods_id ==''){
     //            alert('操作异常');
     //            return false;
@@ -318,7 +312,7 @@
     //        var num = $(".btn2").val();
     //        var goods_type = $('#goods_type').val();
     //        var lottery_time = $(".fnTimeCountDown").data('end');
-    //        var goods_id = '{:I("get.id")}';
+    //        var goods_id = '<?php echo I("get.id");?>';
     //        if(total_fee == ''  || type =='' || num =='' || lottery_time =='' || goods_id =='' || goods_type == ''){
     //            alert('操作异常');
     //            return false;
@@ -334,7 +328,7 @@
     //                if(data.jsApiParameters){
     //                    WeixinJSBridge.invoke('getBrandWCPayRequest',data.jsApiParameters,function(res){
     ////                        WeixinJSBridge.log(res.err_msg);
-    ////                        alert(JSON.stringify({$jsApiParameters}));
+    ////                        alert(JSON.stringify(<?php echo ($jsApiParameters); ?>));
     ////                        alert(res.err_desc+res.err_msg);
     //                        var out_trade_no = data.out_trade_no;
     //                        if(res.err_msg.indexOf('ok')>0){
@@ -362,7 +356,7 @@
     //    }
     //
       function callpay(ptype){
-          var myunix = "{$data.myunix}";
+          var myunix = "<?php echo ($data["myunix"]); ?>";
           var myjsunix = nowunix = Date.parse( new Date())/1000;
 
          if((myunix - myjsunix) < 30){
@@ -376,7 +370,7 @@
         var goods_type = $('#goods_type').val();
         var fromtype = ptype;
         var lottery_time = $(".fnTimeCountDown").data('end');
-        var goods_id = '{:I("get.id")}';
+        var goods_id = '<?php echo I("get.id");?>';
         var buyer_id = $("#buyer_id").val();
         if(total_fee == ''  || type =='' || num =='' || lottery_time =='' || goods_id ==''){
             alert('操作异常,请选择购买数量！');
@@ -459,7 +453,7 @@ function convertCanvasToImage(canvas){
     var flag = 0;
 
     function judge(){
-        var myunix = "{$data.myunix}";
+        var myunix = "<?php echo ($data["myunix"]); ?>";
         var myjsunix = nowunix = Date.parse( new Date())/1000;
 
         if((myunix - myjsunix) < 30){
@@ -468,7 +462,7 @@ function convertCanvasToImage(canvas){
         }
 
         var total_fee = $('.sumn').html();
-        var account = "{$price}";
+        var account = "<?php echo ($price); ?>";
         console.log('account'+account);
         console.log('total_fee'+total_fee);
 
@@ -486,7 +480,7 @@ function convertCanvasToImage(canvas){
                 var num = $(".btn2").val();
                 var goods_type = $('#goods_type').val();
                 var lottery_time = $(".fnTimeCountDown").data('end');
-                var goods_id = '{:I("get.id")}';
+                var goods_id = '<?php echo I("get.id");?>';
                 if(total_fee == ''  || type =='' || num =='' || lottery_time =='' || goods_id ==''){
                     alert('操作异常');
                     return false;
@@ -516,7 +510,7 @@ function convertCanvasToImage(canvas){
     }
 
     function getpay(){
-        var myunix = "{$data.myunix}";
+        var myunix = "<?php echo ($data["myunix"]); ?>";
         var myjsunix = nowunix = Date.parse( new Date())/1000;
 
         if((myunix - myjsunix) < 30){
@@ -544,7 +538,7 @@ function convertCanvasToImage(canvas){
         var type = $('#pay_type').val();
         var num = $(".btn2").val();
         var lottery_time = $(".fnTimeCountDown").data('end');
-        var goods_id = '{:I("get.id")}';
+        var goods_id = '<?php echo I("get.id");?>';
         if(total_fee == ''  || type =='' || num =='' || lottery_time =='' || goods_id ==''){
             alert('操作异常,请选择购买数量！');
             return false;

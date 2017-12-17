@@ -15,7 +15,7 @@ class GoodsController extends HomeController {
 
     public function _initialize(){
         parent::_initialize();
-        //$this->checkLogin();
+        $this->checkLogin();
 
 //        //获取code
 //        echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];

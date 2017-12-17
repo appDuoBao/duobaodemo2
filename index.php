@@ -12,7 +12,7 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP = 5.3!');
  * 项目正式部署后请设置为false
  */
 define('APP_DEBUG', true );
-define('BIND_MODULE','Weixin');
+//define('BIND_MODULE','Weixin');
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 //判断是否属微信
 if (strpos($user_agent, 'MicroMessenger')) {////跳转至微信分组

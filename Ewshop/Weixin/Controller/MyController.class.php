@@ -22,7 +22,7 @@ use User\Api\UserApi;
 class MyController extends HomeController {
     public function _initialize(){
         parent::_initialize();
-        //$this->checkLogin();
+        $this->checkLogin();
     }
 
 
@@ -471,47 +471,7 @@ class MyController extends HomeController {
      */
     public function account(){
         $uid = D('Member')->uid();
-        $map['uid'] = $uid;
-        $map['pid'] = $uid;
-        $map['_logic'] = 'OR';
-        $list = M('AccountLog')->where($map)->order('create_time DESC')->select();
-        //$price = 0;
-//        $ratio = M('Config')->getFieldByName('DISTRIBUTION_PTC','value');//获取分销开启状态
-        foreach($list as $key => $val){
-            $paytype = M('WinOrder')->where(array('order_number'=>$val['out_trade_no']))->getField('paytype');
-            switch($val['status']){
-                case '1':  //分销
-                    if($val['uid'] == $uid){
-                        $list[$key]['money']  = '-'.($val['money_p']/($val['ratio'] * 0.01));
-                        $list[$key]['remark']  = '微信购买';
-                        if($paytype == '个人账户'){
-                            $price = $price - ($val['money_p']/($val['ratio'] * 0.01));
-                            $list[$key]['remark']  = '个人账户购买';
-                        }
-                    }else{
-                        //$price = $price + $val['money_p'];
-                        $list[$key]['money']  = '+'.$val['money_p'];
-                        $list[$key]['remark']  = '分销';
-                    }
-                    break;
-                case '2': //购买
-                    $list[$key]['money']  = '-'.$val['money_p'];
-                    $list[$key]['remark']  = '微信购买';
-                    if($paytype == '个人账户'){
-                        //$price = $price - $val['money_p'];
-                        $list[$key]['remark']  = '个人账户购买';
-                    }
-                    break;
-                case '3': //充值
-                    //$price = $price + $val['money_p'];
-                    $list[$key]['money']  = '+'.$val['money_p'];
-                    $list[$key]['remark']  = '充值';
-                    break;
-            }
-
-        }
-		
-        $account = M('Member')->getFieldByUid($uid,'account');//当前会员原有资金
+        $account = M('Recharge')->where('uid='.$uid)->getField('totalnum');//当前会员原有资金
         $price = intval($account);      
         $this->assign('price',$price);
         $this->assign('id',$uid);

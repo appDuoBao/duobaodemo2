@@ -20,38 +20,24 @@ Class RequestController extends HomeController{
     private $mynum ;
 
     public function _initialize(){
-        $this->Request();
     }
 
     public function Request(){
     }
-
-//    public function index(){
-//        $method = isset($_REQUEST['method'])?$_REQUEST['method']:'submitOrderInfo';
-//        switch($method){
-//            case 'submitOrderInfo'://提交订单
-//                $this->submitOrderInfo();
-//                break;
-//            case 'queryOrder'://查询订单
-//                $this->queryOrder();
-//                break;
-//            case 'submitRefund'://提交退款
-//                $this->submitRefund();
-//                break;
-//            case 'queryRefund'://查询退款
-//                $this->queryRefund();
-//                break;
-//            case 'callback':
-//                $this->callback();
-//                break;
-//        
-//    }
+    private static function checklogin(){
+	    if (!is_login()) {
+		    $url = U('User/register');
+		    header("Location: {$url}");
+		    exit;
+	    }
+    }	
 
     /**
      * 提交订单信息
      */
     public function submitOrderInfo(){			
         //支付处理
+	self::checklogin();	
         $total_fee = $_POST['total_fee'];//总费用
         $type      = $_POST['type'];//1：小号码段   2：大号码段
         $num       = $_POST['num'];//购买数量
@@ -79,18 +65,21 @@ Class RequestController extends HomeController{
         // 1,获取openid
         $openid = $_SESSION['openid'];
         //$openid = 'oPlawwN7QTh_2Nqt8Gl7UmedjXaM';
-         $ptype = I("ptype");
-        
+	$uid = D('Member')->uid();
+	if(!$openid){
+	     $openid = M('Member')->where(array('uid'=>$uid))->getField('openid');
+	}
+        $ptype = I("ptype");
         if($ptype==2){
             if($openid){
             $uid = M('Member')->where(array('openid'=>$openid))->getField('uid');
-            $data['paytype'] = '微信';
+            $data['paytype'] = '支付宝';
            //商户订单号
             }else{
                //  die('openid不能为空!');
             }
         }else{
-              $data['paytype'] = '支付宝';   
+              $data['paytype'] = '微信';   
         }
         $out_trade_no = 'FD'.date('YmjHis').sprintf("%07d", $uid).$type.rand(1000,9999);
         //创建订单
@@ -168,7 +157,7 @@ Class RequestController extends HomeController{
 	    $ret = D('Recharge')->where('uid = '.$uid)->save($data);	
 	    if($ret){
 		$ret = D('WinOrder')->where('id = '.$orderid)->save(array('status'=>1,'paytype'=>'充值'));
-	        if($ret) return array('ret'=>100,'msg'=>'ok','data'=>'s')
+	        if($ret) return array('ret'=>100,'msg'=>'ok','data'=>'s');
 	     }
 	}
 	return array('ret'=>1,'msg'=>'error','data'=>'select');
@@ -258,30 +247,30 @@ Class RequestController extends HomeController{
         $data = array();
         $data["timestamp"] =time();
         //total_fee(int 类型) 单位分
-        $data["total_fee"] = $arr['total_fee'];
+        $data["total_fee"] =1; $arr['total_fee'];
         $data["bill_no"] = $orderid;
         //title UTF8编码格式，32个字节内，最长支持16个汉字
         $data["title"] = '支付';
         //渠道类型:ALI_WEB 或 ALI_QRCODE 或 UN_WEB或JD_WAP或JD_WEB, BC_GATEWAY为京东、BC_WX_WAP、BC_ALI_WEB渠道时为必填, BC_ALI_WAP不支持此参数
         $data["return_url"] = "http://duobao.akng.net/";
         $data["optional"] = (object)array("order"=>$orderid);
-	if($type == 1){
-         $APP_ID = 'f561d848-bb6a-4958-8eb6-21ed37f41a13';
-         $APP_SECRET = '96a3aa41-5ef5-42e9-a927-768229ddc890';
-         $MASTER_SECRET = '1162c1dc-4a0f-4d28-87e1-97db6bcb975c';
+	if($type == 2){
+         $APP_ID = '2fc753cc-da74-4f86-9c32-818e9acab8f7';
+         $APP_SECRET = '3a8bf99e-1857-4f81-92e1-073c008a465d';
+         $MASTER_SECRET = '3d672632-ac0e-4089-83f3-539b397c6dea';
          $TEST_SECRET = 'b38f720b-50a1-475f-bbbc-1e77b8ff3bee';
          $api->registerApp($APP_ID, $APP_SECRET, $MASTER_SECRET, $TEST_SECRET);
         //Test Model,只提供下单和支付订单查询的Sandbox模式,不写setSandbox函数或者false即live模式,true即test模式
          $api->setSandbox(false);
-        	$data["channel"] = "BC_ALI_QRCODE";
+       	 $data["channel"] = "BC_ALI_QRCODE";
         }
-	if($type == 2){
+	if($type == 1){
 	 if(!$arr['openid']){
 		 exit(json_encode(array('ret'=>1,'msg'=>'openid is null')));	
 	 }
-         $APP_ID = '74b02851-f238-49fe-a64f-13470ca72ae4';
-         $APP_SECRET = 'a7b5c556-072e-40fd-a9ee-1e58205546d7';
-         $MASTER_SECRET = 'b15313a5-f330-4fcb-95e6-ec0d35bd5c6d';
+         $APP_ID = '2fc753cc-da74-4f86-9c32-818e9acab8f7';
+         $APP_SECRET = '3a8bf99e-1857-4f81-92e1-073c008a465d';
+         $MASTER_SECRET = '3d672632-ac0e-4089-83f3-539b397c6dea';
          $TEST_SECRET = 'b38f720b-50a1-475f-bbbc-1e77b8ff3bee';
          $api->registerApp($APP_ID, $APP_SECRET, $MASTER_SECRET, $TEST_SECRET);
         //Test Model,只提供下单和支付订单查询的Sandbox模式,不写setSandbox函数或者false即live模式,true即test模式
@@ -294,9 +283,11 @@ Class RequestController extends HomeController{
         if($code_url){
             return array('ret'=>0,'url'=>$code_url);    
         }
-	if($type == 2 && $result->resultCode == 0){
+	if($type == 1 && $result->resultCode == 0){
 	   return  array('ret'=>0,'data'=>$result);
 	}else{
+	   error_log(print_r($result,true),3,'/home/logs/my.log');
+	   error_log(print_r($data,true),3,'/home/logs/my.log');
 	   return  array('ret'=>1,'msg'=>'system error');
 	}
             
@@ -311,7 +302,7 @@ Class RequestController extends HomeController{
         $total_fee = $_POST['total_fee'];//总费用
 	$ptype    = $_POST['ptype'];
         //获取预支付信息
-        $out_trade_no = 'RE-'.date('YmjHis').sprintf("%07d", $uid).'3'.rand(1000,9999);//商户订单号
+        $out_trade_no = 'RE'.date('YmjHis').sprintf("%07d", $uid).'3'.rand(1000,9999);//商户订单号
         //创建订单
         $data['uid'] = D('Member')->uid();
         $data['create_time'] = time();
@@ -334,7 +325,7 @@ Class RequestController extends HomeController{
             exit();
         }
 	 $arr['openid'] = $openid;
-	 $ret = $this->submitOrderInfobyali($arr,$orderid,$ptype);
+	 $ret = $this->submitOrderInfobyali($arr,$out_trade_no,$ptype);
 	 exit(json_encode($ret));
     }
 
@@ -569,24 +560,52 @@ Class RequestController extends HomeController{
 
     public function beecallback(){
 	    $data = $GLOBALS['HTTP_RAW_POST_DATA'];
+	    $data = $data ? $data : file_get_contents('php://input');
 	    $dedate = json_decode($data,true);
-
 	    if($dedate['trade_success']){
 		    $arr['status'] = 1;
 		    $arr['pay_time'] =time();
 		    $out_trade_no = $dedate['message_detail']['orderId'];
-
+		   // 购买订单
 		    $orderData = M('WinOrder')->where(array('order_number'=>$out_trade_no))->find();
-		    if($orderData['status'] == 0){
+	    
+		    if(isset($orderData['status']) &&  $orderData['status'] == 0){
 			    $time_end = $this->get_time_on_clock(time());//倒计时时间
 			    if($orderData['period'] != $this->getPeriod($time_end)){
 				    $arr['period'] = $this->getPeriod($time_end);
 			    }
 			    $ret = M('WinOrder')->where(array('order_number'=>$out_trade_no))->save($arr);
 			    if($ret){
-				    echo "susess";    
+				    echo "susess";return;    
 			    }
-		    }	
+			  return ;
+		    }
+			//充值订单
+		    $orderData = M('RechargeOrder')->where(array('out_trade_no'=>$out_trade_no))->find();
+
+		//error_log(print_r($orderData,true)."orderret\n",3,'/home/logs/my.log');
+		    if(isset($orderData['status']) && $orderData['status']==0){
+			$update['status'] = 1;
+			$order= M('RechargeOrder')->where(array('out_trade_no'=>$out_trade_no))->save($update);
+			
+			if($order){
+			   $addnum = $orderData['total_fee'];
+ 			   $uid = $orderData['uid'];
+			   $objre = M('Recharge');
+			   $isrechage = $objre->where('uid = '.$uid)->find();		
+			   if($isrechage){
+				$tot = bcadd($addnum,$isrechage['totalnum']);
+				$up['totalnum'] = $tot;
+				$ret = $objre->where('uid='.$uid)->save($up);
+			   }else{
+				$adddata['uid'] = $uid;
+				$adddata['totalnum'] = $addnum;
+				$adddata['ctime'] = time();
+				$adddata['status'] = 1;
+				$ret = $objre->add($adddata);
+			   }
+			}
+		    }
 
 	    }
     }

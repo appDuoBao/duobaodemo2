@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -6,26 +6,26 @@
     <meta name="renderer" content="webkit">
     <meta charset="utf-8">
     <title>我的钱包</title>
-    <link rel="stylesheet" href="__CSS__/base.css">
-    <link rel="stylesheet" href="__CSS__/wallet.css">
-    <script src="__JS__/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="/Public/Weixin/css/base.css">
+    <link rel="stylesheet" href="/Public/Weixin/css/wallet.css">
+    <script src="/Public/Weixin/js/jquery-1.9.1.min.js"></script>
 </head>
 <body>
-    <div class="money">{$price}</div>
-    <div class="money_yu">账户余额  {$price} （元）</div>
+    <div class="money"><?php echo ($price); ?></div>
+    <div class="money_yu">账户余额  <?php echo ($price); ?> （元）</div>
     <div class="save_btn" id="recharge">充值</div>
     <div class="save_btn" id="withdraw" style="background: #D8D8D8;color: #686868;">提现</div>
     <div class="money_yu" style="margin-top:60px;color: #4A90E2;">
-        <a href="__ROOT__/pay.php?s=/index/cardlist " style="color:#4A90E2;text-decoration: none;">银行卡管理</a>
+        <a href="/pay.php?s=/index/cardlist " style="color:#4A90E2;text-decoration: none;">银行卡管理</a>
     </div>
 </body>
 </html>
 <script>
     $("#recharge").click(function(){
-        window.location.href="{:U('Goods/detail')}/id/{$uid}/t/cuihua";
+        window.location.href="<?php echo U('Goods/detail');?>/id/<?php echo ($uid); ?>/t/cuihua";
     });
     $("#withdraw").click(function(){
-        window.location.href="{:U('My/accountPresentation')}";
+        window.location.href="<?php echo U('My/accountPresentation');?>";
     });
     //console.log("data");
 </script>

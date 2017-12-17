@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -6,9 +6,9 @@
     <meta name="renderer" content="webkit">
     <meta charset="utf-8">
     <title>支付订单</title>
-    <link rel="stylesheet" href="__CSS__/base.css">
-    <link rel="stylesheet" href="__CSS__/pay_order.css">
-    <script src="__JS__/jquery-2.1.0.min.js"></script>
+    <link rel="stylesheet" href="/Public/Weixin/css/base.css">
+    <link rel="stylesheet" href="/Public/Weixin/css/pay_order.css">
+    <script src="/Public/Weixin/js/jquery-2.1.0.min.js"></script>
     <script src="../../ap.js"></script> 
     <style>
         .chosenum{
@@ -63,19 +63,19 @@
     </div>
     <div class="all_need chosepay" >选择支付方式</div>
     <div class="menu_personal" style="margin-top:5px;">
-        <span class="menu_img"><img src="__IMG__/pay_wei.png" alt=""></span>
+        <span class="menu_img"><img src="/Public/Weixin/images/pay_wei.png" alt=""></span>
         <span class="menu_font">微信支付</span>
         <span class="menu_right"><input type="radio" class="cbtest" name="pay" value="1"/></span>
     </div>
     <div class="menu_personal" style="margin-top:5px;">
-        <span class="menu_img"><img src="__IMG__/QQ.png" alt=""></span>
+        <span class="menu_img"><img src="/Public/Weixin/images/QQ.png" alt=""></span>
         <span class="menu_font">网银支付</span>
         <span class="menu_right">
             <input type="radio" class="cbtest" name="pay" value="3"/>
         </span>
     </div>
     <div class="menu_personal" style="margin-top:5px;">
-        <span class="menu_img"><img src="__IMG__/pay_zhi.png" alt=""></span>
+        <span class="menu_img"><img src="/Public/Weixin/images/pay_zhi.png" alt=""></span>
         <span class="menu_font">支付宝支付</span>
         <span class="menu_right">
             <input type="radio" class="cbtest" name="pay" value="2"/>

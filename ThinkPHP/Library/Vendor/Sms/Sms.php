@@ -50,8 +50,8 @@ class Sms {
 	}
 
 	function sendsms($moblie,$content){
-		$sn = C('SMSACCOUNT'); //提供的账号
-		$pwd= strtoupper(md5(C('SMSACCOUNT').C('SMSPASSWORD')));
+		$sn = 'SDK-YIB-010-00061';
+                $pwd= strtoupper(md5($sn . '366844'));
 		$data = array(
 			'sn' => $sn, //提供的账号
 			'pwd' =>$pwd, //此处密码需要加密 加密方式为 md5(sn+password) 32位大写
