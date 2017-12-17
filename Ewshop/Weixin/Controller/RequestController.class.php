@@ -124,8 +124,9 @@ Class RequestController extends HomeController{
             $arr['mch_create_ip'] = get_client_ip();
         }
         $ptype = I("ptype");
-        //if($ptype == 1){
-        //    $this->paybyweixin($arr,$orderid);
+        if($ptype == 1){
+            $this->paybyweixin($arr,$orderid);exit();
+	}
         //}else{
             $arrali['method'] = 'submitOrderInfo';
             $arrali['out_trade_no'] = $out_trade_no;
@@ -174,30 +175,26 @@ Class RequestController extends HomeController{
         $this->reqHandler = new \RequestHandler();
         $this->pay = new \PayHttpClient();
         $this->cfg = new \Config();
-        
-         if($_GET['t']){
-            $this->cfg->num = $_GET['t'];
-        }else{
-            $num = substr($this->getPeriod($_POST['lottery_time']),-1)%10;//开奖期数
-	        $num = rand(0,9);	
-            $this->cfg->num = $this->mynum = $num;
-        }
-
-        $this->reqHandler->setGateUrl($this->cfg->C('url'));
-        $this->reqHandler->setKey($this->cfg->C('key'));
-        
+	$url = 'https://pay.swiftpass.cn/pay/gateway';
+	$appid = 'wx8c7d8fbdc1575995';
+	$appkey = 'a540fdbbcce3bb61362ae3fe2a2e89fa';
+	$mchid ='101550255054';
+	$key = '7603736a27cea2b14d020c1e2f4b2df6';
+	$version = '2.0';
+        $this->reqHandler->setGateUrl($url);
+        $this->reqHandler->setKey($key);
         
         $this->reqHandler->setReqParams($arr,array('method'));
         $this->reqHandler->setParameter('service','pay.weixin.jspay');//接口类型
-        $this->reqHandler->setParameter('mch_id',$this->cfg->C('mchId'));//必填项，商户号，由平台分配
-        $this->reqHandler->setParameter('version',$this->cfg->C('version'));
+        $this->reqHandler->setParameter('mch_id',$mchid);//必填项，商户号，由平台分配
+        $this->reqHandler->setParameter('version',$version);
         $this->reqHandler->setParameter('limit_credit_pay','1');
-        $this->reqHandler->setParameter('appid',$this->cfg->C('appid'));
+        $this->reqHandler->setParameter('appid',$appid);
 
         $this->reqHandler->setParameter('is_raw','1');
         
-        $this->reqHandler->setParameter('notify_url','http://duobao.akng.net/Weixin/Request/callback?t='.$this->mynum);//
-        $this->reqHandler->setParameter('callback_url','http://duobao.akng.net/Weixin/My/orderDetail/id/'.$orderid);
+        $this->reqHandler->setParameter('notify_url','http://www.bjlaote.com/Weixin/Request/callback');//
+        $this->reqHandler->setParameter('callback_url','http://www.bjlaote.com/Weixin/My/orderDetail/id/');
         $this->reqHandler->setParameter('nonce_str',mt_rand(time(),time()+rand()));//随机字符串，必填项，不长于 32 位
 
         $this->reqHandler->createSign();//创建签名
@@ -216,19 +213,27 @@ Class RequestController extends HomeController{
             if($this->resHandler->isTenpaySign()){
                 //当返回状态与业务结果都为0时才返回，其它结果请查看接口文档
                 if($this->resHandler->getParameter('status') == 0 && $this->resHandler->getParameter('result_code') == 0){
-                    echo json_encode(array('token_id'=>$this->resHandler->getParameter('token_id'),
-                        'pay_info'=>$this->resHandler->getParameter('pay_info'),
+		   $payinfo = $this->resHandler->getParameter('pay_info');
+		   $payinfo = json_decode($payinfo,true);
+		   $paydata['app_id'] = $payinfo['appId'];
+		   $paydata['timestamp'] = $payinfo['timeStamp'];
+		   $paydata['nonce_str'] = $payinfo['nonceStr'];
+		   $paydata['package'] = $payinfo['package'];
+		   $paydata['sign_type'] = $payinfo['signType'];
+		   $paydata['pay_sign'] = $payinfo['paySign'];
+                    echo json_encode(array('ret'=>0,'token_id'=>$this->resHandler->getParameter('token_id'),
+                        'data'=>$paydata,
                         'orderid'=>$orderid));
                     exit();
                 }else{
-                    echo json_encode(array('status'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
+                    echo json_encode(array('ret'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
                     exit();
                 }
             }
 
-            echo json_encode(array('status'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
+            echo json_encode(array('ret'=>500,'msg'=>'Error Code:'.$this->resHandler->getParameter('status').' Error Message:'.$this->resHandler->getParameter('message')));
         }else{
-            echo json_encode(array('status'=>500,'msg'=>'Response Code:'.$this->pay->getResponseCode().' Error Info:'.$this->pay->getErrInfo()));
+            echo json_encode(array('ret'=>500,'msg'=>'Response Code:'.$this->pay->getResponseCode().' Error Info:'.$this->pay->getErrInfo()));
         }
     }
     
@@ -247,7 +252,7 @@ Class RequestController extends HomeController{
         $data = array();
         $data["timestamp"] =time();
         //total_fee(int 类型) 单位分
-        $data["total_fee"] =1; $arr['total_fee'];
+        $data["total_fee"] = $arr['total_fee'];
         $data["bill_no"] = $orderid;
         //title UTF8编码格式，32个字节内，最长支持16个汉字
         $data["title"] = '支付';

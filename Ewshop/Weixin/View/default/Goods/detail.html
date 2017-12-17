@@ -145,23 +145,6 @@
         $('.close').tap(function () {
             $(".alert").hide();
         })
-        document.getElementById('btn2').oninput=function(){
-            var goods_type = $('#goods_type').val();
-            if(goods_type == 2){
-                var max = 100;
-            }else{
-                var max = 100;
-            }
-            if($("#btn2").val()>max){
-                $(".btn2").val(max);
-                alert('单次最多可购买'+max+'单');
-
-                $(".sumn").html($(".btn2").val()*{$data.price_half});
-                return false;
-            }
-
-            $(".sumn").html($(".btn2").val()*{$data.price_half});
-        }
         $(".btn1").tap(function(){
             var x=$(".btn2").val();
             console.log(x);
@@ -217,7 +200,7 @@
             alert('请等待开战时间');
             return false;
         }
-        window.location.href="{:U("Goods/payOrder")}/type/"+type+"/goods_id/{$data['goods_id']}";
+        window.location.href="../../weixin/Goods/payOrder?type="+type+"&goods_id={$data['goods_id']}";
 
         // if(type == 2){
         //     $('.cont').css('background','rgba(243,141,49,1)');
