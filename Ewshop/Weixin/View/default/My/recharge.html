@@ -103,7 +103,7 @@
 	if(total_fee && ptype)
         $.ajax({
             type: 'post', //传送的方式,get/post
-            url: './index.php?s=Weixin/Request/rechargeOrderInfo',
+            url: '../../Weixin/Request/rechargeOrderInfo',
             data: {total_fee:total_fee,ptype:ptype},
             dataType: "json",
             success: function (res) {

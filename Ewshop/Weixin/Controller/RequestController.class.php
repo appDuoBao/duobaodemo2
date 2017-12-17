@@ -323,12 +323,15 @@ Class RequestController extends HomeController{
             $arr['out_trade_no'] = $out_trade_no;
             $arr['sub_openid'] = $openid;
             $arr['body'] = $out_trade_no;
-            //$arr['total_fee'] = $total_fee*100;
-            $arr['total_fee'] = 0.01*100;
+            $arr['total_fee'] = $total_fee*100;
+            //$arr['total_fee'] = 0.01*100;
             $arr['mch_create_ip'] = get_client_ip();
         }else{
             exit();
         }
+	 if($ptype == 1){
+            $this->paybyweixin($arr,$orderid);exit();
+	 }
 	 $arr['openid'] = $openid;
 	 $ret = $this->submitOrderInfobyali($arr,$out_trade_no,$ptype);
 	 exit(json_encode($ret));
