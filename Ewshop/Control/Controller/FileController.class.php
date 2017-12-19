@@ -63,7 +63,6 @@ class FileController extends ControlController {
      */
     public function uploadPicture(){
         //TODO: 用户登录检测
-
         /* 返回标准数据 */
         $return  = array('status' => 1, 'info' => '上传成功', 'data' => '');
 
@@ -76,7 +75,7 @@ class FileController extends ControlController {
             C('PICTURE_UPLOAD_DRIVER'),
             C("UPLOAD_{$pic_driver}_CONFIG")
         ); //TODO:上传到远程服务器
-
+	
         /* 记录图片信息 */
         if($info){
             $return['status'] = 1;

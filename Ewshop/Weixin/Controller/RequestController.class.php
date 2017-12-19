@@ -480,94 +480,53 @@ Class RequestController extends HomeController{
     /**
      * 后台异步回调通知
      */
-    public function callback(){
-        require_once('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/class/ClientResponseHandler.class.php');
-        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/config/config.php');
-        require_once ('ThinkPHP/Library/Vendor/payInterface_jsapi_wx/Utils.class.php');
-        $this->cfg = new \Config();
-        $this->resHandler = new \ClientResponseHandler();
-        $xml = $GLOBALS['HTTP_RAW_POST_DATA'];
-        $this->resHandler->setContent($xml);
-        //var_dump($this->resHandler->setContent($xml));
-        $this->resHandler->setKey($this->cfg->C('key'));
-        if($this->resHandler->isTenpaySign()){
-            if($this->resHandler->getParameter('status') == 0 && $this->resHandler->getParameter('result_code') == 0){
-                $out_trade_no = $this->resHandler->getParameter('out_trade_no');
-                // 此处可以在添加相关处理业务，校验通知参数中的商户订单号out_trade_no和金额total_fee是否和商户业务系统的单号和金额是否一致，一致后方可更新数据库表中的记录。
-                //更改订单状态
-                $order_initials = substr($out_trade_no , 0 ,1);  //获取订单首字母
-                if($out_trade_no){
+public function callback(){
+	$xml = $GLOBALS['HTTP_RAW_POST_DATA'];
+	$data = $xml ? $xml : file_get_contents('php://input');
+        $data = simplexml_load_string($data);
+	$out_trade_no = (string)$data->out_trade_no;
+	//error_log($out_trade_no,3,'/home/logs/my.log');
+	if($out_trade_no){
+		$orderData = M('WinOrder')->where(array('order_number'=>$out_trade_no))->find();
+		if(isset($orderData['status']) && $orderData['status'] == 0){
+			$arr['status'] = 1;
+			$arr['pay_time'] = time();
+			$ret =	M('WinOrder')->where(array('order_number'=>$out_trade_no))->save($arr);
+			if($ret){
+				echo 'success';exit;
+			}
+		}
+		   $orderData = M('RechargeOrder')->where(array('out_trade_no'=>$out_trade_no))->find();
 
-                    switch($order_initials){
+		//error_log(print_r($orderData,true)."orderret\n",3,'/home/logs/my.log');
+		    if(isset($orderData['status']) && $orderData['status']==0){
+			$update['status'] = 1;
+			$order= M('RechargeOrder')->where(array('out_trade_no'=>$out_trade_no))->save($update);
+			
+			if($order){
+			   $addnum = $orderData['total_fee'];
+ 			   $uid = $orderData['uid'];
+			   $objre = M('Recharge');
+			   $isrechage = $objre->where('uid = '.$uid)->find();		
+			   if($isrechage){
+				$tot = bcadd($addnum,$isrechage['totalnum']);
+				$up['totalnum'] = $tot;
+				$ret = $objre->where('uid='.$uid)->save($up);
+			   }else{
+				$adddata['uid'] = $uid;
+				$adddata['totalnum'] = $addnum;
+				$adddata['ctime'] = time();
+				$adddata['status'] = 1;
+				$ret = $objre->add($adddata);
+			   }
+			    echo 'success';exit;
+			}
+		    }
 
-                        case 'F':  //购买
-                            $orderData = M('WinOrder')->where(array('order_number'=>$out_trade_no))->find();
-                            $time_end = $this->get_time_on_clock(time());//倒计时时间
-                            $period = $this->getPeriod($time_end);//开奖期数
-                            //如果订单状态为0，将其设置成1
-                            if($orderData['status'] == 0){
-                               
+	}
+				echo 'failed';exit;
 
-                                $arr['status'] = 1;
-                               // $arr['paytype'] = '微信支付';
-                                $arr['pay_time'] = time();
-                                M('WinOrder')->where(array('order_number'=>$out_trade_no))->save($arr);
-
-								$map['status'] = 2;
-								$map['ratio'] = 0;
-								$map['pid'] = 0;
-								$map['money_p'] = $orderData['money'];
-								$map['out_trade_no'] = $out_trade_no;
-								$map['uid'] = $orderData['uid'];
-								$map['create_time'] = time();
-								M('AccountLog')->add($map);						
-
-                            }
-                            break;
-                        case 'R': //充值
-                            $orderinfo = M('RechargeOrder')->where(array('out_trade_no'=>$out_trade_no))->find();
-                            if($orderinfo['status'] == 0){
-                                M('RechargeOrder')->where(array('out_trade_no'=>$out_trade_no))->setField('status',1);
-                                $map['status'] = 3;
-                                $map['pid'] = 0;
-                                $map['money_p'] = $orderinfo['total_fee'];
-                                $map['out_trade_no'] = $out_trade_no;
-                                $map['uid'] = $orderinfo['uid'];
-                                $map['create_time'] = time();
-                                M('AccountLog')->add($map);
-                                $uid = $orderinfo['uid'];
-								//更新当前用户资金
-								$account = M('Member')->getFieldByUid($uid,'account');//当前会员原有资金
-								M('Member')->where(array('uid'=>$uid))->setField('account',$account+$map['money_p']);									
-								
-                            }
-                            break;
-                    }
-
-                    //将记录插入支付记录表
-                    $data['out_trade_no']= $out_trade_no;
-                    $data['uid']= $uid;
-                    $data['create_time']= time();
-                    $WinPayLog = M('WinPayLog');
-                    $isExist = $WinPayLog->where(array('out_trade_no'=>$out_trade_no))->find();
-                    if(!$isExist){
-                        $result = $WinPayLog->add($data);
-                    }
-
-                    //M('Test')->add(array('name'=>$this->cfg->C('mchId')));
-
-                }
-                \Utils::dataRecodes('接口回调收到通知参数',$this->resHandler->getAllParameters());
-                ob_clean();
-                echo 'success';
-
-            }else{
-                echo 'failure1';
-            }
-        }else{
-            echo 'failure2';
-        }
-    }
+}
 
     public function beecallback(){
 	    $data = $GLOBALS['HTTP_RAW_POST_DATA'];
