@@ -262,8 +262,7 @@ class MyController extends HomeController {
      * @author
      */
     public function exchangeList(){
-        //$uid = D('Member')->uid();
-        $uid=18;
+        $uid = D('Member')->uid();
         $noExchangeList = M('WinExchange')->where(array('uid'=>$uid,'is_exchange'=>0,'is_virtual'=>1))->order("id DESC")->select();
         foreach ($noExchangeList as $k => $v) {
             $noExchangeList[$k]['order'] = M('WinOrder')->where(array('id'=>$v['order_id'],'status'=>1))->find();

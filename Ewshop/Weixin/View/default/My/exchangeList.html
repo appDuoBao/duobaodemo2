@@ -29,6 +29,16 @@
     .yeslist{
         display: none;
     }
+    .nomore{
+        width: 100%;
+        margin-top: 100px;
+        text-align: center;
+    }
+    .nomore p{
+        font-size: 24px;
+        color:gray;
+        line-height: 50px;
+    }
 </style>
 <body>
 <div class="exchange_menu">
@@ -36,6 +46,7 @@
     <div class="exchange_right">已兑换</div>
 </div>
 <!--未兑奖记录-->
+<if condition="count($noExchangeList) gt 1">
 <volist name="noExchangeList" id="vo">
     <div class="purchase_content nolist">
         <div class="purchase_left">
@@ -45,13 +56,19 @@
         <div class="purchase_right">
             <div class="purchase_right_title">{$vo.order.goods_detail.title}</div>
             <div class="purchase_right_choose">我的选择：<span>{$vo.order.num}单  {$vo.type}</span></div>
-            <div class="purchase_right_choose">参与时间：{$vo.order.create_time|date='Y/m/d H:i:s', ###}</div>
+            <div class="purchase_right_choose">参与时间：{$vo.buy_time|date='Y/m/d H:i:s', ###}</div>
             <div class="purchase_right_choose">开奖时间：{$vo.order.lottery_time}</div>
         </div>
     </div>
 </volist>
-
+<else />
+    <div class="nomore nolist">
+        <p>您还没有中奖记录哦</p>
+        <p>快<a href="{:U(Index/index)}">点击这里</a>去夺宝吧</p>
+    </div>
+</if>
 <!--已兑奖记录-->
+<if condition="count($yesExchangeList) gt 1">
 <volist name="yesExchangeList" id="vo">
     <div class="purchase_content yeslist">
         <div class="purchase_left">
@@ -66,21 +83,13 @@
         </div>
     </div>
 </volist>
-<volist name="yesExchangeList" id="vo">
-    <div class="purchase_content yeslist">
-        <div class="purchase_left">
-            <img src="{$vo.order.goods_detail.cover_id|get_cover='path'}" alt="">
-            <p class="duihuan">半价购买：￥{$vo.goods_type}元</p>
-        </div>
-        <div class="purchase_right">
-            <div class="purchase_right_title">{$vo.order.goods_detail.title}</div>
-            <div class="purchase_right_choose">我的选择：<span>{$vo.order.num}单 {$vo.type}</span></div>
-            <div class="purchase_right_choose">参与时间：{$vo.order.create_time|date='Y/m/d H:i:s', ###}</div>
-            <div class="purchase_right_choose">开奖时间：{$vo.order.lottery_time}</div>
-        </div>
+<else />
+    <div class="nomore yeslist">
+        <p>没有找到您的兑换记录哦</p>
+        <p>快<a href="{:U(Index/index)}">点击这里</a>去夺宝吧</p>
     </div>
-</volist>
-<div style="height:8rem;width:100%;"></div>
+</if>
+<div style="height:110px;width:100%;"></div>
 
 <div class="menu_fixed">
     <div class="bottom_menu" id="main">
