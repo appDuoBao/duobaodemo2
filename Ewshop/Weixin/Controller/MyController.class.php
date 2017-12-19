@@ -106,8 +106,8 @@ class MyController extends HomeController {
         if(!$from){
             $isself = true;    
         }
-        //$where = $from ? $from : $uid;
-        $where=18;
+        $where = $from ? $from : $uid;
+        //$where=18;
         $list = M('WinOrder')->where(array('uid'=>$where,'status'=>1))->order('create_time DESC')->select();
         $order_doing_num = 0 ;
         foreach($list as $key => $val){
