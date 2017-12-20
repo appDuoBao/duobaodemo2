@@ -17,6 +17,7 @@
     <div class="account_left">
         <if condition="$isadd eq 'no'">
         <span class="card_nmber">银行卡：{$account[0]['card_no'] | substr=###,0,3}********{$account[0]['card_no'] | substr=###,-4}</span>
+	<input type="hidden" id="cardid"  value="{$account_right[0]['id']}" />
         <else />
         <span class="card_nmber">您还没有添加银行卡</span>
         </if>
@@ -71,6 +72,24 @@
    $(".save_btn").on('click',function(){
         if(check_balance($("#paymoney").val())){
             //提款操作：
+	var num = $("#paymoney").val();
+	var aid = $("#cardid").val(); 
+	$.ajax({
+            type: 'post', //传送的方式,get/post
+            //url: './index.php?s=Weixin/Request/submitOrderInfo',
+            url:"{:U('Pay/doorder')}",
+            data: {numb:num,aid:aid},
+            dataType: "json",
+            success: function (res) {
+                if(res.ret== 0){
+		   window.location.href = "./";
+                }else{
+		   alert(res.msg);
+                }
+            
+            }
+        });
+
         }
    });
 </script>

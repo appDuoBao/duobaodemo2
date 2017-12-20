@@ -32,6 +32,7 @@ Class PayController extends HomeController{
 		if(empty($this->uid)){
 			$this->redirect('User/register');  return;
 		}
+	}
 	public function isCanPay($tsnum){
 		 $uid = $this->uid;
 		 $totnum = D('Recharge')->where('uid = '.$uid)->getField('totalnum');
@@ -48,7 +49,7 @@ Class PayController extends HomeController{
 			}
 			$ispay = $this->isCanPay($shiji);
 			if(!$ispay){
-				$this->error('提现金额有误');exit;	
+				exit(json_encode(array('ret'=>1,'msg'=>"提现金额大于余额")));	
 			}
 			//查询有无银行卡
 			$allcard = M('Account')->where(sprintf('uid = %d and defaultcard=1',$uid))->find();
@@ -82,14 +83,18 @@ Class PayController extends HomeController{
 						$flag = 1;
 						while($flag<=3){
 						$ret = M('Recharge')->where(sprintf("uid = '%d' ",$uid))->save(array('totalnum'=>$left));
+						$ret1 = M('PayRecord')->where(sprintf("pay_id = '%s' ",$orderSn))->save(array('status'=>1));
+
 							if(!$ret){
 								$flag++;
 								error_log(json_encode(array('orderNo'=>$orderNo,'status'=>'exret:'.$exret.'|payret:'.$ret,'msg'=>'更新数据库失败'.implode(':',$order_ids)))."\n\t",3,'/home/tmp/pay.log');   
 							}
 							if($ret) break;
 						}
+				  exit(json_encode(array('ret'=>0)));
 				}else{
 					//第三方支付没成功
+				  exit(json_encode(array('ret'=>2,"msg"=>"提现出错，请稍后再试！")));
 				}  
 				$this->redirect('index/recordlist');return;
 

@@ -497,12 +497,12 @@ class MyController extends HomeController {
         $uid = D('Member')->uid();
         $isadd='yes';
         //银行卡信息
-        $account_msg=M("account")->where(array('uid'=>337,'status'=>1))->order('ctime DESC')->select();
+        $account_msg=M("account")->where(array('uid'=>$uid,'status'=>1,'defaultcard'=>1 ))->order('ctime DESC')->select();
         if(count($account_msg)>0){
             $isadd= 'no';
         }
         //账户余额
-        $balance = M("member")->where(array('uid'=>337))->getField('account');
+        $balance = M("Recharge")->where(array('uid'=>$uid))->getField('totalnum');
         $this->assign('account' , $account_msg);
         $this->assign('balance' , $balance);
         $this->assign('isadd' , $isadd);

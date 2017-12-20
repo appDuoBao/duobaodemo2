@@ -89,11 +89,11 @@ class IndexController extends HomeController {
 			$buy_list[$i]['buy_num'] = $val1['num'];
 			$buy_list[$i]['period'] = $val1['period'];
 			$buy_list[$i]['type'] = ($val1['type'] == 1) ? '单' : '双';
-			//if($val1['type'] ==1){
-                $buy_list[$i]['userinfo'] = M('Member')->field('uid,headimgurl,nickname')->where("uid = {$val1['uid']}")->find();
-            // }elseif($val1['type']==2){
-            //     $buy_list[$i]['userinfo'] = M('MemberTemp')->field('id as uid,headimgurl,nickname')->where("id = {$val1['uid']}")->find();
-            //  }
+		if($val1['type'] ==1){
+                	$buy_list[$i]['userinfo'] = M('Member')->field('uid,headimgurl,nickname')->where("uid = {$val1['uid']}")->find();
+             }elseif($val1['type']==2){
+                 $buy_list[$i]['userinfo'] = M('MemberTemp')->field('id as uid,headimgurl,nickname')->where("id = {$val1['uid']}")->find();
+              }
        		$i++;
         }			
        
