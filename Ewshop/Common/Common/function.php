@@ -1914,6 +1914,31 @@ function getdisuserids($uid){
     }
     return $str;
 }
+function PostHttp($url, $params,$header = array(), $multi = false){
+    $opts = array(
+            CURLOPT_TIMEOUT        => 10,
+            CURLOPT_HEADER         => 1,
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => false,
+            CURLOPT_HTTPHEADER     => $header
+    );
+               //判断是否传输文件
+            $params = $multi ? $params : http_build_query($params);
+            $opts[CURLOPT_URL] = $url;
+            $opts[CURLOPT_POST] = 1;
+            $opts[CURLOPT_POSTFIELDS] = $params;
+
+
+    /* 初始化并执行curl请求 */
+    $ch = curl_init();
+    curl_setopt_array($ch, $opts);
+    $data  = curl_exec($ch);
+    $error = curl_error($ch);
+    curl_close($ch);
+    if($error) return $error;
+    return  $data;
+}
 
 //获取上商品数量
 function get_goodnum(){

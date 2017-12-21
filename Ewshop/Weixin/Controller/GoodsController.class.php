@@ -104,7 +104,7 @@ class GoodsController extends HomeController {
         }
 
         //半价pk榜(中奖记录)
-        $pk_list = M('WinExchange')->where("goods_id = {$goodsId}")->order('buy_time DESC')->limit(10,20)->select();
+        $pk_list = M('WinExchange')->where("goods_id = {$goodsId}")->order('buy_time DESC')->limit(20)->select();
         foreach($pk_list as $key => $val){
             if($val['utype'] == 2){
                 $pk_list[$key]['userinfo'] = M('MemberTemp')->field('headimgurl,nickname')->where("id = {$val['uid']}")->find();//虚拟用户

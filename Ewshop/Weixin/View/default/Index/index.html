@@ -71,11 +71,11 @@
     <!--</div>-->
     <div class="tab-index">
         <div class="active">
-            最近参与记录
+            最近抢购记录
         </div>
         <!--<div onclick="location.href='/Weixin/Index/introduce'">玩法规则</div>-->
         <div>
-            最近战绩
+            最新战绩
         </div>       
     </div>
     <div class="tab-con">
@@ -83,16 +83,18 @@
             <volist name="data.buy_list" id="vo1">
                <a href="{:U('My/buyLog?uid='.$vo1['userinfo']['uid'])}">
                     <li>
-                        <div class="lf">
-                            <img src="{$vo1['userinfo']['headimgurl']}" alt="">
+                    <div class="lf">
+                        <img src="{$vo1.userinfo.headimgurl}" alt="">
+                    </div>
+                    <div class="lm">
+                        <div class="lm-head">
+                            <p class="lmh" style="text-overflow: ellipsis;width: 8.8rem;">{$vo1.userinfo.nickname}</p>
+                             <p class="lmt">{$vo1.buy_time|date='Y-m-d H:i',###}</p>
                         </div>
-                        <div class="lm">
-                            <div class="lm-head">
-                                <p class="lmh" >{$vo1.userinfo.nickname|mb_substr=0,9}</p>
-                                 <p class="lmt">{$vo1.buy_time|date='Y-m-d H:i:s',###}</p>
-                            </div>
-                            <p class="lm-gwk">{$vo1.goods_title}    购买第{$vo1.period}期    单×{$vo1.buy_num}  {$vo1.type}</p>
-                        </div>
+                        
+                        <p class="lm-gwk">{$vo1.goods_title}    中奖第{$vo1.period}期    单×{$vo1.buy_num}  {$vo1.codeid}</p>
+                       
+                    </div>
                         <!--<div class="lt">
                             <p class="lt1"><span>{$vo.num}</span>单</p><p class="lt2">参与</p>
                         </div>-->
@@ -108,7 +110,7 @@
                     </div>
                     <div class="lm">
                         <div class="lm-head">
-                            <p class="lmh" style="text-overflow: ellipsis;width: 2.8rem;">{$vo.userinfo.nickname}</p>
+                            <p class="lmh" style="text-overflow: ellipsis;width: 8.8rem;">{$vo.userinfo.nickname}</p>
                              <p class="lmt">{$vo.buy_time|date='Y-m-d H:i',###}</p>
                         </div>
                         

@@ -95,5 +95,24 @@ class FileController extends HomeController {
         /* 返回JSON数据 */
         $this->ajaxReturn($return);
     }
+   public function upMembertx(){
+	$obj= D('MemberTemp');
+	$user = $obj->select();
+	$url = '/Uploads/Picture/tx/';
+	$path = '/home/wwwroot/newduobao/';
+	$dir = $path . $url;
+	$i = 0;
+	if (is_dir($dir)) {
+		if ($dh = opendir($dir)) {
+			while (($file = readdir($dh)) !== false) {
+				if($file != '.' && $file != '..')
+				  $updata['headimgurl'] = $url . $file;
+				  $ret = $obj->where('id = '.$user[$i]['id'])->save($updata);
+				  echo $updata['headimgurl']."<br/>";
+				$i++;
+			} closedir($dh);
+		}
+	}
+   }
 
 }

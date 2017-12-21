@@ -42,18 +42,7 @@ class IndexController extends HomeController {
 
         //首页商品
         $data['list_50'] = M('Document')->where("category_id = 217 and price = 1 and status = 1")->order('id asc')->select();//50元卡
-//        foreach($data['list_50'] as $key => $val){
-//            //授权url
-//            $detail_url = 'http://'.$_SERVER['HTTP_HOST'].'/Weixin/Goods/detail/id/'.$val['id'];
-//            $data['list_50'][$key]['url'] = R('Qfpay/getGoodsDetailUrl' , array ($detail_url));
-//        }
         $data['list_100'] = M('Document')->where("category_id = 217 and price = 2 and status = 1")->order('id asc')->select();//100元卡
-//        foreach($data['list_100'] as $key => $val){
-//            //授权url
-//            $detail_url = 'http://'.$_SERVER['HTTP_HOST'].'/Weixin/Goods/detail/id/'.$val['id'];
-//            $data['list_100'][$key]['url'] = R('Qfpay/getGoodsDetailUrl' , array ($detail_url));
-//        }
-
         $data['time_end'] = $this->get_time_on_clock(time());//倒计时时间
 
         //最近中奖(中奖记录)
@@ -89,9 +78,10 @@ class IndexController extends HomeController {
 			$buy_list[$i]['buy_num'] = $val1['num'];
 			$buy_list[$i]['period'] = $val1['period'];
 			$buy_list[$i]['type'] = ($val1['type'] == 1) ? '单' : '双';
-		if($val1['type'] ==1){
+			$buy_list[$i]['uid'] = $val1['uid'];
+		if($val1['utype'] ==1){
                 	$buy_list[$i]['userinfo'] = M('Member')->field('uid,headimgurl,nickname')->where("uid = {$val1['uid']}")->find();
-             }elseif($val1['type']==2){
+             }elseif($val1['utype']==2){
                  $buy_list[$i]['userinfo'] = M('MemberTemp')->field('id as uid,headimgurl,nickname')->where("id = {$val1['uid']}")->find();
               }
        		$i++;
@@ -103,8 +93,6 @@ class IndexController extends HomeController {
 		}
 		array_multisort($buy_time, SORT_DESC, $buy_list);
 		$data['buy_list'] = $buy_list;
-        //var_dump($buy_list);die;
-		
         //开奖号码
         $code_list = M('WinCode')->where("code <> '0'")->order('id desc')->limit('10')->select();
         foreach($code_list as $key => $val){

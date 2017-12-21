@@ -452,7 +452,7 @@ function get_action_type($type, $all = false){
 	}
 	return $list[$type];
 }
-
+/*
 function PostHttp($url, $params,$header = array(), $multi = false){
     $opts = array(
             CURLOPT_TIMEOUT        => 10,
@@ -469,7 +469,7 @@ function PostHttp($url, $params,$header = array(), $multi = false){
             $opts[CURLOPT_POSTFIELDS] = $params;
           
     
-    /* 初始化并执行curl请求 */
+    // 初始化并执行curl请求
     $ch = curl_init();
     curl_setopt_array($ch, $opts);
     $data  = curl_exec($ch);
@@ -478,6 +478,7 @@ function PostHttp($url, $params,$header = array(), $multi = false){
     if($error) return $error;
     return  $data;
 }
+*/
 function GetHttp($url, $params,$header = array(), $multi = false){
      $opts = array(
             CURLOPT_TIMEOUT        => 30,

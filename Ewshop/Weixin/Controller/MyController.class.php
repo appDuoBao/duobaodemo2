@@ -263,7 +263,7 @@ class MyController extends HomeController {
      */
     public function exchangeList(){
         $uid = D('Member')->uid();
-        $noExchangeList = M('WinExchange')->where(array('uid'=>$uid,'is_exchange'=>0,'is_virtual'=>1))->order("id DESC")->select();
+        $noExchangeList = M('WinExchange')->where(array('uid'=>$uid,'is_exchange'=>0,'is_virtual'=>0))->order("id DESC")->select();
         foreach ($noExchangeList as $k => $v) {
             $noExchangeList[$k]['order'] = M('WinOrder')->where(array('id'=>$v['order_id'],'status'=>1))->find();
             $noExchangeList[$k]['order']['goods_detail'] = M('Document')->field('title,cover_id,price')->where(array('id'=>$noExchangeList[$k]['goods_id']))->find();

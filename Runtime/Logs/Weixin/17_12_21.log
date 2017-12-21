@@ -1,0 +1,14 @@
+[ 2017-12-21T14:37:01+08:00 ] 49.4.12.68 /Weixin/Auto/doAuto
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000046s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0006s ]
+SQL: SELECT `type`,`name`,`value` FROM `ewshop_config` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/12/21 14:40:00' AND `period` = 28 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = '0' and time < 1513838400 ) ORDER BY id desc  [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
