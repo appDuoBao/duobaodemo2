@@ -46,9 +46,9 @@ class IndexController extends HomeController {
         $data['time_end'] = $this->get_time_on_clock(time());//倒计时时间
 
         //最近中奖(中奖记录)
-        $pk_list = M('WinExchange')->join('LEFT JOIN ewshop_win_order on ewshop_win_exchange.order_id=ewshop_win_order.id')->order('buy_time DESC')->limit(10)->field('ewshop_win_exchange.*,ewshop_win_order.period')->select();;
+        $pk_list = M('WinExchange')->join('LEFT JOIN ewshop_win_order on ewshop_win_exchange.order_id=ewshop_win_order.id')->order('buy_time DESC')->limit(10)->field('ewshop_win_exchange.*,ewshop_win_order.period,ewshop_win_order.type')->select();;
         foreach($pk_list as $key => $val){
-            $codeid [] = $val['order_id'];
+            $pk_list[$key]['type'] = $val['type']==1 ? '单' : '双' ;
             $pk_list[$key]['goods_title'] = M('Document')->where("id = {$val['goods_id']}")->getField('title');
             $pk_list[$key]['period'] = $val['period'];
             if($val['utype'] == 2){
@@ -57,13 +57,8 @@ class IndexController extends HomeController {
                 $pk_list[$key]['userinfo'] = M('Member')->field('uid,headimgurl,nickname')->where("uid = {$val['uid']}")->find();
             }
         }
-        $cmap['id'] = array('in',$codeid); 
-        $codarr = M('WinOrder')->where($cmap)->getField('id,type,period');//var_dump($codeid);exit;
-        foreach ($pk_list as $k=>$v) {
-            $pk_list[$k]['codeid'] = ($codarr[$v['order_id']]['type'] ==1) ? '单' : '双';
-        } 
        
-       // var_dump($pk_list);exit;
+        //var_dump($pk_list);exit;
         $data['pk_list'] = $pk_list;
         
 
@@ -126,34 +121,34 @@ class IndexController extends HomeController {
           }
          
         $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
-        $users = $Model->query("select w.uid,o.type,w.order_id,sum(w.buy_num) as num from ewshop_win_exchange as w ,ewshop_win_order as o where w.order_id = o.id and w.is_virtual=1 and w.buy_time >1498962640   group by uid  order by num desc limit 10");  
+        $users = $Model->query("select w.uid,o.utype ,w.order_id,sum(w.buy_num) as num from ewshop_win_exchange as w ,ewshop_win_order as o where w.order_id = o.id and  w.buy_time >".$today." group by uid  order by num desc limit 10");  
+	//var_dump($users);exit;
         if($users){
             foreach($users as $k=>$v){
-                // if($v['type'] == 2){
-                //     $vuser[] = $v['uid'];    
-                // }else{
-                    $user[] = $v['uid'];   
-                //}    
+                 if($v['utype'] == 2){
+                     $vuser[] = $v['uid'];    
+                 }else{
+                     $user[] = $v['uid'];   
+                }    
             } 
-            //var_dump($vuser);exit;
-            // if($vuser){
-            //      $vmap['id'] = array('in',$vuser); 
-            //      $vuser = M('MemberTemp')->where($vmap)->getField('id,headimgurl,nickname',true);//虚拟用户
-            //  }
+            //var_dump($users);exit;
+             if($vuser){
+                  $vmap['id'] = array('in',$vuser); 
+                  $vuser = M('MemberTemp')->where($vmap)->getField('id,headimgurl,nickname',true);//虚拟用户
+              }
            
              if($user){
                 $map['uid'] = array('in',$user);
                 $user = M('Member')->where($map)->getField('uid as id,headimgurl,nickname',true);
              }   
-            
-             //$vuser = is_array($vuser) ? $vuser : array();
+             $vuser = is_array($vuser) ? $vuser : array();
              $user = is_array($user) ? $user : array();
-             //$usersar = array_merge_recursive($vuser,$user);
+             $usersar = array_merge_recursive($vuser,$user);
              
              foreach($users as $k=>$v){
-                // if($vuser[$v['uid']]){
-                //     $users[$k]['userinfo'] = $vuser[$v[uid]];
-                // }
+                 if($vuser[$v['uid']]){
+                     $users[$k]['userinfo'] = $vuser[$v[uid]];
+                 }
                 if($user[$v['uid']]){
                      $users[$k]['userinfo'] = $user[$v[uid]];   
                 }

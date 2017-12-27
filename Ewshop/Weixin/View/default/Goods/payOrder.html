@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title>支付订单</title>
     <link rel="stylesheet" href="__CSS__/base.css">
-    <link rel="stylesheet" href="__CSS__/pay_order.css">
+    <link rel="stylesheet" href="__CSS__/pay_order.css?t=1234">
     <script src="__JS__/jquery-1.9.1.min.js"></script>
     <script src="../../ap.js"></script> 
 </head>
@@ -33,6 +33,11 @@
     <div class="all_need">总需：<span id="pay_num">{$pay_half}</span>微币</div>
     <p style="display:none" class="fnTimeCountDown" data-end="{$data.time_end}" >
     <div class="menu_personal" style="margin-top:18px;">
+        <span class="menu_img"><img src="__IMG__/money.png" alt=""></span>
+        <span class="menu_font">余额支付</span>
+        <span class="menu_right"><input type="radio" class="cbtest" checked  name="pay" value="3" /></span>
+    </div>
+    <div class="menu_personal" style="margin-top:5px;">
         <span class="menu_img"><img src="__IMG__/pay_wei.png" alt=""></span>
         <span class="menu_font">微信支付</span>
         <span class="menu_right"><input type="radio" class="cbtest" name="pay" value="1" /></span>
@@ -124,13 +129,6 @@
             data: {total_fee:total_fee,type:type,num:num,goods_type:goods_type,lottery_time:lottery_time,goods_id:goods_id,ptype:ptype,buyer_id:'',buyer_logon_id:''},
             dataType: "json",
             success: function (res) {
-                if(res.ret == 2){
-		  alert('请选择支付类型');return;
-		}
-		if(res.ret == 100){
-		  alert('支付成功');
-                   window.location.href = "./"; return;
-		}
                 if(res.ret== 0){
                     if(ptype ==2){      
                         _AP.pay(res.url);
@@ -139,6 +137,13 @@
                     if(ptype == 1){
                         wxcallpay(res.data);  
                     }
+		   if(ptype == 3){
+		      alert('支付成功');
+                      window.location.href = "./"; return;
+		    }
+		}else if(res.ret == 100){
+			alert(res.msg);
+			window.location.href = "/weixin/my/recharge.html"; return;
                 }else{
                    alert(res.msg);
                 }

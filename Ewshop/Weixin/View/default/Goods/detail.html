@@ -62,7 +62,7 @@
         <div class="tablis">
             <ul>
                 <volist name="data.pk_list" id="vo">
-                    <li>
+                     <a href="{:U('My/exchangeList?uid='.$vo['userinfo']['uid'])}"><li>
                         <div class="li1"><img src="{$vo.userinfo.headimgurl}" alt=""></div>
                         <div class="li2">
                             <p>
@@ -71,9 +71,9 @@
                             </p>
 
                             <!--<p>刚刚参与<span>{$vo.num}</span> 单,-&#45;&#45;{$vo.ip_info}</p>-->
-                            <p class="title">{$data.goodsDetail.title}  &nbsp;中奖  <span>{$vo.buy_num}</span>  单</p>
+                            <p class="title">{$data.goodsDetail.title}  &nbsp;中奖  <span>{$vo.buy_num}</span>  单 {$vo.type}</p>
                         </div>
-                    </li>
+                    </li></a>
                 </volist>
             </ul>
             <!--<ul class="tablis-rule">-->
@@ -85,6 +85,7 @@
                 </li>
                 -->
                 <volist name="data.buy_list" id="vo1">
+		 <a href="{:U('My/buyLog?uid='.$vo1['userinfo']['uid'])}">
                     <li>
                         <div class="li1"><img src="{$vo1.userinfo.headimgurl}" alt=""></div>
                         <div class="li2">
@@ -92,9 +93,10 @@
                                 <span class="li2l">{$vo1.userinfo.nickname}</span>
                                 <span class="li2r"js>{$vo1.buy_time|date='Y/m/d H:i:s',###}</span>
                             </p>
-                            <p class="title">{$data.goodsDetail.title}  购买<span>{$vo1.buy_num}</span>单 </p>
+                            <p class="title">{$data.goodsDetail.title}  购买<span>{$vo1.buy_num}</span>单 {$vo1.type}</p>
                         </div>
                     </li>
+		 </a>
                 </volist>
             </ul>
         </div>

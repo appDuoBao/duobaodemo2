@@ -124,9 +124,6 @@ Class RequestController extends HomeController{
             $arr['mch_create_ip'] = get_client_ip();
         }
         $ptype = I("ptype");
-        if($ptype == 1){
-            $this->paybyweixin($arr,$orderid);exit();
-	}
         //}else{
             $arrali['method'] = 'submitOrderInfo';
             $arrali['out_trade_no'] = $out_trade_no;
@@ -137,13 +134,12 @@ Class RequestController extends HomeController{
             $arrali['buyer_id'] = I("buyer_id");
 	    $arrali['openid'] = $openid;
 	   //充值支付
-            $ispay = $this->payByChange($orderid,$data['money']);
-	    if($ispay['ret']==100){
-		exit(json_encode($ispay));	
-	    }elseif($ptype){
-            	$ret = $this->submitOrderInfobyali($arrali,$out_trade_no,$ptype);
+	    if($ptype == 1){
+		    $this->paybyweixin($arr,$orderid);exit();
+	    }elseif($ptype == 3){
+		    $ret = $this->payByChange($orderid,$data['money']);
 	    }else{
-		$ret = array('ret'=>2,'msg'=>'select pay type');
+		    $ret = $this->submitOrderInfobyali($arrali,$out_trade_no,$ptype);
 	    }
 	    exit(json_encode($ret));
        // }
@@ -158,10 +154,10 @@ Class RequestController extends HomeController{
 	    $ret = D('Recharge')->where('uid = '.$uid)->save($data);	
 	    if($ret){
 		$ret = D('WinOrder')->where('id = '.$orderid)->save(array('status'=>1,'paytype'=>'充值'));
-	        if($ret) return array('ret'=>100,'msg'=>'ok','data'=>'s');
+	        if($ret) return array('ret'=>0,'msg'=>'ok','data'=>'s');
 	     }
 	}
-	return array('ret'=>1,'msg'=>'error','data'=>'select');
+	return array('ret'=>100,'msg'=>'余额不足，请充值!','data'=>'select');
     }
     private function paybyweixin($arr,$orderid){
          header("Content-type: text/html; charset=utf-8");

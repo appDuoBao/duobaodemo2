@@ -92,7 +92,7 @@
                              <p class="lmt">{$vo1.buy_time|date='Y-m-d H:i',###}</p>
                         </div>
                         
-                        <p class="lm-gwk">{$vo1.goods_title}    中奖第{$vo1.period}期    单×{$vo1.buy_num}  {$vo1.codeid}</p>
+                        <p class="lm-gwk">{$vo1.goods_title}    抢购第{$vo1.period}期    单×{$vo1.buy_num}  {$vo1.type}</p>
                        
                     </div>
                         <!--<div class="lt">
@@ -104,7 +104,7 @@
         </ul>
         <ul class="lis" style="display:none">
             <volist name="data.pk_list" id="vo">
-                 <a href="{:U('My/buyLog?uid='.$vo['userinfo']['uid'])}"><li>
+                 <a href="{:U('My/exchangeList?uid='.$vo['userinfo']['uid'])}"><li>
                     <div class="lf">
                         <img src="{$vo.userinfo.headimgurl}" alt="">
                     </div>
@@ -114,7 +114,7 @@
                              <p class="lmt">{$vo.buy_time|date='Y-m-d H:i',###}</p>
                         </div>
                         
-                        <p class="lm-gwk">{$vo.goods_title}    中奖第{$vo.period}期    单×{$vo.buy_num}  {$vo.codeid}</p>
+                        <p class="lm-gwk">{$vo.goods_title}    中奖第{$vo.period}期    单×{$vo.buy_num}  {$vo.type}</p>
                        
                     </div>
                     <!--<div class="lt">

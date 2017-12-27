@@ -1,0 +1,1952 @@
+[ 2017-12-25T20:19:40+08:00 ] 114.248.72.254 /control.php?s=/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0005s ]
+SQL: SELECT SUM(money) AS tp_Sum FROM `ewshop_win_order` WHERE `status` = 1 AND `utype` = 1 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 AND `utype` = 1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`status`,`uid`,`utype`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 AND `utype` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0023s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title` FROM `ewshop_document` WHERE `id` IN ('245','245','245','245','243','243','243','243','243','243','254','243','243','243','245','243','243','245','245','245')  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT uid as id,`nickname` FROM `ewshop_member` WHERE `uid` IN ('337','337','337','337','337','337','337','337','337','7','3496','7','7','4','337','337','337','337','337','337')  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0005s ]
+SQL: SELECT `order_id`,`is_exchange` FROM `ewshop_win_exchange` WHERE `order_id` IN ('6365','6364','6356','6355','6354','6321','6312','6311','6310','5382','4893','4410','4409','2440','2057','2014','2010','1999','607','516') AND `utype` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: allprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined variable: allzprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined variable: dhprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined variable: wdhprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000034s ]
+
+[ 2017-12-25T20:19:44+08:00 ] 114.248.72.254 /control.php?s=/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0054s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0004s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005845s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000032s ]
+
+[ 2017-12-25T20:20:18+08:00 ] 114.248.72.254 /control.php?s=/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001065s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000027s ]
+
+[ 2017-12-25T20:21:14+08:00 ] 114.248.72.254 /control.php?s=/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0004s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://www.bjlaote.com' WHERE ( name='DOMAIN' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0004s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000009s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.004839s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000517s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000033s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.004493s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005798s ]
+SQL: select version() as v; [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000812s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000004s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001123s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.001129s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000008s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006564s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000173s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000003s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001604s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.000475s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.006119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000220s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000002s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001644s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000034s ]
+
+[ 2017-12-25T20:21:22+08:00 ] 114.248.72.254 /control.php?s=/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 16 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '信息管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '加盟管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '推广管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0004s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0055s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0004s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000046s ]
+
+[ 2017-12-25T20:22:00+08:00 ] 114.248.72.254 /control.php?s=/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0012s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0099s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0008s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0006s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007361s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000040s ]
+
+[ 2017-12-25T20:22:02+08:00 ] 114.248.72.254 /control.php?s=/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0055s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0005s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006034s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000030s ]
+
+[ 2017-12-25T20:22:06+08:00 ] 114.248.72.254 /control.php?s=/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0004s ]
+SQL: SELECT SUM(money) AS tp_Sum FROM `ewshop_win_order` WHERE `status` = 1 AND `utype` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 AND `utype` = 1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`status`,`uid`,`utype`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 AND `utype` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0027s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ewshop_document` WHERE `id` IN ('245','245','245','245','243','243','243','243','243','243','254','243','243','243','245','243','243','245','245','245')  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0004s ]
+SQL: SELECT uid as id,`nickname` FROM `ewshop_member` WHERE `uid` IN ('337','337','337','337','337','337','337','337','337','7','3496','7','7','4','337','337','337','337','337','337')  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0004s ]
+SQL: SELECT `order_id`,`is_exchange` FROM `ewshop_win_exchange` WHERE `order_id` IN ('6365','6364','6356','6355','6354','6321','6312','6311','6310','5382','4893','4410','4409','2440','2057','2014','2010','1999','607','516') AND `utype` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: allprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined variable: allzprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined variable: dhprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined variable: wdhprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005866s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000038s ]
+
+[ 2017-12-25T20:22:07+08:00 ] 114.248.72.254 /control.php?s=/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0055s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0005s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000029s ]
+
+[ 2017-12-25T20:24:45+08:00 ] 114.248.72.254 /control.php?s=/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001213s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000028s ]
+
+[ 2017-12-25T20:25:26+08:00 ] 114.248.72.254 /control.php?s=/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0004s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://www.bjlaote.com' WHERE ( name='DOMAIN' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0008s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000008s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006494s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000478s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000030s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.006095s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007444s ]
+SQL: select version() as v; [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000823s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000004s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001164s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.001170s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000008s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.008277s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000170s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000004s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001700s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.000531s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.007817s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000220s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000002s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001744s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000034s ]
+
+[ 2017-12-25T20:39:51+08:00 ] 114.248.72.254 /control.php?s=/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000042s ]
+
+[ 2017-12-25T20:41:59+08:00 ] 114.248.72.254 /control.php?s=/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000032s ]
+
+[ 2017-12-25T20:43:05+08:00 ] 114.248.72.254 /control.php?s=/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0004s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://www.bjlaote.com' WHERE ( name='DOMAIN' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0004s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000009s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.004809s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000032s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.004456s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005775s ]
+SQL: select version() as v; [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000815s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000003s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001118s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.001124s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000007s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006508s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000163s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000003s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001584s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.000460s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.006061s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000210s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000002s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001624s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000036s ]
+
+[ 2017-12-25T20:43:08+08:00 ] 114.248.72.254 /control.php?s=/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 16 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '信息管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '加盟管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '推广管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0004s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0066s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0006s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006886s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000036s ]
+
+[ 2017-12-25T20:43:14+08:00 ] 114.248.72.254 /control.php?s=/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0055s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0004s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005834s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000033s ]
+
+[ 2017-12-25T20:49:14+08:00 ] 114.248.72.254 /control.php?s=/Config/group.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 68 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '管理员' AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '内容管理' AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ewshop_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004951s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004974s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000035s ]
+
+[ 2017-12-25T20:49:18+08:00 ] 114.248.72.254 /control.php?s=/Database/index/type/export.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Database/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 68 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '管理员' AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '内容管理' AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW TABLE STATUS [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000033s ]
+
+[ 2017-12-25T20:49:29+08:00 ] 114.248.72.254 /control.php?s=/Database/export.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/newduobao/ThinkPHP/Common/functions.php 第 1243 行.
+NOTIC: [2] file_put_contents(/backup.lock): failed to open stream: Permission denied /home/wwwroot/newduobao/Ewshop/Control/Controller/DatabaseController.class.php 第 182 行.
+
+[ 2017-12-25T20:51:43+08:00 ] 114.248.72.254 /control.php?s=/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0055s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0005s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000033s ]
+
+[ 2017-12-25T20:51:58+08:00 ] 114.248.72.254 /control.php?s=/User/index/p/174.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0058s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 3460,20   [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0007s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='7' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='7' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='5' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='4' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005241s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000038s ]
+
+[ 2017-12-25T20:52:07+08:00 ] 114.248.72.254 /control.php?s=/User/index/p/173.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0055s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 3440,20   [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0005s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='27' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='27' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='26' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='26' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='25' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='25' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='24' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='24' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='23' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='23' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='22' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='22' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='21' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='21' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='20' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='20' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='19' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='19' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='18' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='18' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='17' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='17' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='16' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='16' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='15' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='15' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='14' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='14' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='13' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='13' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='12' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='12' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='11' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='11' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='10' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='10' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='9' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='9' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='8' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='8' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007099s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000034s ]
+
+[ 2017-12-25T20:54:32+08:00 ] 114.248.72.254 /control.php?s=/User/agentinfo/puid/0/root_id/0/uid/8.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+NOTIC: [8] Undefined variable: meta_title /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 6 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 128 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 131 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 133 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 134 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 135 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 136 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 137 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 138 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 139 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 140 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 141 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 142 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 145 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 146 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 147 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 149 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 157 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 159 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 160 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 161 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 162 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 163 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 164 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 165 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 166 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 167 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 168 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 169 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 171 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000045s ]
+
+[ 2017-12-25T20:55:41+08:00 ] 114.248.72.254 /control.php?s=/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 16 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '信息管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '加盟管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '推广管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0004s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0055s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`root_id`,`parent_id`,`branding_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0005s ]
+SQL: SELECT `uid` FROM `ewshop_join` WHERE `is_delete` = 0 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3496' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3495' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3494' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3493' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3492' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3467' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3466' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3465' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3464' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3463' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3462' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3461' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3460' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3459' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3458' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3457' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3456' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3455' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3454' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='3453' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: usertype /home/wwwroot/newduobao/Ewshop/Control/Controller/UserController.class.php 第 58 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000034s ]
+
+[ 2017-12-25T20:57:50+08:00 ] 114.248.72.254 /control.php?s=/User/agentinfo/puid/0/root_id/0/uid/3496.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+NOTIC: [8] Undefined variable: meta_title /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 6 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 128 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 131 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 133 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 134 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 135 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 136 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 137 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 138 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 139 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 140 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 141 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 142 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 145 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 146 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 147 行.
+NOTIC: [8] Undefined variable: parent /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 149 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 157 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 159 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 160 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 161 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 162 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 163 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 164 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 165 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 166 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 167 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 168 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 169 行.
+NOTIC: [8] Undefined variable: roots /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 171 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000035s ]
+
+[ 2017-12-25T20:57:55+08:00 ] 114.248.72.254 /control.php?s=/User/agentinfo/puid/1074/root_id/74/uid/3466.html
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0011s ]
+SQL: SELECT `uid`,`company`,`name`,`mobile`,`ratio`,`parent_id`,`ratio_type`,`address` FROM `ewshop_join` WHERE `uid` IN ('1074','74')  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+NOTIC: [8] Undefined variable: meta_title /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 6 行.
+NOTIC: [8] Undefined index: kaihuhang /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 138 行.
+NOTIC: [8] Undefined index: kahao /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 139 行.
+NOTIC: [8] Undefined index: xingming /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 140 行.
+NOTIC: [8] Undefined index: nickname /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 141 行.
+NOTIC: [8] Undefined index: pname /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 146 行.
+NOTIC: [8] Undefined index: erm /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 147 行.
+NOTIC: [8] Undefined index: create_time /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 149 行.
+NOTIC: [8] Undefined index: kaihuhang /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 164 行.
+NOTIC: [8] Undefined index: kahao /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 165 行.
+NOTIC: [8] Undefined index: xingming /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 166 行.
+NOTIC: [8] Undefined index: nickname /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 167 行.
+NOTIC: [8] Undefined index: erm /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 169 行.
+NOTIC: [8] Undefined index: create_time /home/wwwroot/newduobao/Runtime/Cache/Control/049a906c62594d80a8678ae6e8616309.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004730s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000038s ]
+
+[ 2017-12-25T20:58:24+08:00 ] 114.248.72.254 /control.php?s=/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0006s ]
+SQL: SELECT SUM(money) AS tp_Sum FROM `ewshop_win_order` WHERE `status` = 1 AND `utype` = 1 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 AND `utype` = 1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`status`,`uid`,`utype`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 AND `utype` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0023s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 96 行.
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ewshop_document` WHERE `id` IN ('245','245','245','245','243','243','243','243','243','243','254','243','243','243','245','243','243','245','245','245')  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT uid as id,`nickname` FROM `ewshop_member` WHERE `uid` IN ('337','337','337','337','337','337','337','337','337','7','3496','7','7','4','337','337','337','337','337','337')  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0004s ]
+SQL: SELECT `order_id`,`is_exchange` FROM `ewshop_win_exchange` WHERE `order_id` IN ('6365','6364','6356','6355','6354','6321','6312','6311','6310','5382','4893','4410','4409','2440','2057','2014','2010','1999','607','516') AND `utype` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+NOTIC: [2] Illegal string offset 'is_exchange' /home/wwwroot/newduobao/Ewshop/Control/Controller/BiddingController.class.php 第 117 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+NOTIC: [8] Undefined variable: allprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined variable: allzprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined variable: dhprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined variable: wdhprice /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 126 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+NOTIC: [8] Undefined index: code /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 185 行.
+NOTIC: [8] Undefined index: xkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 187 行.
+NOTIC: [8] Undefined index: dkjnum /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 188 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: xkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 191 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: dkjdx /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 192 行.
+NOTIC: [8] Undefined index: is_exchange /home/wwwroot/newduobao/Runtime/Cache/Control/1886e10f6cc72280bd715b5cd6e4ecf4.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005683s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005699s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000032s ]
+

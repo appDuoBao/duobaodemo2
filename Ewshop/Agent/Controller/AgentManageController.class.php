@@ -407,21 +407,17 @@ class AgentManageController extends ControlController {
             $url = $this->makeShareCode($uid,$shareurl);
             $arr['erm'] = $url;
             $ret = $join->where('uid = '.$uid)->save($arr);
+	    error_log(print_r($shareurl,true)."\n",3,'/home/wwwroot/logs/my.log');
         }
     }
     
      private function makeShareCode($uid,$shareurl){
         
-        $userinfo = M('Member')->where(array('uid'=>$uid))->find();
-         $weixin = (C('weixin'));
-      
+            $userinfo = M('Member')->where(array('uid'=>$uid))->find();
             $oldpic = $userinfo['headimgurl'] ? $userinfo['headimgurl'] : './Public/Weixin/erweima/logo.png';
-            
-            $wurl = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$weixin['appid']."&redirect_uri=".$shareurl."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+            //$wurl = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$weixin['appid']."&redirect_uri=".$shareurl."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
             //var_dump($wurl);exit($wurl);
-            $url = $this->makeCodeLogo('DL'.$uid,$oldpic,$wurl);
-            $res['ewm']  = ltrim($url,'.');
-            M('BrandingMember')->where(array('id'=>$buid))->save($res);
+            $url = $this->makeCodeLogo('DL'.$uid,$oldpic,$shareurl);
         
        // print_r($url);exit;
             return $url;

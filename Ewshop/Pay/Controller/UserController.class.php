@@ -280,7 +280,7 @@ class UserController extends ControlController {
         $phone       = M('UcenterMember')->where("id = {$uid}")->getField('mobile');
         $mobile_code = random(4 , 1);//生成手机验证码
         $send_code   = $_POST['send_code'];//获取提交随机加密码
-        $content     = "您的短信验证码为：" . $mobile_code . "，有效期一小时。【千亩阳光】";
+        $content     = "您的短信验证码为：" . $mobile_code . "，有效期一小时。【翔傲元】";
         $result      = sendsmscode($phone , $content , $send_code , $mobile_code);
 
         $this->ajaxreturn($result);

@@ -12,8 +12,8 @@
 </head>
 <body>
     <div class="heand">
-        <div class="head_img"><img src="__IMG__/head.png" alt=""></div>
-        <div class="head_name">用户名</div>
+        <div class="head_img"><img src="{$data.headimgurl}" alt=""></div>
+        <div class="head_name">{$data.nickname}</div>
     </div>
     <div id="mywallet" class="menu_personal" style="margin-top:5px;">
         <span class="menu_img"><img src="__IMG__/my_money.png" alt=""></span>
@@ -27,7 +27,7 @@
     </div>
     <div id="trancepaylog" class="menu_personal" style="margin-top:5px;">
         <span class="menu_img"><img src="__IMG__/zhuan.png" alt=""></span>
-        <span class="menu_font">我的转售</span>
+        <span class="menu_font">我的寄售</span>
         <span class="menu_right">〉</span>
     </div>
     <div id="buylog" class="menu_personal" style="margin-top:5px;">
@@ -95,7 +95,7 @@
             window.location.href='{:U('My/account')}';
         });
         $("#trancepaylog").click(function(){
-            window.location.href='http://duobao.akng.net/pay.php';
+            window.location.href='./pay.php';
         });
         $("#cooperation").click(function(){
             window.location.href='{:U('My/join')}';

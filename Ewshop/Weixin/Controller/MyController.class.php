@@ -57,12 +57,12 @@ class MyController extends HomeController {
 		}
 		
 		
-//		if(in_array($uid,$join_user_id) || $data['parent_id'] > 0){//代理或者下级代理会员
-//			$isjoin = true;
-//		}else{
-//			$isjoin = false;
-//		}	
-		$this->assign('isjoin' , $isjoin);
+		if(in_array($uid,$join_user_id) || $data['parent_id'] > 0){//代理或者下级代理会员
+			$isjoin = true;
+		}else{
+			$isjoin = false;
+		}	
+	$this->assign('isjoin' , $isjoin);
         $this->meta_title = '个人中心';
         $this->display();
     }
@@ -263,6 +263,8 @@ class MyController extends HomeController {
      */
     public function exchangeList(){
         $uid = D('Member')->uid();
+	$puid = I('uid',0);
+        $uid = ($puid) ? $puid : $uid;
         $noExchangeList = M('WinExchange')->where(array('uid'=>$uid,'is_exchange'=>0,'is_virtual'=>0))->order("id DESC")->select();
         foreach ($noExchangeList as $k => $v) {
             $noExchangeList[$k]['order'] = M('WinOrder')->where(array('id'=>$v['order_id'],'status'=>1))->find();
@@ -289,7 +291,7 @@ class MyController extends HomeController {
                 $noExchangeList[$k]['win_code'] = M('WinCode')->where(array('period'=>$noExchangeList[$k]['order']['period'],'create_time'=>$noExchangeList[$k]['order']['lottery_time']))->getField('code_110');
             }
         }
-        //dump($noExchangeList[0]['order']);die;
+        //var_dump($noExchangeList);die;
 
 
         $yesExchangeList = M('WinExchange')->where(array('uid'=>$uid,'is_exchange'=>1,'is_virtual'=>0))->order("id DESC")->select();
@@ -319,6 +321,7 @@ class MyController extends HomeController {
                 $yesExchangeList[$k]['win_code'] = M('WinCode')->where(array('period'=>$yesExchangeList[$k]['order']['period'],'create_time'=>$yesExchangeList[$k]['order']['lottery_time']))->getField('code_110');
             }
         }
+	//var_dump($noExchangeList);
         $this->assign('noExchangeList',$noExchangeList);//未兑换
         $this->assign('yesExchangeList',$yesExchangeList);//已兑换
 
@@ -587,9 +590,9 @@ class MyController extends HomeController {
             $userinfo = M('Member')->where(array('uid'=>$uid))->find();
             $parent_id = $userinfo['parent_id'] ? $userinfo['parent_id'] : 0;
             $_POST['join_type'] = ($parent_id) ? 1 : 0;
-            $_post['root_id'] = ($userinfo['root_id']!=0) ? $userinfo['root_id'] : 0;
+            $_POST['root_id'] = ($userinfo['root_id']!=0) ? $userinfo['root_id'] : 0;
             $rootid = $userinfo['root_id'] ? $userinfo['root_id'] : $uid;
-            $url =  $this->getErm($uid,$rootid);
+            $url =  $this->getErm($uid,$rootid,$parent_id);
             if($parent_id){
                 $isjoinbyparent = M('Join')->where('uid = '.$parent_id)->getField('id');
                 if($isjoinbyparent){
@@ -623,17 +626,15 @@ class MyController extends HomeController {
         }
     }
     
-    private function getErm($uid,$rootid){
+    private function getErm($uid,$rootid,$parentid){
         $weixin = (C('weixin'));
         if($uid){
-            $userinfo = M('Member')->where(array('uid'=>$uid))->find();
-            $shareurl ='http://' . $_SERVER['HTTP_HOST'] . '/Weixin/User/register/parent_id/'.$uid.'/root_id/'.$rootid;
+            $shareurl ='http://' . $_SERVER['HTTP_HOST'] . '/Weixin/User/register/parent_id/'.$parentid.'/root_id/'.$rootid;
            
             $oldpic = $userinfo['headimgurl'] ? $userinfo['headimgurl'] : './Public/Weixin/erweima/logo.png';
-            
-            $wurl = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$weixin['appid']."&redirect_uri=".$shareurl."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+            //$wurl = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$weixin['appid']."&redirect_uri=".$shareurl."&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
             //var_dump($wurl);exit($wurl);
-            $url = $this->makeCodeLogo('DL'.$uid,$oldpic,$wurl);
+            $url = $this->makeCodeLogo('DL'.$uid,$oldpic,$shareurl);
             return $url;
         }
     }

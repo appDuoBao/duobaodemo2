@@ -104,18 +104,13 @@ class GoodsController extends HomeController {
         }
 
         //半价pk榜(中奖记录)
-        $pk_list = M('WinExchange')->where("goods_id = {$goodsId}")->order('buy_time DESC')->limit(20)->select();
+	$pk_list = M('WinExchange')->join('LEFT JOIN ewshop_win_order on ewshop_win_exchange.order_id=ewshop_win_order.id')->order('buy_time DESC')->limit(10)->field('ewshop_win_exchange.*,ewshop_win_order.period,ewshop_win_order.type')->select();;
         foreach($pk_list as $key => $val){
+            $pk_list[$key]['type'] = $val['type']==1 ? '单' : '双' ;
             if($val['utype'] == 2){
-                $pk_list[$key]['userinfo'] = M('MemberTemp')->field('headimgurl,nickname')->where("id = {$val['uid']}")->find();//虚拟用户
-				if($i<20){
-					$buy_list[$i]['buy_time'] = $val['buy_time'];
-					$buy_list[$i]['buy_num'] = $val['buy_num'];				
-					$buy_list[$i]['userinfo'] = M('MemberTemp')->field('headimgurl,nickname')->where("id = {$val['uid']}")->find();//虚拟用户
-					$i++;
-				}
+                $pk_list[$key]['userinfo'] = M('MemberTemp')->field('id as uid,headimgurl,nickname')->where("id = {$val['uid']}")->find();//虚拟用户
             }else{
-                $pk_list[$key]['userinfo'] = M('Member')->field('headimgurl,nickname')->where("uid = {$val['uid']}")->find();
+                $pk_list[$key]['userinfo'] = M('Member')->field('uid,headimgurl,nickname')->where("uid = {$val['uid']}")->find();
             }
         }	
         $data['pk_list'] = $pk_list;	
@@ -128,6 +123,7 @@ class GoodsController extends HomeController {
         foreach($order_list as $key => $val1){
 			$buy_list[$i]['buy_time'] = $val1['create_time'];
 			$buy_list[$i]['buy_num'] = $val1['num'];
+			$buy_list[$i]['type'] = ($val1['type'] == 1) ? '单' : '双';
 			if($val1['utype'] ==2){
 			    $vuid[]= $val1['uid'];    
 			}else{
@@ -138,7 +134,7 @@ class GoodsController extends HomeController {
         }			
          if($vuid){
             $vmap['id'] = array('in',$vuid);
-            $vuser = M('MemberTemp')->where($vmap)->getField('id,headimgurl,nickname',true);
+            $vuser = M('MemberTemp')->where($vmap)->getField('id as uid,headimgurl,nickname',true);
         }
         if($uids){
              $umap['uid'] = array('in',$uids);

@@ -452,7 +452,7 @@ function get_action_type($type, $all = false){
 	}
 	return $list[$type];
 }
-/*
+/**
 function PostHttp($url, $params,$header = array(), $multi = false){
     $opts = array(
             CURLOPT_TIMEOUT        => 10,

@@ -12,6 +12,7 @@
     <script type="text/javascript" src="Public/Pay/js/libs/zepto.min.js"></script>
 </head>
 <body>
+  <form action="{:U(docharge)}" method="post" class="form-horizontal">   
     <div class="resale_top">
         <span class="resale_top_img"><img src="__IMG__/zhuan.png" alt=""></span><span style="padding-left:20px;">兑换码转售</span>
     </div>
@@ -31,7 +32,7 @@
             <span class="right_font">{$sxf}元</span>
         </div>
     </div>
-    <div class="yes_btn">确定</div>
+    <div class="yes_btn" id="submit" >确定</div>
     <div class="card_number">
         <span class="card_name">银行卡号：</span>
         <input id="bank_no" type="text" value="{$cardinfo.card_no}">
@@ -63,6 +64,7 @@
             <span class="menu_bottom_font">转售记录</span>
         </div>
     </div>
+</form>
 </body>
 </html>
 <script>
@@ -72,7 +74,13 @@
     $("#bankcard").click(function(){
         window.location.href="{:U('Index/cardlist')}";
     });
-    $("#tranceReport").click(function(){
-        window.location.href="{:U('Index/recordlist')}";
-    });
+   $("#tranceReport").click(function(){
+		window.location.href="{:U('Index/recordlist')}";
+ });
+	$("#submit").click(function(){
+		var rdata =  $(".kuang").html();
+		if(rdata){
+		$('form').submit();   
+		}
+		});
 </script>

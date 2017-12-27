@@ -19,11 +19,11 @@ class IndexController extends ControlController {
      * 后台首页
      * @author ew_xiaoxiao
      */
-    private static  $certFilePath='/home/cert/800041100020001.p12';
+    private static  $certFilePath='/home/cert/800000600020008.p12';
    
-    private static  $merchanid='800041100020001';
+    private static  $merchanid='800000600020008';
    
-    private static  $merchantCertPass='NMJOih'; 
+    private static  $merchantCertPass='VkSuds'; 
     
     private static  $deskey = 'cputest';  
     
@@ -34,9 +34,8 @@ class IndexController extends ControlController {
     public function _initialize(){
         
         $this->uid = ($_SESSION['onethink_home']['uid']) ? ($_SESSION['onethink_home']['uid']) : ($_SESSION['onethink_admin']['user_auth']['uid']) ;
-       $this->uid=671;
         if(empty($this->uid)){
-             //$this->redirect('User/register');  return; 
+             $this->redirect('User/register');  return; 
         }
     }
       
@@ -55,15 +54,15 @@ class IndexController extends ControlController {
 	     $cardmap['uid'] = array('eq',$uid);
 	     $cardinfo = M('Account')->where($cardmap)->find();
 	     //var_dump($cardinfo);exit;
-	     $this->assign('cardno',count($allcard));
+	     $this->assign('cardno',count($zhcode));
 	     $this->assign('cardinfo',($cardinfo));
 	     
 	     $this->assign('shiji',$shiji);
 	     $this->assign('code',$zhcode);
 	     $this->assign('total',$total);
 	     $this->assign('sxf',$sxf);
-         $this->assign('sytlei',1);
-		 $this->display();
+             $this->assign('sytlei',1);
+	     $this->display();
     }
     
     private function getExCode($arr = ''){
@@ -106,6 +105,47 @@ class IndexController extends ControlController {
             }   
         }
         exit(json_encode(array('ret'=>1,'msg'=>'error','data'=>'')));    
+    }
+    public function docharge(){
+	$uid = $this->uid;
+        $datacode= ''; //I('codedata');
+        if(empty($uid)){
+
+            $this->error("请登陆");return;
+        }
+        $order = $this->getExCode();
+	$total_fee = $order['shiji'];
+        $ptype    = 3;
+        //获取预支付信息
+        $out_trade_no = 'RE'.date('YmjHis').sprintf("%07d", $uid).'3'.rand(1000,9999);//商户订单号
+        //创建订单
+        $data['uid'] = $uid;
+        $data['create_time'] = time();
+        $data['total_fee'] = $total_fee;
+        $data['ptype'] = $ptype;
+        $data['out_trade_no'] = $out_trade_no;
+	$arrcode = $order['arrcode'];
+        $paycode=implode(':', $arrcode);
+	$data['content'] = $paycode;
+	$data['status'] = 1;
+        if($orderid = M('RechargeOrder')->add($data)){
+		$acc = D('Recharge');
+		$nowtoto = $acc->where()->getField('totalnum');
+		$arr['totalnum'] = bcadd($data['total_fee'],$nowtoto,4);var_dump($arr);
+		$ret = $acc->where('uid = '. $uid)->save($arr);
+		if($ret){
+			$win_ex = M('WinExchange');
+			$order_ids = array_keys($order['code']); 
+			$exmap['id'] = array('in',$order_ids);
+			$exret = $win_ex->where($exmap)->save(array('is_exchange'=>1));	
+			if($ret && $exret){
+		   		header('Location: http://www.bjlaote.com/index.php?s=/Weixin/My/account');exit;
+		        }
+		}
+        }else{
+		 $this->redirect('Index/index');  return;
+        }
+
     }
     public function doorder(){
         $uid = $this->uid;
@@ -214,24 +254,24 @@ class IndexController extends ControlController {
             }
             $data['uid'] = $uid;
             $data['username'] = I('username');
-            $data['idcard'] = I('idcard');
+            $data['idcard'] = I('bank_add');
             $data['mobile'] = I('mobile');
             $data['ctime'] = time();
-            $data['bankname'] = I('bankname');
+            $data['bankname'] = I('bank_name');
             $data['defaultcard'] = 1;
             //参数验证
-            if(strlen($data['idcard']) < 18){
-                $this->error("身份证号不正确");return;
-            }
+            //if(strlen($data['idcard']) < 18){
+                $//this->error("身份证号不正确");return;
+           // }
             $ret = $accout->add($data);
             if($ret){
-                $this->redirect('index/index');  return;  
+                $this->redirect('index/recordlist');  return;  
             }
          }
          $username = I('username');
          $idcard = I('idcard');
          $cardno = I('cardno');
-         $bankname = I('bankname');
+         $bankname = I('bank_name');
          $this->assign('username',$username);
          $this->assign('idcard',$idcard);
          $this->assign('cardno',$cardno);
@@ -252,7 +292,7 @@ class IndexController extends ControlController {
         $phone = $_POST['phone'];
         $mobile_code = random(4 , 1);//生成手机验证码
         $send_code   = (!empty($_SESSION['send_code'])) ? $_SESSION['send_code'] : '8888';//获取提交随机加密码
-        $content     = "您的短信验证码为：" . $mobile_code . "，有效期一小时。【千亩阳光】";
+        $content     = "您的短信验证码为：" . $mobile_code . "，有效期一小时。【翔傲元】";
         $result      = sendsmscode($phone , $content , $send_code , $mobile_code);
         exit(json_encode($result));
         
